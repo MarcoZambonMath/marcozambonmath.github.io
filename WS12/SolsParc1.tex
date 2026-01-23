@@ -1,0 +1,202 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[pdftex]{graphicx}
+\usepackage{latexsym} 
+\usepackage{graphics} 
+\usepackage{url}
+%\usepackage{fullpage}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+     
+\textheight 246mm
+     
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+     
+\textwidth 159mm
+
+
+%               Theorem Environments
+%\theoremstyle{definition}
+\newtheorem{ex}{}
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%               Subquestions numbered with letters
+\renewcommand{\theenumi}{\textbf{\alph{enumi}}}
+
+%               Maths definitions
+
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\QQ}{\ensuremath{\mathbb Q}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+
+
+\pagestyle{empty} %%%
+\begin{document}
+\noindent
+{\sffamily\large  
+\'Algebra I, curso 2012-13\hfill     25/10/2012}
+ 
+
+%\noindent
+%\hrulefill{}\\
+\begin{center}\bfseries\large\textsf{Ejercicios en clase 1 - Soluciones \\
+Seraf\'in Ruiz Cabello\vspace{-2mm}}
+\end{center}
+
+
+\hrulefill{}\\ 
+\begin{ex}[5 puntos]   
+{\bf Hallar un n\'umero complejo en forma bin\'omica: $a + bi$ tal que $(a + bi)^2 = 1 + i$.}
+\end{ex}  
+
+Debe obtenerse un n\'umero $z\in\mathbb{C}$ tal que $z^2 = i+1$. Basta con resolver dicha ecuaci\'on y dar una de sus ra\'ices. Vamos a ver dos formas de hacerlo:
+\begin{itemize}
+ \item Con coordenadas polares: En primer lugar hay que escribir $i+1$ como $z=re^{i\alpha}$, donde $r$ es el m\'odulo y $\alpha$ es el \'angulo. Concretamente,
+\[
+ r = \sqrt{1^2+1^2}= \sqrt{2},\qquad \alpha = \arctan(1/1) = \frac{\pi}{4}.
+\]
+Por tanto, la ecuaci\'on se puede reescribir en polares como
+\[
+ z^2 = \sqrt{2}e^{i\pi/4}.
+\]
+Como se trata de una ra\'iz cuadrada, existen dos soluciones distintas, que llamaremos $z_1$ y $z_2$. Ambas tienen el mismo m\'odulo, que es la ra\'iz cuadrada positiva de $r$; es decir $\sqrt{\sqrt{2}}=2^{1/4}$. En cuanto a los \'angulos, la primera de ellas tiene $\alpha/2=\pi/8$; y la segunda, $\alpha/2+\pi=9\pi/8$. Por tanto,
+\[
+ z_1 = 2^{1/4}e^{i\pi/8},\qquad z_2=2^{1/4}e^{i9\pi/8}.
+\]
+Cualquiera de ellas es una soluci\'on v\'alida, pero el enunciado nos pide presentarla en forma bin\'omica. Para ello, basta recordar que
+\[
+ e^{ix} = \cos x+i\sen x, \qquad\text{para cualquier $x$ real}.
+\]
+Por tanto, {\bf las dos posibles soluciones del problema son:}
+\[
+\begin{array}{cclcl}
+ z_1 & = & 2^{1/4}\cos(\pi/8) & + & i\,2^{1/4}\sen(\pi/8) \\
+ z_2 & = & 2^{1/4}\cos(9\pi/8) & + & i\,2^{1/4}\sen(9\pi/8).
+\end{array}
+\]
+
+\item Con coordenadas rectangulares: En este caso la resoluci\'on es ligeramente m\'as complicada, aunque las soluciones se obtienen directamente en forma bin\'omica. Elevando el cuadrado la expresi\'on de la izquierda de la igualdad en el enunciado, se obtiene:
+\[
+ a^2 +2abi - b^2 = 1 + i.
+\]
+Ahora igualamos las partes reales e imaginarias, y se obtiene un sistema de dos ecuaciones:
+\[
+ \left.\begin{array}{rcc}
+  a^2 - b^2 & = & 1 \\
+  2ab & = & 1
+ \end{array}\right\}.
+\]
+Como $a=0$ no es soluci\'on, podemos dividir la segunda ecuaci\'on por $2a$ y se obtiene $b=1/(2a)$. Sustituyendo el valor de $b$ en la primera ecuaci\'on, queda
+\[
+ a^2 - \frac{1}{4a^2} = 1\qquad \Rightarrow \qquad 4a^4-1=4a^2.
+\]
+Mediante el cambio $x=a^2$, esta ecuaci\'on queda reducida a una de segundo grado, $4x^2-4x-1 = 0$. Sus soluciones son
+\[
+ x = \frac{4\pm\sqrt{16+16}}{8}=\frac12\pm\sqrt{\frac12}.
+\]
+Como $a=\pm\sqrt{x}$, s\'olo nos podemos quedar con la soluci\'on positiva de $x$. Por tanto, $a$ tiene dos soluciones, que son
+\[
+ a_1 = \sqrt{\frac12+\sqrt{\frac12}},\qquad a_2 = -\sqrt{\frac12+\sqrt{\frac12}}.
+\]
+Ahora podemos despejar $b_1=1/(2a_1)$ y $b_2=1/(2a_2)$. Por tanto, {\bf las dos posibles soluciones son}
+\[
+ z_1 = \sqrt{\frac12+\sqrt{\frac12}}+\frac{i}{2\sqrt{\frac12+\sqrt{\frac12}}}, \qquad z_2 = -\sqrt{\frac12+\sqrt{\frac12}}-\frac{i}{2\sqrt{\frac12+\sqrt{\frac12}}}.
+\]
+Con la ayuda de una calculadora puede comprobarse que las soluciones obtenidas mediante ambos m\'etodos coinciden. De hecho,
+\[
+ z_1 \approx 1'0987 + i\cdot0'4551, \qquad z_2 \approx -1'0987 - i\cdot0'4551.
+\]
+
+
+\end{itemize}
+
+%n 17 hoja 1
+
+\hrulefill{}\\ 
+\begin{ex}[5 puntos]   
+ {\bf >Cu\'ales de los siguientes conjuntos (con la adici\'on y multiplicaci\'on por escalares definidas de manera natural) son espacios vectoriales? Justifica tu respuesta.}
+\begin{description}
+\item[a)]  {\bf El conjunto de todas las funciones no-negativas en el intervalo $[0,1]$.}
+\item[b)] {\bf El conjunto de todos polinomios de grado \emph{exactamente} $n$.}
+\end{description}
+
+\end{ex} 
+%p 5 en Trailer
+
+\begin{enumerate}
+ \item Este conjunto de funciones, al que llamaremos $A$, no es un espacio vectorial. La raz\'on es que al multiplicar cualquiera de estas funciones (no nula) por un escalar negativo, se obtiene una funci\'on que no pertenece al conjunto. Esto, sin ser una de las ocho propiedades necesarias, ya provoca que $A$ no pueda ser espacio vectorial, pues la multiplicaci\'on por escalares no est\'a bien definida. De las ocho propiedades que debe cumplir un espacio vectorial, la \'unica que $A$ no cumple es la propiedad del inverso aditivo. Seg\'un esta propiedad, para cada funci\'on $f\in A$, deber\'ia existir otra funci\'on $g\in A$ tal que $f+g \equiv 0$; o equivalentemente, $f(x)+g(x) = 0, \forall x\in[0,1]$. Pero la \'unica funci\'on posible como candidata a $g$ es $-f$. Y toda funci\'on $f$ de $A$ que no sea la funci\'on $0$ toma valores positivos en alg\'un punto del intervalo $[0,1]$, por lo que $-f$ no est\'a en $A$. Por tanto, {\bf este conjunto de funciones no es un espacio vectorial}. Puede comprobarse que las otras siete propiedades s\'i se cumplen, a partir de las propiedades b\'asicas de funciones.
+ \item Llamemos $B$ a este segundo conjunto. Tampoco va a ser un espacio vectorial, y en este caso hay varias razones. Pero la principal es que $B$ no es cerrado para la suma de polinomios. Si consideramos por ejemplo, los polinomios $x^n + x - 3$ y $-x^n +2$, su suma ya no es un polinomio de grado $n$, sino uno de grado menor. Esto ya causa que $B$ no pueda ser espacio vectorial, pues la suma no est\'a bien definida para todos sus elementos. A partir de esto, que de nuevo no es una de las ocho propiedades pero es necesario para que la definici\'on sea correcta, puede demostrarse f\'acilmente que $B$ no cumple ciertas propiedades de espacio vectorial:
+ \begin{itemize}
+  \item No existe elemento neutro para la suma. El \'unico candidato es el polinomio $0$, que obviamente no tiene grado $n$ para cualquier $n\geq 1$, y por tanto no está en $B$.
+  \item No existe elemento neutro para el producto. De nuevo, el candidato natural es el polinomio constante $1$, que tampoco tiene el grado adecuado si $n\geq 1$.
+ \end{itemize}
+ Cualquiera de estar tres razones justifica que {\bf $B$ no es un espacio vectorial}. Es interesante notar que si se considera en su lugar el conjunto de todos los polinomios de grado {\it como mucho} $n$, entonces s\'i que se tiene un espacio vectorial.
+\end{enumerate}
+
+
+
+%%
+\hrulefill{}\\ 
+\begin{ex}[5 puntos]   
+{\bf Explica por qu\'e lo siguiente \emph{no} es un producto escalar en el espacio vectorial especificado:}
+\begin{itemize}
+\item[a)] {\bf $\langle (x_1,x_2), (y_1,y_2) \rangle=x_1y_1-x_2y_2$ en $\RR^2$}
+\item[b)] {\bf $\langle A,B\rangle=Traza(A+B)$ en el espacio de matrices reales $2 \times 2$.}
+\end{itemize}
+{\bf Recuerda:} {\bf La traza de una matriz $A=\left(\begin{array}{cc}\alpha & \beta \\ \gamma & \delta\end{array}\right)$ es $Traza(A):=\alpha+\delta$.}
+\end{ex}
+% p 122 trail ex 1.5
+
+\begin{enumerate}
+ \item La funci\'on $\langle\rangle:\mathbb{R}^2\times\mathbb{R}^2\rightarrow\mathbb{R}$ {\bf no es un producto escalar} porque no cumple la \'ultima propiedad de estos (es f\'acil comprobar que cumple todas las dem\'as). Para $(x_1,x_2)=(y_1,y_2)$, se tiene que
+ \[
+  \langle (x_1,x_2),(x_1,x_2) \rangle = x_1^2 - x_2^2,
+ \]
+y dicha cantidad no ser\'a siempre positiva para cualquier vector $(x_1,x_2)$ no nulo de $\mathbb{R}^2$. Por ejemplo, $\langle(1,1),(1,1)\rangle = 1^2 - 1^2 = 0$, o $\langle(0,1),(0,1)\rangle = 0 - 1^2 = -1$.
+ \item Algo muy similar ocurre con la siguiente funci\'on, $\langle\rangle:\mathcal{M}_{2\times 2}(\mathbb{R})\times\mathcal{M}_{2\times 2}(\mathbb{R})\rightarrow\mathbb{R}$. Para $A=B$, se tiene
+ \[
+  \langle A,A\rangle = \text{Traza}(2A) = 2\alpha + 2\delta,
+ \]
+y esta cantidad puede ser negativa o cero para muchas matrices $2x2$. Por ejemplo,
+\[
+ \text{Traza}\begin{pmatrix} 0 & 1 \\ 1 & 0\end{pmatrix} = 0 + 0 = 0,\qquad \text{Traza}\begin{pmatrix} 1 & 0 \\ 0 & -2\end{pmatrix} = 2-4 = -2.
+\]
+Por tanto, esta funci\'on {\bf no es un producto escalar.}
+
+\end{enumerate}
+ 
+
+
+ \end{document}
+ %%%%%%%
+ \begin{ex}
+
+\end{ex}
+
+ \begin{ex}
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{ex}
+ 
+ 
+ 
+ 

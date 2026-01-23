@@ -1,0 +1,350 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx,amssymb,latexsym,amsmath,verbatim}
+\usepackage{sans}
+\usepackage{graphicx,amssymb,latexsym,amsmath}
+\renewcommand{\thepage}{}
+\renewcommand{\baselinestretch}{1}
+\setlength{\parindent}{2em} \setlength{\textwidth}{18cm}
+\setlength{\textheight}{24cm} \setlength{\topmargin}{-1cm}
+\setlength{\oddsidemargin}{-1cm}
+%\hyphenation{va-rie-da-des
+%va-rie-dad pa-ra-le-lo a-si-mi-la a-pro-ve-cha-bles u-ni-for-me
+%u-ni-for-me-men-te si-guien-te si-guien-tes re-su-mien-do
+%ha-bi-tua-les}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Para empezar una interrogativa: ?`  %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Para partir una matriz en cajas:         %%%%%
+%% \[ \left(\begin{array}{c|c} A&B          %%%%%
+%% \\ \cline{1-2} C&D\end{array}\right) \]  %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%SETS OF NUMBERS
+%\newcommand{\R}{\mbox{${\bf R}$}}                  %reals
+\newcommand{\R}{\mbox{${\mathbb R}$}}               %reals
+%\newcommand{\C}{\mbox{${\bf C}$}}                  %complex
+\newcommand{\C}{\mbox{${\mathbb C}$}}
+%\newcommand{\N}{\mbox{${\bf N}$}}                  %natural numbers
+\newcommand{\N}{\mbox{${\mathbb N}$}}
+%\newcommand{\Z}{\mbox{${\bf Z}$}}                  %integers
+\newcommand{\Z}{\mbox{${\mathbb Z}$}}
+%\newcommand{\Q}{\mbox{${\bf Q}$}}                  %rationals
+\newcommand{\Q}{\mbox{${\mathbb Q}$}}
+\newcommand{\gp}{\mbox{${\bf F}_{p}$}}             % Fp
+\newcommand{\pea}{\mbox{$ {\bf Z}_{p}$}}           %p-adic integers
+\newcommand{\zn}{\mbox{${\bf Z}/{n}$}}             %Z/n
+\newcommand{\zp}{\mbox{${\bf Z}/{p}$}}             %Z/p
+\newcommand{\Zh}{\mbox{$\hat{{\bf Z}}$}}           %Z^
+\newcommand{\xp}{\mbox{${\bf F}_{p}^{*}$}}         %units Fp
+
+%GREEK LETTERS
+\newcommand{{\ff}}{\mbox{$\varphi$}}                   %phi
+\newcommand{\fp}{\mbox{$\varphi_{p}$}}               %phi_p
+\newcommand{\al}{\mbox{$\alpha$}}                    %alpha
+\newcommand{\be}{\mbox{$\beta$}}                     %beta
+\newcommand{\px}{\mbox{$\varepsilon$}}               %epsilon
+\newcommand{\Ga}{\mbox{$\Gamma$}}                    %capital gamma
+\newcommand{\ga}{\mbox{$\gamma$}}                    %small gamma
+
+%LOGIC SYMBOLS
+\newcommand{\ex}{\mbox{$\exists$}}                   %there is
+\newcommand{\fa}{\mbox{$\forall$}}                   %forall
+\newcommand{\stf}{\mbox{$\models$}}                  %satisfies
+\newcommand{\y}{\mbox{$\wedge$}}                     %and
+%\newcommand{\o}{\mbox{$\vee$}}                       %or
+\newcommand{\si}{\mbox{$\Longrightarrow$}}           %implies
+\newcommand{\ekiv}{\mbox{$\Longleftrightarrow$}}     %equiv
+
+%OTHERS
+\newcommand{\dm}{\mbox{$\preceq$}}                   %dominates
+
+
+
+
+\begin{document}
+
+\small
+
+\noindent{\sf Universidad Aut\'onoma de Madrid  \hfill \'Algebra.
+Curso 2013--14} \vspace{0.1cm} \hrule \vspace{0.1cm} \noindent{\sf
+Ingenier\'ia Inform\'atica} \vspace{0.1cm}
+\begin{center}
+{\bfseries  \'ALGEBRA. HOJA 5.}
+\end{center}
+
+\begin{enumerate}
+%\renewcommand{\theenumi}{\bf\arabic{enumi})\ }
+\renewcommand{\labelenumi}{\bf\arabic{enumi})\ }
+%\renewcommand{\theenumii}{\alph{enumii})\ }
+\renewcommand{\labelenumii}{\alph{enumii})\ }
+\medskip
+
+
+
+\item Aplica el m\'etodo de Gauss para discutir y resolver los siguientes sistemas de ecuaciones lineales.
+{\setlength\arraycolsep{.1em}
+\begin{align*}
+& a)\
+\left.
+\begin{array}{rrrrrrr}
+ && x_2 & -&3x_3 &= & -5\\
+2x_1 &+& 3x_2 &+& 3x_3 &=& 7\\
+4x_1 &+& 5x_2 &-& 2x_3 &=& 10
+\end{array}
+\right\}
+&&
+b)\
+\left.
+\begin{array}{rrrrrrr}
+ 3x_1 &-& 10x_2 &-& x_3 &=& -15\\
+2x_1  &+& 2x_2 &+& 3x_3 &=& 6\\
+ x_1  &+& 14x_2 &+& 7x_3 &=& -1
+\end{array}
+\right\}
+&&
+c)\
+\left.
+\begin{array}{rrrrrrr}
+x_1 &+&  x_2 &+& x_3 &=& 2\\
+-x_1 &+& x_2 &+& x_3 &=& 1\\
+-x_1 &+& 3x_2 &+& 3x_3 &=& 4
+\end{array}
+\right\}
+\\ &
+d)\
+\left.
+\begin{array}{rrrrrrr}
+2x_1 &-& 2 x_2 &+&x_3 & = & 9\\
+3x_1  &-&5x_2 &+& 2x_3 & = & 4\\
+3x_1  &+&3x_2 &-&x_3 & = & 9\\
+\end{array}
+\right\}
+&&
+e)\ \left.
+\begin{array}{rrrrrrr}
+x_1 &-& 2x_2 &+& x_3 &=&7\\
+3x_1 &+& 2x_2 &-& x_3 &=& 1\\
+2x_1 &-& 5x_2 &+& 2x_3 &=& 6
+\end{array}
+\right\}
+&& f)\ \left.
+\begin{array}{rrrrrrr}
+x_1 &-& 3x_2 &+& 2x_3  & =&0\\
+-x_1 &-& 2x_2 &+& 2x_3  & =& 0\\
+2x_1 &&&-& 2x_3  & =& 0
+\end{array}
+\right\}
+\\ &
+g)\ \left.
+\begin{array}{rrrrrrrrr}
+x &+& y &+& z &+& t &=& 0\\
+  & & y &-& z & &   &=& 5\\
+x &+&   & & z &+& 2t &=& 1\\
+x &+& 2y &&   & &   &=& 0
+\end{array}
+\right\}
+&&
+h)\ \left.
+\begin{array}{rrrrrrr}
+x_1 &+& 2x_2 &+& 3x_3 &=& 2\\
+x_1 &-& x_2 &+& x_3  &=& 0\\
+x_1 &+& 3x_2 &-& x_3 &=& -2\\
+3x_1 &+& 4x_2 &+& 3x_3 &=& 0
+\end{array}
+\right\}
+&&
+i) \ \left.
+\begin{array}{rrrrrrrrr}
+x_1 &+& 2x_2 &+& 3x_3 &+& 4x_4 &=& 0\\
+ -x_1 &+& x_2 & & &+& 9x_4 &=& 0\\
+-x_1 &-& 3x_2 &+& 2 x_3 &+& 3x_4 &=& 0\\
+-x_1 &+& 2x_2 &-& 5x_3 &+& 2x_4 &=& 0
+\end{array}
+\right\}
+\end{align*}
+}
+
+\noindent
+\medskip\textbf{Soluci\'on: } a) $\left( \frac{67}{11}, -\frac{28}{11}, \frac{9}{11}\right)$;
+b) incompatible;
+c) $\left\{ \left( \frac{1}{2}, \frac{3}{2} - \alpha, \alpha \right) | \alpha \in \R \right\}$;
+d) $\left( 1, 13, 33 \right)$;
+e) $\left( 2, 8, 21\right)$;\\
+f) $\left( 0,0,0\right)$;
+g) $\left( -8, 4, -1, 5 \right)$;
+h) $\left( -1, 0, 1 \right)$;
+i) $\left\{ \left( 59 \alpha, -22 \alpha, -17 \alpha, 9 \alpha \right) | \alpha \in \R \right\}$.
+
+\medskip
+
+
+\item Discute los siguientes sistemas de ecuaciones en funci\'on de los valores del par\'ametro $a\in\R$:
+{\setlength\arraycolsep{.1em}
+\[
+a) \ \left.
+\begin{array}{rrrrrrr}
+ax &+& y &+& z &=& 1\\
+x &+& ay &+& z &=& a\\
+x &+& y &+& az &=& a^2
+\end{array}
+\right\}
+\qquad
+b) \
+\left.
+\begin{array}{rrrrrrr}
+3x &-& y && &=& ax\\
+5x &+& y &+& 2z &=& ay\\
+ && 4y &+& 3z &=& az
+\end{array}
+\right\}
+\]
+}
+
+\medskip
+
+\item Discute el siguiente sistema de ecuaciones en funci\'on de los valores de los par\'ametros $a,b\in\R$:
+{\setlength\arraycolsep{.1em}
+\[
+\left.
+\begin{array}{rrrrrrr}
+2x &-& ay &+& bz &=& 4\\
+x  & &    &+& z  &=& 2\\
+x &+& y &+& z &=& 2
+\end{array}
+\right\}
+\]
+}
+
+\item Cada uno de los siguientes sistemas de ecuaciones tiene dos t\'erminos independientes. Resu\'elvelos a la vez mediante el m\'etodo de Gauss.
+{\setlength\arraycolsep{.1em}
+\begin{align*}
+& a) \ \left.
+\begin{array}{rrrrrrrrr|rr}
+2x_1 &-& 4x_2 & &     & &     &=& 10 & -8\\
+x_1  &-& 3x_2 & &     &+& x_4 &=& -4 & -2\\
+x_1  & &      &-& x_3 &+& 2x_4 &=& 4 & 9\\
+3x_1 &-& 4x_2 &+& 3x_3 &-& x_4 &=& -11 & -15
+\end{array}
+\right\} &
+b) \ \left.
+\begin{array}{rrrrrrr|rr}
+2x_1 &-& 4x_2 & & &=& 10 & -8\\
+x_1 &-& 3x_2  & & &=& -4 & -2\\
+x_1 & & &-& x_3  &=& 4 & 9\\
+4x_1 &-& 7x_2 &-& x_3 &=& 10 & -15
+\end{array}
+\right\}
+\\ &
+c) \ \left.
+\begin{array}{rrrrrrrrr|rr}
+2x_1 &-& 4x_2 & & && &=&10 & -8\\
+x_1 &-& 3x_2 && &+&x_4 &=& -4 & -2\\
+x_1 && &-& x_3 &+& 2x_4 &=& 4 & 9
+\end{array}
+\right\}
+\end{align*}
+}
+
+\noindent
+\medskip\textbf{Soluci\'on: } a) $\left( \frac{97}{13}, \frac{16}{13}, -\frac{157}{13}, -\frac{101}{13} \right)$ y $\left( 0, 2, -1, 4\right)$;
+b) $\left( 23, 9, 19 \right)$ e incompatible;\\
+c) $\left\{ \left( 23+2 \alpha, 9+\alpha, 19+4\alpha, \alpha \right) | \alpha \in \R \right\}$ y $\left\{ \left( -8+2\alpha , -2+\alpha, -17+4 \alpha , \alpha \right) | \alpha \in \R \right\}$.
+
+\medskip
+
+\item Aplica el m\'etodo de Gauss para calcular, si existe, la inversa de las siguientes matrices.
+\[
+a) \ \begin{pmatrix}
+1 & 3 & -2\\
+2 & 5 & -3\\
+-3 & 2 & -4
+\end{pmatrix} ,
+ \qquad b) \ \begin{pmatrix}
+1 & 3 & -2\\
+2 & 5 & -3\\
+3 & 8 & -5
+\end{pmatrix} .
+\]
+\textbf{Soluci\'on:}
+\[
+ a) \
+ \begin{pmatrix}
+14 & -8 & -1\\
+-17 & 10 & 1\\
+-19 & 11 & 1
+\end{pmatrix} , \qquad
+b) \ \text{no existe.}
+\]
+
+\item Sea $A\in \mathcal{M}_n$ una matriz invertible. Demuestra las siguientes propiedades:
+
+a) $(A^{-1})^{-1}=A$.
+
+b) $(rA)^{-1}=\frac{1}{r}A^{-1}$ para cada $r\in\R \setminus \{0\}$.
+
+c) $(A^p)^{-1}=(A^{-1})^{p}$, para cada $p\in\N$ con $p\geq 1$.
+
+\medskip
+
+\item Dadas dos matrices $A,B\in \mathcal{M}_n$, decide si se cumplen las siguientes igualdades (da una demostraci\'on en caso afirmativo y busca un contraejemplo en caso contrario):
+
+a) $(A+B)^2=A^2+B^2+2AB.$
+
+b) $(A+B)(A-B)=A^2-B^2$.
+
+\medskip
+
+\item Calcula $A^2$, $A^3$, $A^4$ para
+\[
+ a) \ A = \begin{pmatrix}
+1 & 1\\
+1 & 1
+\end{pmatrix} , \qquad
+ b) \ A=
+\begin{pmatrix}
+1 & 1 & 1\\
+0 & 1 & 1\\
+0 & 0 & 1
+\end{pmatrix} .
+\]
+Generaliza el resultado calculando $A^n$ para $n\in\N$. (\emph{Sugerencia}: intenta inferir el posible valor de $A^n$ y demu\'estralo por inducci\'on).
+
+\medskip
+
+\item Sea $A=
+\begin{pmatrix}
+2 & 1\\
+1 & 2
+\end{pmatrix}$.
+Calcula los valores de $\alpha, \beta\in\R$ para los que se cumple la igualdad $A^2+\alpha A+\beta I_2=0$, donde $I_2$ es la matriz identidad de orden $2$.
+
+\medskip
+
+\item Demuestra que la suma de matrices sim\'etricas es sim\'etrica. >Es el producto de matrices sim\'etricas una matriz sim\'etrica en general?
+
+
+\medskip
+
+\item Una matriz $A\in \mathcal{M}_n$ se llama \emph{idempotente} si $A^2=A$. Demuestra lo siguiente:
+
+a) La matriz $\begin{pmatrix}
+2 & -2 & -4\\
+-1 & 3 & 4\\
+1 & -2 & -3
+\end{pmatrix}$ es idempotente.
+
+b) Si $A$ es idempotente, entonces $I_n-A$ es idempotente ($I_n$ es la matriz identidad de orden $n$).
+
+c) Si $A$ es idempotente, entonces $(I_n-A) A=A (I_n-A)=0$.
+
+d) Si $A$ es idempotente e invertible entonces $A$ es la matriz identidad.
+
+\end{enumerate}
+
+
+
+
+\end{document}

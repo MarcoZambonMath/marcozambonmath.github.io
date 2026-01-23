@@ -1,0 +1,91 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+
+%% Para las columnas
+\usepackage{multicol}
+
+
+\usepackage{amssymb, amsmath}
+\usepackage{latexsym}
+\usepackage{multicol}
+
+
+%% Para numeraci?n autom?tica
+\newcounter{nroproblema}
+\setcounter{nroproblema}{1}
+\newcounter{nroapartado}
+\setcounter{nroapartado}{1}
+\newcommand{\n}{%
+    \vspace{.1in}\noindent{\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+\newcommand{\apartado}{\vspace*{0.2cm}\hspace*{0.2cm}%
+   {\bf \alph{nroapartado})}
+   \addtocounter{nroapartado}{1}%
+   }
+
+%% m?genes
+
+\setlength{\unitlength}{1mm} \addtolength{\voffset}{-15mm}
+\addtolength{\textheight}{30mm} \addtolength{\hoffset}{-15mm}
+\addtolength{\textwidth}{30mm}
+
+
+\begin{document}
+
+\begin{center}{\bf {\Large \'ALGEBRA I. HOJA 9}}\end{center}
+
+\n Hallar los autovalores de las siguientes matrices, y diagonalizar cuando
+sea posible (es decir, hallar una matriz inversible $P$ tal que $A = PDP^{-1}$).
+
+a) $\left( \begin{matrix}3 & 4 \\
+- 2 & - 3\end{matrix} \right)$.
+
+b) $\left( \begin{matrix}2 &  -1 \\
+1 & 0\end{matrix} \right)$.
+
+c) $\left( \begin{matrix} - 2 &  9 & -6 \\
+1 & -2 & 0\\
+ 3 & -9 & 5 \end{matrix} \right)$.
+ 
+d) $\left( \begin{matrix} 2 &  -1  & -1 \\
+0 & 3 & 2\\
+-1 & 1 & 2 \end{matrix} \right)$.
+
+e) $\left( \begin{matrix} 1 &  1  & 0 \\
+ 0 & 1 & 1\\
+0 & 0 & 1 \end{matrix} \right)$.
+
+f) $\left( \begin{matrix} -10 &  6  & 3 \\
+-26 & 16 & 8\\
+16 & -10 & -5 \end{matrix} \right)$.
+
+
+g) $\left( \begin{matrix} 0 &  -6  & -16 \\
+ 0 & 17 & 45\\
+0 & -6 & -16 \end{matrix} \right)$.
+ 
+ Probar que las matrices en f) y g) son similares.
+ 
+ \n  Diagonalizar $A=\left( \begin{matrix}1 & 4 \\
+2 & 3\end{matrix} \right)$. Calcular $A^5$.
+
+Respuesta parcial: los autovalores son 5 y -1.
+
+\n Sea $a\in\mathbb{R}$, $a\ne 0$. Demostrar que
+$\left( \begin{matrix}1 & a \\
+0 & 1\end{matrix} \right)$ no es diagonalizable.
+
+\n  Probar que si  $a\in\mathbb{R}$
+no es un múltiplo entero de $2\pi$, entonces la matriz $\left( \begin{matrix}\cos a & -\sin a \\
+\sin a & \cos a\end{matrix} \right)$ no tiene autovectores.
+
+\n  Probar que si  $a\in\mathbb{R}$, entonces la matriz $A := \left( \begin{matrix}\cos a & \sin a \\
+\sin a & - \cos a\end{matrix} \right)$  tiene (al menos) un autovector $v$ asociado al autovalor
+$1$. Probar que si $w$ es perpendicular a $v$, entonces $A w = - w$.
+
+
+
+\end{document}

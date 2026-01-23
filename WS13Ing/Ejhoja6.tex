@@ -1,0 +1,229 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx,amssymb,latexsym,amsmath,verbatim}
+\usepackage{sans}
+\usepackage{graphicx,amssymb,latexsym,amsmath}
+\renewcommand{\thepage}{}
+\renewcommand{\baselinestretch}{1}
+\setlength{\parindent}{2em} \setlength{\textwidth}{18cm}
+\setlength{\textheight}{24cm} \setlength{\topmargin}{-1cm}
+\setlength{\oddsidemargin}{-1cm}
+%\hyphenation{va-rie-da-des
+%va-rie-dad pa-ra-le-lo a-si-mi-la a-pro-ve-cha-bles u-ni-for-me
+%u-ni-for-me-men-te si-guien-te si-guien-tes re-su-mien-do
+%ha-bi-tua-les}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Para empezar una interrogativa: ?`  %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Para partir una matriz en cajas:         %%%%%
+%% \[ \left(\begin{array}{c|c} A&B          %%%%%
+%% \\ \cline{1-2} C&D\end{array}\right) \]  %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%SETS OF NUMBERS
+%\newcommand{\R}{\mbox{${\bf R}$}}                  %reals
+\newcommand{\R}{\mbox{${\mathbb R}$}}               %reals
+%\newcommand{\C}{\mbox{${\bf C}$}}                  %complex
+\newcommand{\C}{\mbox{${\mathbb C}$}}
+%\newcommand{\N}{\mbox{${\bf N}$}}                  %natural numbers
+\newcommand{\N}{\mbox{${\mathbb N}$}}
+%\newcommand{\Z}{\mbox{${\bf Z}$}}                  %integers
+\newcommand{\Z}{\mbox{${\mathbb Z}$}}
+%\newcommand{\Q}{\mbox{${\bf Q}$}}                  %rationals
+\newcommand{\Q}{\mbox{${\mathbb Q}$}}
+\newcommand{\gp}{\mbox{${\bf F}_{p}$}}             % Fp
+\newcommand{\pea}{\mbox{$ {\bf Z}_{p}$}}           %p-adic integers
+\newcommand{\zn}{\mbox{${\bf Z}/{n}$}}             %Z/n
+\newcommand{\zp}{\mbox{${\bf Z}/{p}$}}             %Z/p
+\newcommand{\Zh}{\mbox{$\hat{{\bf Z}}$}}           %Z^
+\newcommand{\xp}{\mbox{${\bf F}_{p}^{*}$}}         %units Fp
+
+%GREEK LETTERS
+\newcommand{{\ff}}{\mbox{$\varphi$}}                   %phi
+\newcommand{\fp}{\mbox{$\varphi_{p}$}}               %phi_p
+\newcommand{\al}{\mbox{$\alpha$}}                    %alpha
+\newcommand{\be}{\mbox{$\beta$}}                     %beta
+\newcommand{\px}{\mbox{$\varepsilon$}}               %epsilon
+\newcommand{\Ga}{\mbox{$\Gamma$}}                    %capital gamma
+\newcommand{\ga}{\mbox{$\gamma$}}                    %small gamma
+
+%LOGIC SYMBOLS
+\newcommand{\ex}{\mbox{$\exists$}}                   %there is
+\newcommand{\fa}{\mbox{$\forall$}}                   %forall
+\newcommand{\stf}{\mbox{$\models$}}                  %satisfies
+\newcommand{\y}{\mbox{$\wedge$}}                     %and
+%\newcommand{\o}{\mbox{$\vee$}}                       %or
+\newcommand{\si}{\mbox{$\Longrightarrow$}}           %implies
+\newcommand{\ekiv}{\mbox{$\Longleftrightarrow$}}     %equiv
+
+%OTHERS
+\newcommand{\dm}{\mbox{$\preceq$}}                   %dominates
+
+
+
+
+\begin{document}
+
+\small
+
+\noindent{\sf Universidad Aut\'onoma de Madrid  \hfill \'Algebra.
+Curso 2013--14} \vspace{0.1cm} \hrule \vspace{0.1cm} \noindent{\sf
+Ingenier\'ia Inform\'atica} \vspace{0.1cm}
+\begin{center}
+{\bfseries  \'ALGEBRA. HOJA 6.}
+\end{center}
+
+\begin{enumerate}
+%\renewcommand{\theenumi}{\bf\arabic{enumi})\ }
+\renewcommand{\labelenumi}{\bf\arabic{enumi})\ }
+%\renewcommand{\theenumii}{\alph{enumii})\ }
+\renewcommand{\labelenumii}{\alph{enumii})\ }
+\medskip
+
+
+
+\item Calcula los siguientes determinantes:
+\begin{align*}
+ & a) \
+ \begin{vmatrix}
+ 4 & -2 & 5 & 1 \\
+ -4 & 1 & 0 & -1 \\
+ 2 & 1 & -1 & 1 \\
+ 1 & 0 & 1 & -2
+ \end{vmatrix}
+ && b) \
+  \begin{vmatrix}
+ -4 & 1 & 1 & 1 & 1 \\
+ 1 & -4 & 1 & 1 & 1 \\
+ 1 & 1 & -4 & 1 & 1 \\
+ 1 & 1 & 1 & -4 & 1 \\
+ 1 & 1 & 1 & 1 & -4
+ \end{vmatrix}
+ && c) \
+ \begin{vmatrix}
+ x & a & a & a \\
+ a & x & a & a  \\
+ a & a & x & a \\
+ a & a & a & x
+ \end{vmatrix}
+ && d) \
+ \begin{vmatrix}
+ 1 & 2 & 3 & 4 & 5 \\
+ 2 & 2 & 3 & 4 & 5 \\
+ 3 & 3 & 3 & 4 & 5 \\
+ 4 & 4 & 4 & 4 & 5 \\
+ 5 & 5 & 5 & 5 & 5
+ \end{vmatrix}  \\
+ & e) \
+ \begin{vmatrix}
+ a_{11} & a_{12} & a_{13} & \cdots & a_{1n} \\
+ 0 & a_{22} & a_{23} & \cdots & a_{2n} \\
+ 0 & 0 & a_{33} & \cdots & a_{3n} \\
+ \vdots & \vdots & \vdots & \ddots & \vdots \\
+ 0 & 0 & 0 & \cdots & a_{nn}
+ \end{vmatrix} .
+\end{align*}
+
+\noindent
+\medskip\textbf{Soluci\'on: } a) $63$;
+b) $0$;
+c) $(x-a)^3 (3a + x)$;
+d) $5$;
+e) $a_{11} \cdot a_{22} \cdot a_{33} \cdots a_{nn}$.
+
+\medskip
+
+
+\item Utilizando determinantes, calcula, cuando exista, la inversa de las siguientes matrices
+\begin{equation*}
+ a) \
+ \begin{pmatrix}
+ 1 & 2 & 3 & 4 \\
+ 2 & 3 & 5 & -2 \\
+ 3 & 5 & 1 & 1 \\
+ 1 & 1 & -5 & -7
+ \end{pmatrix} \quad
+ b) \
+  \begin{pmatrix}
+ 3 & 3 & 2 \\
+ 4 & 3 & 3 \\
+ 1 & 1 & 1
+ \end{pmatrix} \quad
+ c) \
+ \begin{pmatrix}
+ a & 1 & 1  \\
+ 2 & -1 & 1 \\
+ b & -2 & -1
+ \end{pmatrix} .
+\end{equation*}
+
+
+\noindent
+\medskip\textbf{Soluci\'on: } a) No existe;
+b) $\begin{pmatrix}
+      0  &   1  &  -3\\
+      1  &  -1  &   1\\
+      -1  &  0  &   3
+\end{pmatrix}$;\\
+c) $\displaystyle \frac{1}{3a + 2b - 2}
+\begin{pmatrix}
+ 3 & -1 &   2 \\
+ b + 2 &  -a - b & -a + 2  \\
+ b - 4 & 2a + b & -a - 2
+\end{pmatrix}$
+si $3a + 2b - 2 \neq 0$; no existe si $3a + 2b - 2 =0$.
+
+
+\medskip
+
+\item Decide, usando determinantes, si la matriz de coeficientes de los siguientes sistemas de ecuaciones es invertible. Cuando lo sea, calcula la soluci\'on del sistema usando la regla de Cramer.
+{\setlength\arraycolsep{.1em}
+\begin{equation*}
+ a) \ \left.
+\begin{array}{rrrrrrrr}
+x_1 &+& 2x_2 &-& 3x_3 &=& 7 \\
+2 x_1  &+& x_2 &+ & x_3 &=& 6\\
+a x_1  &-& x_2 &+& 3 x_3 &=& -1
+\end{array}
+\right\} \qquad
+b) \ \left.
+\begin{array}{rrrrrrrr}
+2x_1 &-& 4x_2 & & &=& b \\
+x_1 &-& 3x_2  & & &=& -4 \\
+x_1 &+& a x_2 &-& x_3  &=& 4
+\end{array}
+\right\}
+\end{equation*}
+}
+
+\noindent
+\medskip\textbf{Soluci\'on: } a) No es invertible si $a = \frac{2}{5}$; cuando $a \neq \frac{2}{5}$ la soluci\'on es $\left( \frac{5}{5a - 2} , \frac{25a - 17}{5a - 2} , \frac{5 a - 5}{5a - 2} \right)$; \\
+b) $\left( \frac{3b}{2} + 8 , \frac{b}{2} + 4 , \frac{4a}{3} + \frac{b}{2} + \frac{ab}{6} + \frac{4}{3} \right)$.
+\medskip
+
+\item Comprueba que
+\[
+  \begin{vmatrix}
+ a_{11} & a_{12} & a_{13} & a_{14} \\
+ a_{21} & a_{22} & a_{23} & a_{24} \\
+ 0 & 0 & a_{33} & a_{34} \\
+ 0 & 0 & a_{43} & a_{44}
+ \end{vmatrix} =
+\begin{vmatrix}
+ a_{11} & a_{12} \\
+ a_{21} & a_{22}
+ \end{vmatrix} \cdot \begin{vmatrix}
+  a_{33} & a_{34} \\
+ a_{43} & a_{44}
+ \end{vmatrix} .
+\]
+
+
+\end{enumerate}
+
+
+
+
+\end{document}

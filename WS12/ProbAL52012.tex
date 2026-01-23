@@ -1,0 +1,179 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+
+%% Para las columnas
+\usepackage{multicol}
+
+
+\usepackage{amssymb, amsmath}
+\usepackage{latexsym}
+\usepackage{multicol}
+
+
+%% Para numeraci?n autom?tica
+\newcounter{etiqueta}
+\newcounter{nroproblema}
+
+\setcounter{nroproblema}{1}
+\newcounter{nroapartado}
+\setcounter{nroapartado}{1}
+\newcommand{\n}{%
+    \vspace{.1in}\noindent{\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+\newcommand{\apartado}{\vspace*{0.2cm}\hspace*{0.2cm}%
+   {\bf \alph{nroapartado})}
+   \addtocounter{nroapartado}{1}%
+   }
+
+%% m?genes
+
+\setlength{\unitlength}{1mm} \addtolength{\voffset}{-15mm}
+\addtolength{\textheight}{30mm} \addtolength{\hoffset}{-15mm}
+\addtolength{\textwidth}{30mm}
+
+
+\begin{document}
+
+\begin{center}{\bf {\Large \'ALGEBRA I. HOJA 5}}\end{center}
+
+\
+
+Problemas de LADW: pp. 29-30, 6.1-6.12, p. 31, 7.1-7.5.
+
+\
+
+
+\n Estudiar los rangos de las siguientes matrices como función de $\lambda$: 
+$$\left(\begin{matrix}
+2 &3 & 1& 7\\ 
+3&  7 & -6 &-2\\ 
+5& 8& 1 & \lambda
+\end{matrix}\right)
+, \left(\begin{matrix}
+3& 1& 1& 4\\ 
+\lambda &4& 10& 1\\ 
+1& 7& 17& 3\\ 
+2& 2& 4& 3 \end{matrix}\right)
+, \left(\begin{matrix}
+1 & \lambda & -1& 2\\ 
+2& -1 &\lambda&  5\\ 
+1 &10& -6& 1 \end{matrix}\right)$$
+
+
+
+\n Estudiar si son subespacios vectoriales de $\mathbb{R}^2$ los siguientes subconjuntos: 
+
+\apartado $S_1=\{(x, y) \in \mathbb{R}^2,\, y -x = 0\}$, 
+
+\apartado $S_2 =\{(x, y) \in \mathbb{R}^2,\, y- x = 1\}$, 
+
+\apartado $S_3 =\{(x, y) \in \mathbb{R}^2,\, xy = 0\}$, 
+
+\apartado $S_4 =\{(x, y) \in \mathbb{R}^2,\, y = |x|\}$, 
+
+\apartado $S_5 =\{(x, y) \in \mathbb{R}^2,\, |y| = |x|\}$,
+
+\apartado $S_6=\{(x,y) \in \mathbb{R}^2,\, x\geq 0 \}$.
+
+\vspace{0.2cm}
+
+\n 
+\apartado Comprobar que aunque $\mathbb{Q}$ est\'a contenido en $\mathbb{R}$ 
+y sus operaciones est\'an inducidas por las de $\mathbb{R}$, $\mathbb{Q}$ no es subespacio vectorial de $\mathbb{R}$ 
+(considerado como espacio vectorial de dimensión 1 sobre $\mathbb{R}$). 
+
+\apartado Comprobar que $\mathbb{R}$ no es espacio vectorial sobre $\mathbb{C}$. 
+
+\apartado Comprobar que $\mathbb{C}$ es un espacio vectorial de dimensión 2 sobre $\mathbb{R}$.
+
+
+\vspace{0.2cm}
+
+\n Estudiar si son subespacios vectoriales de $\mathbb{C}$, considerado como espacio vectorial complejo, 
+
+\apartado el conjunto de los n\'umeros reales,
+
+\apartado el conjunto de los n\'umeros imaginarios puros. 
+
+\vspace{0.2cm}
+
+
+
+
+\n Estudiar si son subespacios vectoriales del espacio vectorial real de funciones reales 
+de variable real los siguientes subconjuntos: 
+
+\apartado $S_1=\{f : f (0) = 0\}$,
+
+\apartado $S_2 = \{f : f (1) = 0\}$,
+
+\apartado $S_3 = \{f : f (0) = 1\}$. 
+
+\vspace{0.2cm}
+
+\n Averiguar si son subespacios vectoriales de los correspondientes espacios vectoriales los 
+siguientes subconjuntos: 
+
+\apartado  El subconjunto de los polinomios de variable real y con coeficientes reales, dentro de las 
+funciones reales de variable real. 
+
+\apartado El subconjunto de los polinomios de grado $\leq n$, de variable real y con coeficientes reales, 
+siendo $n$ fijo, dentro del espacio vectorial de las funciones reales de variable real. 
+
+
+
+\apartado El subconjunto de polinomios divisibles por $x-1$,  grado $\leq 3$,  de variable real y con 
+coeficientes reales,  como subconjunto del espacio vectorial  de los polinomios de variable real, 
+ grado $\leq 3$, y con coeficientes reales. 
+
+
+\n Averiguar si son subespacios vectoriales de $\mathcal{M}_{2\times 2}(\mathbb{R})$ los siguientes subconjuntos: 
+
+\apartado Las matrices $2\times 2$ con n\'umeros racionales.
+
+\apartado Las matrices de n\'umeros reales de orden $2\times 2$ de traza cero. (Se llama traza de una 
+matriz a la suma de los elementos de su diagonal). 
+
+\apartado Las matrices de n\'umeros reales de orden $2\times 2$ de rango $1$. 
+
+\apartado Las matrices de n\'umeros reales de orden $2\times 2$ que conmutan con la matriz 
+B, siendo B una matriz fija $2\times 2$. 
+
+\vspace{0.2cm}
+
+\n Averiguar si los siguientes subconjuntos son subespacios vectoriales de $\mathcal{M}_{n\times n}(K)$: 
+
+\apartado Las matrices diagonales.
+
+\apartado Las matrices triangulares superiores. 
+
+\apartado Las matrices sim\'etricas (las que satisfacen que $A^t=A$). 
+
+\apartado Las matrices antisim\'etricas (las que satisfacen que $A=-A^t$).
+
+\vspace{0.2cm}
+
+\n Averiguar si el subconjunto de las matrices escalonadas de m filas y n columnas, 
+es un subespacio vectorial del espacio  de matrices con entradas   reales (o complejas) de orden $m\times n$. 
+
+\vspace{0.2cm}
+
+
+
+\end{document}
+
+\n Estudiar, seg\'un los valores de $\lambda$, la compatibilidad, o consistencia, de los sistemas $AX = b$, donde la matriz $(A|b)$ es:
+$$\left(\begin{array}{ccc|c}
+3& 2 &5 &1 \\
+2 &4 &6& 3\\ 
+5 &7& \lambda & 5 
+\end{array}\right), \left(\begin{array}{ccc|c}
+\lambda & 1 &  1& 1\\
+ 1 & \lambda & 1 & 1 \\
+1& 1& \lambda & 1 \\
+\end{array}\right).$$
+
+\vspace{0.2cm}

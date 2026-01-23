@@ -1,0 +1,364 @@
+\documentclass[12pt,a4paper]{amsart}
+ 
+ %\usepackage[latin1]{inputenc}
+\usepackage[applemac]{inputenc}%para mac
+
+
+%\usepackage{latexcad}
+
+\usepackage{graphicx}
+
+
+% numeraci\'on autom\'atica (para problemas, principalmente)
+\newcounter{number}
+\setcounter{number}{1}
+\newcommand{\n}{\vspace{0.3cm}\noindent{\bf \arabic{number})\ }\addtocounter{number}{1}}
+
+% apartados, nivel 1
+\newcommand{\pr}[1]{\vspace{0.1cm}\hspace*{0.1cm} \textbf{#1) }}
+
+% apartados, nivel 2
+\newcommand{\prr}[1]{\vspace{0.1cm}\hspace*{0.5cm}\textbf{#1) }}
+
+
+\newcommand{\df}{\mathop=\limits^{\sf def}}
+\newcommand{\gfo}{G=(V,A)}
+\newcommand{\gfop}{G^{\prime}=(V^{\prime},A^{\prime})}
+\newcommand{\gfoc}{G^{\textsc{c}}=(V^{\textsc{c}},A^{\textsc{c}})}
+\newcommand{\RR}{\mathbb{R}} %by Marco
+\newcommand{\CC}{\mathbb{C}}
+% para combinar figuras y texto; probar ambos
+%\usepackage{wrapfig}
+%\usepackage{floatflt}
+
+\setlength{\parindent}{0pt}
+
+\newcommand{\esp}{\vspace{0.1cm}} % espacio entre ejercicios
+
+\usepackage[hmargin=1.5cm,vmargin=2cm]{geometry}
+
+
+
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\pagestyle{empty}
+
+\begin{center}
+\framebox{\rule[0mm]{0cm}{10mm}\qquad\qquad}
+\framebox{\rule[0mm]{0cm}{10mm}\qquad\qquad}
+\framebox{\rule[0mm]{0cm}{10mm}\qquad\qquad}
+\framebox{\rule[0mm]{0cm}{10mm}\qquad\qquad}
+\setlength{\fboxrule}{3pt}
+\framebox{\rule[0mm]{0cm}{10mm}\qquad\qquad}
+\end{center}
+
+\vskip .4 cm
+\begin{center}
+  \textsc{Algebra I} \hfill \textbf{Examen Final, Convocatoria Ordinaria} \hfill \textsc{Curso 2012/13}\\
+\textbf{\Large{SOLUCIONES}}  
+\end{center}
+
+\vskip .5 cm
+
+APELLIDOS\hspace{7cm}
+NOMBRE\\
+DNI
+
+\vskip .5 cm
+
+
+INSTRUCCIONES: Entregar UNICAMENTE estas hojas. Cuando se pide en un apartado responder  V (verdadero) o F
+(falso), responder {\em \'unicamente} V o F, marcando adecuadamente la opci\'on
+elegida. \\
+IMPORTANTE: Se prohibe el uso de calculadoras, libros, apuntes, tel\'efonos moviles,
+y en general, de toda la tecnolog\'ia moderna (posterior al bol\'igrafo). \\IMPORTANTE: En los problemas
+II, III y IV las respuestas deben justificarse adecuadamente.
+
+
+\vskip .2 cm
+
+INFORMACION: Los puntos asignados a las preguntas SI o NO son: respuesta correcta,
+1 punto, respuesta incorrecta,
+- 1 punto, en blanco, 0 puntos. Valor m\'{\i}nimo de cualquier problema: 0 puntos.
+
+
+
+\vskip .4 cm
+
+
+\pr{I}  1) Ninguna aplicaci\'on lineal $T:\mathbb{R}^3\to \mathbb{R}^7$ es sobreyectiva.
+\vspace{-6mm}
+ \begin{flushright} \ \ \ \framebox{V} \ \ \ F\end{flushright}
+ \emph{La imagen de una aplicaci\'on $T:\mathbb{R}^3\to \mathbb{R}^7$ es un subespacio de $\RR^7$ de dimensi\'on $\le 3$, por lo tanto no puede ser todo $\RR^7$.} 
+  \vskip .2 cm
+2)  Si $T:\mathbb{R}^3\to \mathbb{R}^7$ es lineal, entonces $\operatorname{dim} Ker(T) + \operatorname{dim} Ran(T) = 7$,
+donde $Ker(T)$ y $Ran(T)$ denotan el n\'ucleo y el rango (o im\'agen) de $T$, respectivamente. \vspace{-6mm}
+ \begin{flushright} \ \ \ V \ \ \ \framebox{F} \end{flushright}
+ \emph{ $\operatorname{dim} Ker(T) + \operatorname{dim} Ran(T)$ es igual a la dimensi\'on del dominio de $T$, que es $3$.} 
+  \vskip .2 cm
+3) Los espacios vectoriales $\mathbb{C}^n$ y $\mathbb{P}_{n - 1}(\mathbb{C})$ son isomorfos
+($\mathbb{P}_{n - 1}(\mathbb{C})$ denota el espacio de polinomios en una variable, con coeficientes
+complejos y grado $< n$).
+\vspace{-6mm}
+ \begin{flushright} \ \ \ \framebox{V}  \ \ \ F\end{flushright}
+  \emph{Ambos son espacios vectoriales complejos de dimensi\'on $n$.} 
+  \vskip .2 cm
+4) Multiplicaci\'on por un n\'umero complejo define una aplicaci\'on $\mathbb{R}$-lineal de $\mathbb{R}^2$
+en $\mathbb{R}^2$.\vspace{-6mm}
+ \begin{flushright} \ \ \ \framebox{V}  \ \ \ F\end{flushright}
+   \emph{Si llamamos $c$ este n\'umero complejo y identificamos $\RR^2$ con $\CC$, obtemenos la aplicaci\'on $\CC\to \CC,z\mapsto cz$,
+   que claramente es $\CC$-lineal, y por lo tanto tambi\'en $\RR$-lineal.} 
+  \vskip .2 cm 
+
+5) Multiplicaci\'on por un n\'umero complejo $c$ define una aplicaci\'on $\mathbb{R}$-lineal de $\mathbb{R}^2$
+en $\mathbb{R}^2$ cuyo determinante es $|c|^2$.\vspace{-6mm}
+ \begin{flushright} \ \ \ \framebox{V}  \ \ \ F\end{flushright}
+     \emph{Si el numero complejo es $c=a+ib$, entonces la aplicaci\'on es $\RR^2\to \RR^2, \left(\begin{array}{c} x\\ y   \end{array}\right)\mapsto \left(\begin{array}{cc}a & -b \\b & a\end{array}\right)
+  \left(\begin{array}{c} x\\ y   \end{array}\right)$, que claramente tiene determinante  $|c|^2$.} 
+  \vskip .2 cm
+ 6) Suponemos que los productos de matrices $AB$ y $BA$ est\'an bien definidos.
+Entonces $tr(AB) = tr(BA)$, donde $tr$ denota la traza.
+\vspace{-6mm}
+ \begin{flushright} \ \ \ \framebox{V}  \ \ \ F\end{flushright}
+   \emph{$Tr(AB)=\sum_i(AB)_{ii}=\sum_i(\sum_j A_{ij} B_{ji})=
+   \sum_j(\sum_i A_{ij} B_{ji})=\sum_j(\sum_i B_{ji} A_{ij})=\sum_j(BA)_{jj}=Tr(BA).$
+   } 
+  \vskip .2 cm
+
+7) Suponemos que los productos de matrices $AB$ y $BA$ est\'an bien definidos.
+Entonces $\operatorname{det}(AB) = \operatorname{det}(BA)$.
+\vspace{-6mm}
+ \begin{flushright} \ \ \ V \ \ \ \framebox{F} \end{flushright}
+  \emph{Toma $A=(1\;\;1)$ y $B=\left(\begin{array}{c} 1\\ 1   \end{array}\right)$. Entonces $AB=2$, mientras que $BA=\left(\begin{array}{cc}1 & 1 \\1 & 1\end{array}\right)$ tiene determinante cero.} 
+  \vskip .2 cm
+ 8) Suponemos que los productos de matrices $AB$ y $BA$ est\'an bien definidos.
+Entonces $AB$ es inversible si y solo si $BA$ lo es.
+\vspace{-6mm}
+ \begin{flushright} \ \ \ V \ \ \ \framebox{F} \end{flushright}
+   \emph{Toma $A,B$ como arriba.} 
+  \vskip .2 cm
+9) Si una matriz tiene determinante positivo, entonces es diagonalizable.
+\vspace{-6mm}
+ \begin{flushright} \ \ \ V \ \ \ \framebox{F} \end{flushright}
+   \emph{$\left(\begin{array}{cc}1 & 1 \\0 & 1\end{array}\right)$
+tiene determinante $1$, pero no existe una base de $\RR^2$ que consiste de autovectores de esta matriz.      } 
+  \vskip .2 cm
+
+10) Si la matriz $A$ es diagonal, $20\times 20$, y  satisface $A_{ii} > 0$ para todo $i$, 
+entonces define un producto escalar $(x,y) := x^T A y$ en $\mathbb{R}^{20}$.
+\vspace{-6mm}
+ \begin{flushright} \ \ \ \framebox{V}  \ \ \ F\end{flushright}
+  \emph{La aplicaci\'on $(\cdot,\cdot)$ es claramente bilineal  y sim\'etrica. Es definida positiva porque $A_{ii} > 0$ para todo $i$.} 
+  \vskip .2 cm
+
+\newpage
+\pr{II}  
+Sean
+$$v_1=\left(\begin{array}{c} 1\\1  \\0     \end{array}\right),
+v_2=\left(\begin{array}{c} 1\\  -1\\0   \end{array}\right),
+v_3=\left(\begin{array}{c} 0\\ 0 \\1     \end{array}\right),
+w_1=\left(\begin{array}{c} 1\\  2\\ 3    \end{array}\right),
+w_2=\left(\begin{array}{c} 1\\  1\\ 1    \end{array}\right)
+.$$
+Adem\'as, sean $e_1,e_2,e_3$ los vectores de la base can\'onica de $\RR^3$.
+
+ 
+1) (5 puntos) Encuentra explicitamente la matriz  $Mat_{3\times 3}(\RR)$
+que corresponde, con respecto a la base can\'onica, a la aplicaci\'on lineal
+$S \colon \RR^3\to \RR^3$ determinada por $S(e_1)=w_1$, $S(e_2)=w_2$,
+$S(e_3)=\vec{0}$.
+ 
+ 
+\vskip 0.5cm
+ \emph{  La condici\'on $S(e_1)=w_1$ implica que la primera columna de la matriz que buscamos es $w_1$. De manera similar, la segunda y tercera columna son $w_2$ y $\vec{0}$. Entonces la matriz que buscamos es
+$\left(\begin{array}{ccc}1 & 1 & 0 \\2 & 1 & 0 \\3 & 1 & 0\end{array}\right).$}
+
+\vskip 7cm
+ 
+ 
+2) (5 puntos) Encuentra explicitamente la matriz  $Mat_{3\times 3}(\RR)$
+que corresponde, con respecto a la base can\'onica, a la aplicaci\'on lineal
+$R \colon \RR^3\to \RR^3$ determinada por $R(v_1)=e_1$, $R(v_2)=e_2$,
+$R(v_3)=e_3$.
+%\vskip 10 cm
+\vskip 0.5cm \emph{Primero hallamos la matriz que describe $R^{-1}$. Nota que 
+$R^{-1}(e_1)=v_1$, $R^{-1}(e_2)=v_2$,
+$R^{-1}(e_3)=v_3$. Por lo tanto, argumentando como en 1), vemos la matriz que describe $R^{-1}$ es $A:=\left(\begin{array}{ccc}1 & 1 & 0 \\1 & -1 & 0 \\0 & 0 & 1\end{array}\right).$ La matriz que
+describe $R$ es su inversa $A^{-1}=\left(\begin{array}{ccc}\frac{1}{2} & \frac{1}{2} & 0 \\\frac{1}{2} & -\frac{1}{2} & 0 \\0 & 0 & 1\end{array}\right).$}
+
+\newpage
+3)  (5 puntos)  Sea
+$T \colon \RR^3\to \RR^3$ la aplicaci\'on lineal determinada por $T(v_1)=w_1$, $T(v_2)=w_2$,
+$T(v_3)=\vec{0}$. Dar una base de la imagen de $T$.
+
+\vskip 0.5cm\emph{
+La imagen es $Span\{w_1,w_2,\vec{0}\}=Span\{w_1,w_2\}$. Como $\{w_1,w_2\}$ es una familia linealmente independiente, entonces es una base de la imagen de $T$.
+} 
+
+\vskip 7 cm
+4)  (5 puntos) Encuentra explicitamente la matriz  $Mat_{3\times 3}(\RR)$
+que corresponde, con respecto a la base can\'onica, a la aplicaci\'on lineal
+$T$.
+
+\vskip 0.5cm
+\emph{ Tenemos $T=S\circ R$. La matriz que describe $T$ por lo tanto es
+$$\left(\begin{array}{ccc}1 & 1 & 0 \\2 & 1 & 0 \\3 & 1 & 0\end{array}\right)\left(\begin{array}{ccc}\frac{1}{2} & \frac{1}{2} & 0 \\\frac{1}{2} & -\frac{1}{2} & 0 \\0 & 0 & 1\end{array}\right)=
+\left(\begin{array}{ccc}1 &0 & 0 \\\frac{3}{2} & \frac{1}{2} & 0 \\2& 1 & 0\end{array}\right)
+.$$}
+
+
+\newpage
+\pr{III}  Dado el siguiente sistema de ecuaciones lineales:
+
+
+$$\left. \begin{array} {r@{\hspace{1mm}}r@{\hspace{1mm}}r@{\hspace{1mm}}r@{\hspace{2mm}}r@{\hspace{2mm}}r}
+5 x      & - y & -2 z   &=&1 \\
+-2x & +6y & -3z       &=& 3 \\
+-2 x&  -y           &+ 4 z   &=& 10
+\end{array}\right\}$$
+
+\renewcommand{\labelenumi}{\alph{enumi}$)$ }
+\begin{enumerate}
+\item (10 puntos) Escribir el sistema en forma matricial $A \mathbf{x} = \mathbf{b}$ y calcular 
+las soluciones del sistema o justificar que no las tiene. 
+
+\vskip 0.5cm
+\emph{El sistema en forma matricial es 
+$$\left(\begin{array}{ccc}5 & -1 & -2 \\-2 & 6 & -3 \\-2 & -1 & 4\end{array}\right)
+\left(\begin{array}{c} x\\  y\\z   \end{array}\right)=
+\left(\begin{array}{c} 1\\  3\\10   \end{array}\right).$$
+Resolvemos utilizando el m\'etodo de Gauss:
+$$\left(\begin{array}{ccc|c}5 & -1 & -2 &1\\-2 & 6 & -3 &3\\-2 & -1 & 4&10\end{array}\right)\rightsquigarrow
+\left(\begin{array}{ccc|c}5 & -1 & -2 &1\\0 & \frac{28}{5} & -\frac{19}{5} &\frac{17}{5}\\0 & -\frac{7}{5} & \frac{16}{5}&\frac{52}{5}\end{array}\right)\rightsquigarrow
+\left(\begin{array}{ccc|c}5 & -1 & -2 &1\\0 & \frac{28}{5} & -\frac{19}{5} &\frac{17}{5}\\0 & 0 & \frac{45}{20}&\frac{225}{20}\end{array}\right).$$
+Obtenemos $z=\frac{225}{45}=5$. De $28y=17+19\cdot 5=112$ obtenemos $y=4$. De $5x=4+10+1=15$ obtenemos $x=3$.\\
+En conclusi\'on, la \'unica soluci\'on es $x=3,y=4,z=5$.
+}
+\newpage
+
+\item (10 puntos) Hallar una base para el n\'ucleo (kernel) de la siguiente matriz; hallar tambi\'en una base para su
+espacio de columnas:
+$\left[
+\begin{array}{ccccc}
+ 1 & -1 & 2 & 3 & 0 \\
+ -1 & 0 & -4 & 3 & -1 \\
+ 2 & -1 & 6 & 0 & 1 \\
+-1 & 2 & 0 & -1 & 1 \\
+\end{array}
+\right].$
+
+\end{enumerate}
+
+ \vskip 0.5cm
+\emph{Haciendo operaci\'ones de filas, llevamos la matriz a forma escalonada:
+\begin{align*}
+A:=&\left[
+\begin{array}{ccccc}
+ 1 & -1 & 2 & 3 & 0 \\
+ -1 & 0 & -4 & 3 & -1 \\
+ 2 & -1 & 6 & 0 & 1 \\
+-1 & 2 & 0 & -1 & 1 \\
+\end{array}
+\right]\rightsquigarrow
+\left[
+\begin{array}{ccccc}
+ 1 & -1 & 2 & 3 & 0 \\
+ 0 & -1 & -2 & 6 & -1 \\
+0 & 1 & 2 & -6 & 1 \\
+0 & 1 & 2 & 2 & 1 \\
+\end{array}
+\right]
+\\ \rightsquigarrow&
+\left[
+\begin{array}{ccccc}
+ 1 & -1 & 2 & 3 & 0 \\
+ 0 & 1 & 2 & 2 & 1 \\
+0 & 1 & 2 & -6 & 1 \\
+0 & 0 & 0 & 0 & 0 \\
+\end{array}
+\right]\rightsquigarrow
+\left[
+\begin{array}{ccccc}
+ 1 & -1 & 2 & 3 & 0 \\
+ 0 & 1 & 2 & 2 & 1 \\
+0 & 0 & 0 & -8 & 0 \\
+0 & 0 & 0 & 0 & 0 \\
+\end{array}
+\right]:=E_A
+\end{align*}
+Para encontrar el n\'ucleo de $A$, resolvemos el sistema homogeneo correspondente a la matriz $E_A$. Las variables libres son $x_3$ y $x_5$. Obtenemos $x_4=0$, $x_2=-2x_3-x_5$, y de $x_1-x_2+2x_3=0$ obtenemos $x_1=-4x_3-x_5$. Por lo tanto el nucleo es
+$$\left\{
+\left(\begin{array}{c} -4x_3-x_5\\  -2x_3-x_5\\x_3\\0\\x_5   \end{array}\right): x_3,x_5\in \RR
+\right\}=
+\left\{x_3
+\left(\begin{array}{c} -4\\  -2\\1\\0\\0   \end{array}\right)
++x_5
+\left(\begin{array}{c} -1\\  -1\\0\\0\\1   \end{array}\right)
+: x_3,x_5\in \RR
+\right\}.$$
+Una base del espacio de columnas de $A$ consiste de las columnas de $A$ correspondentes a las columnas de $E_A$ que tienen pivotes, es decir, la primera, segunda y cuarta. Por lo tanto, ena base del espacio de columnas de $A$ es 
+$$\left\{
+\left(\begin{array}{c} 1\\  -1\\2\\-1  \end{array}\right),
+\left(\begin{array}{c} -1\\  0\\-1\\2  \end{array}\right),
+\left(\begin{array}{c} 3\\  3\\0\\-1  \end{array}\right)\right\}.$$
+}
+
+\newpage
+ \vskip -1cm
+\pr{IV}  
+1)  (5 puntos) Calcular el determinante de la matriz
+$A=\left(\begin{array}{cccc}1 & 0 & 0 & 0 \\2 & 2 & 0 & 0 \\3 & 3 & 3 & 0 
+\\4 & 4 & 4 & 4\end{array}\right).$
+\vskip 0.5cm
+\emph{
+$A$ es una matriz triangular, entoces el determinante es el producto de los elementos en la diagonal: $det(A)=1\cdot2\cdot3\cdot4=24$.
+}
+\vskip 1cm
+2)  (5 puntos) Encontrar los autovalores de la matriz
+$B=\left(\begin{array}{cc}1 & 2 \\2 & 1\end{array}\right).$
+
+\vskip 0.5cm
+\emph{
+Calculamos $det(B-\lambda I)=det\left(\begin{array}{cc}1-\lambda & 2 \\2 & 1-\lambda\end{array}\right)=\lambda^2-2\lambda-3=(\lambda-3)(\lambda+1),$
+entonces los autovalores son $3$ y $-1$.
+}
+\vskip 3cm
+%\newpage
+3)  (5 puntos) Encontrar un autovector para cada autovalor de $B$.
+
+\vskip 0.5cm
+\emph{
+Recuerda que dado un autovalor $\lambda$ de $B$, sus autovectores 
+son   todas las soluciones $v$ de $(B-\lambda I)v=\vec{0}$, menos la soluci\'on trivial $v=\vec{0}$.\\
+Para el autovalor $3$:  la soluciones 
+de
+$\left(\begin{array}{cc}-2 & 2 \\2 & -2\end{array}\right)
+\left(\begin{array}{c} x\\  y    \end{array}\right)=\vec{0}$
+son exactamente los multiplos de 
+$\left(\begin{array}{c} 1\\ 1    \end{array}\right)$, por lo tanto
+$
+\left(\begin{array}{c} 1\\ 1    \end{array}\right)$ es un autovector.\\
+Para el autovalor $-1$:  la soluciones 
+de
+$\left(\begin{array}{cc}2 & 2 \\2 & 2\end{array}\right)
+\left(\begin{array}{c} x\\  y    \end{array}\right)=\vec{0}$
+son exactamente los multiplos de 
+$\left(\begin{array}{c} 1\\ -1    \end{array}\right)$, por lo tanto
+$
+\left(\begin{array}{c} 1\\ -1    \end{array}\right)$ es un autovector.\\
+}
+\vskip2 cm
+4)  (5 puntos) > Es la matriz $B$ diagonalizable?
+
+\vskip 0.5cm
+\emph{S\'i, es diagonalizable. Una raz\'on es que existe una base de $\RR^2$ que consiste de autovectores de $B$: la base $\left\{
+\left(\begin{array}{c} 1\\ 1    \end{array}\right),
+\left(\begin{array}{c} 1\\ -1    \end{array}\right)\right\}$
+hallada en 3). Otra raz\'on es que, por el teorema espectral, todas las matrizes (reales) sim\'etricas son diagonalizables, y $B$ es sim\'etrica.
+}
+
+\end{document}
+

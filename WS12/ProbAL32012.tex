@@ -1,0 +1,265 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+
+%% Para las columnas
+\usepackage{multicol}
+
+
+\usepackage{amssymb, amsmath}
+\usepackage{latexsym}
+\usepackage{multicol}
+
+
+%% Para numeraci?n autom?tica
+\newcounter{nroproblema}
+\setcounter{nroproblema}{1}
+\newcounter{nroapartado}
+\setcounter{nroapartado}{1}
+\newcommand{\n}{%
+    \vspace{.1in}\noindent{\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+\newcommand{\apartado}{\vspace*{0.2cm}\hspace*{0.2cm}%
+   {\bf \alph{nroapartado})}
+   \addtocounter{nroapartado}{1}%
+   }
+
+%% m?genes
+
+\setlength{\unitlength}{1mm} \addtolength{\voffset}{-15mm}
+\addtolength{\textheight}{30mm} \addtolength{\hoffset}{-15mm}
+\addtolength{\textwidth}{30mm}
+
+
+\begin{document}
+
+\begin{center}{\bf {\Large \'ALGEBRA I. HOJA 3}}\end{center}
+
+
+
+
+\n Sea $\mathcal{M}_{m\times n}(\mathbb{K})$ el conjunto de  matrices $m\times n$ sobre el
+cuerpo $\mathbb{K} = \mathbb{R}$ ó $\mathbb{C}$. Comprobar que en $\mathcal{M}_{m\times n}(\mathbb{K})$
+\begin{enumerate}
+    \item La suma es asociativa.
+    \item Cada matriz tiene un elemento
+    opuesto (inverso aditivo).
+    \item Sea $m=n$. Entonces el producto de matrices es distributivo (a derecha y a izquierda), con 
+    respecto a la suma de
+    matrices.
+\end{enumerate}
+
+    \n Dada la matriz
+    $$
+    A=\left(%
+\begin{array}{cc}
+  1 & 0 \\
+  1 & 0 \\
+\end{array}%
+\right),
+$$
+comprobar que no existe una matriz $B$ tal que $AB=I=BA$.
+  
+\n Siendo $A$ y $B$ las matrices dadas a continuación,
+    calcular los productos $AB$ y $BA$ cuando sea posible y
+    comparar los resultados.
+    \begin{multicols}{2}
+\begin{enumerate}
+    \item [a)] $A=\left(%
+\begin{array}{cc}
+  1 & 1 \\
+  -1 & 1 \\
+\end{array}%
+\right)\ B=\left(%
+\begin{array}{cc}
+  3 & 4 \\
+  5 & 5 \\
+\end{array}%
+\right)$
+    \item [b)] $A=\left(%
+\begin{array}{cc}
+  2 & 3 \\
+  0 & 1 \\
+\end{array}%
+\right)\ B=\left(%
+\begin{array}{cc}
+  1 & 3 \\
+  0 & 8 \\
+\end{array}%
+\right)$
+    \item [c)] $A=\left(%
+\begin{array}{ccc}
+  2 & 4 & 0 \\
+  5 & 0 & 3 \\
+  0 & 1 & 0 \\
+\end{array}%
+\right)\ B=\left(%
+\begin{array}{cc}
+  5 & 50 \\
+  1 & 60 \\
+  1 & 86 \\
+\end{array}
+\right)$
+    \item [d)] $A=\left(%
+\begin{array}{ccc}
+  2 & 3 & 4 \\
+  4 & 3 & 2 \\
+\end{array}%
+\right)\ B=\left(%
+\begin{array}{cc}
+  1 & 2 \\
+  1 & 0 \\
+  4 & 4 \\
+\end{array}%
+\right)$
+\end{enumerate}
+    \end{multicols}
+    
+    \n ¿Es cierta para matrices cuadradas la relación
+    $(A+B)^2=A^2+2AB+B^2$? Probar la relación, o suministrar un
+    contraejemplo. Determinar que sucede en el caso especial de 
+    las matrices $2\times 2$ de la forma 
+    $\left(
+\begin{array}{cc}
+  u & -v \\
+  v & u \\
+\end{array}
+\right).$
+¿Es el producto de tales matrices conmutativo? Si son
+distintas de la matriz 0 ¿tienen siempre un inverso multiplicativo?
+
+    \n Comprobar que el producto de dos matrices puede ser nulo
+    sin que lo sean ninguno de los factores, hallando $AB$, siendo
+    $A$ y $B$ las matrices dadas a continuación:
+        \begin{multicols}{2}
+\begin{enumerate}
+    \item [a)] $A=\left(%
+\begin{array}{cc}
+  1 & 1 \\
+  1 & 1 \\
+\end{array}
+\right)\ B=\left(
+\begin{array}{c}
+  1 \\
+  -1 \\
+\end{array}
+\right)$
+    \item [b)] $A=\left(
+\begin{array}{cc}
+  3 & 6 \\
+  1 & 2 \\
+\end{array}
+\right)\ B=\left(
+\begin{array}{c}
+  -2 \\
+  1 \\
+\end{array}
+\right)$
+    \item [c)] $A=\left(
+\begin{array}{cc}
+  5 & 6
+\end{array}
+\right)\ B=\left(
+\begin{array}{c}
+  -6 \\
+  5
+\end{array}
+\right)$
+    \item [d)] $A=\left(%
+\begin{array}{cc}
+  1 & 0 \\
+  1 & 0  \\
+\end{array}
+\right)\ B=\left(
+\begin{array}{cc}
+  0 & 0 \\
+  1 & 1 \\
+\end{array}
+\right).$
+\end{enumerate}
+    \end{multicols}
+    
+\n Siendo $A$, $B$ y $C$ las matrices dadas a continuación,
+    calcular los productos $D:=AB$, $DC$, $E:=BC$,  y $AE$.
+¿Es $DC =AE$?. En general, ¿es el producto de matirces $2\times 2$ asociativo?
+
+    \begin{multicols}{3}
+$A = \left(%
+\begin{array}{cc}
+  1 & 1 \\
+  -1 & 1 \\
+\end{array}%
+\right)\ B = \left(%
+\begin{array}{cc}
+  3 & 4 \\
+  5 & 6 \\
+\end{array}%
+\right)
+    \ C = \left(%
+\begin{array}{cc}
+  2 & 3 \\
+  0 & 1 \\
+\end{array}%
+\right).$
+    \end{multicols}
+    
+    \n ¿Es el producto de matrices asociativo? No suponemos que las matrices son cuadradas,
+pero si que los productos están bien definidos.
+Por ejemplo, si $A$ es $2\times 1$, $B$ es $1\times 2$ y $C$ es $2\times 2$, ¿se cumple siempre
+que  $(AB)C =A(BC)$?
+
+ \n Dada la matriz
+    $$
+    A=\left(%
+\begin{array}{cc}
+  9/10 & 2/10 \\
+  1/10 & 8/10 \\
+\end{array}%
+\right),
+$$
+calcular $A^2, A^4$, y  $A^8$. Una pregunta para meditar sobre ella: ¿existe $\lim_{n\to\infty} A^n$?.
+
+\n Escribiendo $y = y(x)$ (de modo que $x$ es la variable
+independiente), y con los datos siguientes, ha\-llar la
+correspondiente recta de regresión $y = a x + b$.
+
+Datos: $(x,y) = (1,1), (3,2), (4,4), (6,4), (8,5), (9,7), (11, 8),
+(14, 9)$.
+
+
+Solución: $a = 6/11, b= 7/11$.
+
+\
+
+ADEMAS:
+
+\
+
+LADW, pp. 122-123, del 1.1 al 1.9. pp. 126-127, 2.1, 2.3-2.6, pensar sobre el 2.7.
+
+
+
+
+\end{document}
+
+
+
+
+\n Sea $P_2(\mathbb{R})$ el espacio de polinomios sobre $\mathbb{R}$ de grado $\le 2$, con
+el  producto escalar
+$(f,g):= \int_0^1 f(t) g(t) dt$. Hallar una base para el complemento ortogonal del subespacio generado por $1 + 3t$.
+
+\n Hallar una base para el complemento ortogonal del subespacio generado por $(1,2,3)$ en $\mathbb{R}^3$. 
+
+\n Decidir razonadamente si los siguientes conjuntos, con las  adici\'on y multiplicaci\'on por escalares definidas de manera natural, forman espacios vectoriales:
+\begin{enumerate}
+\item   $\{f\colon [0,1]\to \mathbb{R} \text{ tal que } f \text{ es continua}\}$
+\item   $\{f\colon [0,1]\to \mathbb{R}_+ \text{ tal que } f \text{ es continua}\}$, donde $\mathbb{R}_+$ denota los n\'umeros positivos,
+\item    $\{f\colon [0,1]\to \mathbb{R} \text{ tal que }  f \text{ es continua}\}$,
+\item $P_n(\mathbb{R})$, el espacio de polinomios reales de grado $\le n$ (donde $n$ es un n\'umero entero positivo fijado),
+\item  el espacio de polinomios reales de grado \emph{igual} a $n$.\end{enumerate}
+
+\n Sea $P(\mathbb{R})$ el espacio de polinomios  sobre $\mathbb{R}$. Comproba que,  con las  adici\'on y multiplicaci\'on por escalares definidas de manera natural,  es una espacio vectorial. Existe una base de 
+$P(\mathbb{R})$?

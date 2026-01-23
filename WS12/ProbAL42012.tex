@@ -1,0 +1,287 @@
+\documentclass[12pt,a4paper]{article}
+
+%% Para acentos
+\usepackage[latin1]{inputenc}
+
+% Para fuentes postscript
+%\usepackage{type1ec}
+%\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+
+%% Para mates
+\usepackage{amsmath,amssymb,latexsym}
+
+%% Para gráficos
+\usepackage{graphicx}
+
+%% Para gráficos realizados con LatexCad
+%\usepackage{latexcad}
+
+
+%% Para numeración automática
+\newcounter{nroproblema}
+\setcounter{nroproblema}{1}
+\newcounter{nroapartado}
+\setcounter{nroapartado}{1}
+\newcommand{\n}{%
+    \vspace{.1in}\noindent{\bf \arabic{nroproblema})\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+\newcommand{\apartado}{\vspace*{0.2cm}\hspace*{0.2cm}%
+   {\bf \alph{nroapartado})}
+   \addtocounter{nroapartado}{1}%
+   }
+
+
+%% Abreviaturas comunes (para evitar usar misMacros.mcr)
+\newcommand{\ds}{\displaystyle}
+\newcommand{\df}{\mathop=\limits^{\sf def}}
+
+% Para maquetación
+\setlength{\parindent}{0pt}
+\usepackage[hmargin={1.5cm,1.5cm},vmargin={1.5cm,1.5cm}]{geometry}
+
+
+
+\begin{document}
+
+
+\begin{center}{\bf {\Large \'ALGEBRA I. HOJA 4}}\end{center}
+
+
+
+\vspace{0.3cm}
+
+\
+
+
+Problemas de LADW pp. 16-17, 3.1-3.5.
+
+\
+
+Problemas de LADW pp. 23, 5.1-5.8.
+
+\
+
+
+
+\n   ¿Es cierto que $AB=0\Rightarrow BA=0$? 
+   
+
+    \n Hallar las matrices $2\times 2$ reales tales que su cuadrado
+es $-I$.
+
+    \n
+    Siendo
+    $$
+    A=\left(
+\begin{array}{cc}
+  1 & 1 \\
+  0 & 1 \\
+  1 & 1 \\
+\end{array}
+\right)=(C_1,C_2),\ B=\left(
+\begin{array}{cc}
+  2 & -4 \\
+  4 & 5 \\
+\end{array}
+\right)=\left(
+\begin{array}{c}
+  F_1 \\
+  F_2 \\
+\end{array}
+\right),
+    $$
+    comprobar que $AB=C_1F_1+C_2F_2$. Generalizar este resultado
+    para matrices de dimensiones multiplicables.
+    
+    \n ¿Qué transformación tiene lugar en la matriz $C$ dada a
+    continuación cuando la multiplicamos por la matriz diagonal
+    $D$, también dada a continuación?
+    $$
+    C=\left(
+\begin{array}{ccc}
+  6 & -2 & 0 \\
+  2 & 0 & 1 \\
+  1 & 1 & 0 \\
+\end{array}
+\right),\ D=\left(
+\begin{array}{ccc}
+  2 & 0 & 0 \\
+  0 & 4 & 0 \\
+  0 & 0 & 6 \\
+\end{array}
+\right)
+$$
+    ¿Cuáles son las matrices diagonales que conmutan con todas las
+    demás?
+    
+    \n Demostrar que una matriz que no es diagonal no conmuta
+    con todas las demás. Deducir de este ejercicio y del anterior
+    la forma de las matrices que conmutan con todas las demás.
+    
+    \n Multiplicando las dos matrices $A$ y $B$ dadas a
+    continuacián,
+    $$
+    A=\left(
+\begin{array}{ccc}
+  2 & 4 & 0 \\
+  5 & 0 & 3 \\
+  0 & 1 & 1 \\
+\end{array}%
+\right),\ B=\left(
+\begin{array}{ccc}
+  6 & -2 & 0 \\
+  2 & 0 & 1 \\
+  1 & 1 & 0 \\
+\end{array}
+\right),
+    $$
+    comprobar que:
+    \begin{enumerate}
+        \item [a)] La primera fila del producto $AB$ es la suma de
+        las filas de $B$, multiplicadas por los números de la
+        primera fila de $A$, considerados como coeficientes.
+        \item [b)] La primera columna de $AB$ es la suma de las
+        columnas de $A$, multiplicadas por los números de la
+        primera columna de $B$, considerados como coeficientes.
+    \end{enumerate}
+    ¿Qué ocurre análogamente con las demás filas y columnas del
+    producto?
+    
+    \n
+     Se llaman matrices elementales a las obtenidas de la
+    matriz identidad, haciendo alguna de las siguientes
+    transformaciones:
+    \begin{enumerate}
+        \item [a)] Permutación de dos filas.
+        \item [b)] Suma de una fila por otra (distinta),
+        multiplicada por un número.
+        \item [c)] Multiplicación de una fila por un número
+        distinto de cero.
+    \end{enumerate}
+    Escribir todas las matrices elementales $3\times 3$.
+
+    Escoger una matriz cualquiera de números y comprobar que al
+    multiplicar esta matriz por otra elemental por la izquierda,
+    se realiza en la matriz escogida, la transformación que había
+    tenido lugar para obtener la matriz elemental. Generalizar el
+    resultado.
+
+    \n Una matriz \textit{simétrica} (respectivamente, \textit{antisimétrica}) es aquella que cumple
+    $A={}^tA$ (respectivamente, $A={-}^tA$), siendo ${}^tA = A^T$ la matriz traspuesta de $A$. 
+    
+    Probar
+    que una matriz antisimétrica tiene nulos todos los elementos
+    en la diagonal principal.
+    
+    \n Una matriz que es simétrica y antisimétrica ha de ser la
+    matriz nula (todos sus elementos son 0).
+    
+    \n Probar que:
+    \begin{enumerate}
+        \item Dada una matriz cuadrada $A$, la matriz
+        $1/2(A+{}^tA)$ es simétrica.
+        \item Dada una matriz cuadrada $A$, la matriz
+        $1/2(A-{}^tA)$ es antisimétrica.
+        \item Toda matriz cuadrada se puede escribir como suma
+        de una matriz simétrica y otra antisimétrica.
+    \end{enumerate}
+
+    Entre las matrices cuadradas complejas se definen las matrices
+    \textit{hermíticas} como aquellas que verifican
+    $a_{ij}=\overline{a_{ji}}\,\forall ij$ (o bien,
+    $A=\overline{{}^tA}$). Respectivamente, las
+    \textit{antihermíticas} como aquellas que verifican
+    $A=-\overline{{}^tA}$.
+
+    Probar como ejercicios que:
+    
+    \n Una matriz hermítica tiene todos los elementos de la
+    diagonal principal reales.
+    
+    \n Una matriz antihermítica tiene todos los elementos de la
+    diagonal principal imaginarios puros.
+    
+    \n Una matriz a la vez hermítica y antihermítica ha de ser
+    la matriz nula.
+    
+    \n Toda matriz cuadrada compleja se puede escribir como
+    suma de una matriz hermítica y otra antihermítica.
+    
+    \n Comprobar que el producto de matrices simétricas no es
+    necesariamente una matriz simétrica, realizando el producto
+    $AB$ en el caso a):
+    \begin{enumerate}
+        \item $A=\left(%
+\begin{array}{ccc}
+  1 & 0 & 1 \\
+  0 & 1 & 0 \\
+  1 & 0 & 0 \\
+\end{array}%
+\right)\ \left(%
+\begin{array}{ccc}
+  1 & 0 & 0 \\
+  0 & 2 & 0 \\
+  0 & 0 & 2 \\
+\end{array}%
+\right)$.
+
+Sin embargo, sí es simétrico en el caso:
+
+        \item $A=\left(%
+\begin{array}{ccc}
+  1 & 4 & 1 \\
+  4 & 3 & 4 \\
+  1 & 4 & 1 \\
+\end{array}%
+\right)\ \left(%
+\begin{array}{ccc}
+  0 & 0 & 1 \\
+  0 & 1 & 0 \\
+  1 & 0 & 0 \\
+\end{array}%
+\right)$.
+    \end{enumerate}
+
+    Comprobar que en el caso a), $AB={}^t(BA)$, mientras que en el
+    caso b), $AB=BA$ (esto es, $A$ y $B$ \textit{conmutan}).
+
+    \n Demostrar que dadas dos matrices simétricas $A$ y $B$,
+    conmutan si y sólo si su producto es una matriz simétrica.
+    Encontrar matrices simétricas que conmuten y que no distintas
+    de las del ejercicio anterior.
+    
+    \n Probar que si $A$ es simétrica y $B$ antisimétrica, $A$
+    y $B$ conmutan si y sólo si su producto es una matriz
+    antisimétrica.
+    
+    \n Demostrar que toda matriz simétrica real o compleja $2\times 2$ que
+    conmute con
+    $$
+    \left(%
+\begin{array}{cc}
+  1 & 1 \\
+  0 & 1 \\
+\end{array}%
+\right)
+$$
+    es un múltiplo de la identidad.
+    
+    
+    \n Idem para la matriz $3\times 3$
+$$
+\left(%
+\begin{array}{ccc}
+  1 & 1 & 0 \\
+  0 & 1 & 1 \\
+  0 & 0 & 1 \\
+\end{array}%
+\right).
+$$
+
+\end{document}
+
+

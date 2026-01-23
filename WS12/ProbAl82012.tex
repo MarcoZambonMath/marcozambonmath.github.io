@@ -1,0 +1,440 @@
+\documentclass[12pt,a4paper]{article}
+
+%% Para acentos
+\usepackage[latin1]{inputenc}
+
+% Para fuentes postscript
+%\usepackage{type1ec}
+%\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+
+%% Para mates
+\usepackage{amsmath,amssymb,latexsym}
+
+%% Para gráficos
+\usepackage{graphicx}
+
+%% Para gráficos realizados con LatexCad
+%\usepackage{latexcad}
+
+
+%% Para numeración automática
+\newcounter{nroproblema}
+\setcounter{nroproblema}{1}
+\newcounter{nroapartado}
+\setcounter{nroapartado}{1}
+\newcommand{\n}{%
+    \vspace{.1in}\noindent{\bf \arabic{nroproblema})\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+\newcommand{\apartado}{\vspace*{0.2cm}\hspace*{0.2cm}%
+   {\bf \alph{nroapartado})}
+   \addtocounter{nroapartado}{1}%
+   }
+
+
+%% Abreviaturas comunes (para evitar usar misMacros.mcr)
+\newcommand{\ds}{\displaystyle}
+\newcommand{\df}{\mathop=\limits^{\sf def}}
+
+% Para maquetación
+\setlength{\parindent}{0pt}
+\usepackage[hmargin={1.5cm,1.5cm},vmargin={1.5cm,1.5cm}]{geometry}
+
+
+
+\begin{document}
+
+
+
+\begin{center}{\bf {\Large \'ALGEBRA I. HOJA 8}}\end{center}
+
+
+%\begin{enumerate}
+
+    \n Calcular  los determinantes
+    siguientes:
+    $$
+a)\left|%
+\begin{array}{ccc}
+  0 & 2 & 4 \\
+  1 & 1 & 3 \\
+  3 & 3 & 3 \\
+\end{array}%
+\right|\ b)\left|%
+\begin{array}{ccc}
+  0 & -1 & 1 \\
+  1 & 0 & 1 \\
+  2 & -1 & -1 \\
+\end{array}%
+\right|\ c)\left|%
+\begin{array}{ccc}
+  -2 & 1 & 1 \\
+  -3 & 2 & 1 \\
+  1 & -1 & 1 \\
+\end{array}%
+\right|\ d)\left|%
+\begin{array}{cccc}
+  0 & -1 & -1 & 1 \\
+  1 & 0 & -1 & 1 \\
+  2 & -1 & -3 & -1 \\
+  0 & 1 & -1 & 0 \\
+\end{array}%
+\right|
+$$
+
+Sol: 12, -4, -1, -8.
+    
+    \n Calcular los determinantes de las matrices dadas a
+    continuación:
+    $$
+a)\left|\frac{1}{7}\left(%
+\begin{array}{ccc}
+  3 & 2 & -6 \\
+  6 & -3 & 2 \\
+  2 & 6 & 3 \\
+\end{array}%
+\right) \right|
+\hspace{1cm} b)\left|\frac{1}{9}\left(%
+\begin{array}{ccc}
+  -8 & -1 & -4 \\
+  -4 & 4 & 7 \\
+  1 & 8 & -4 \\
+\end{array}%
+\right) \right|
+    $$
+    
+    Sol: a) -1,  b) 1.
+    
+    \n Demostrar que los
+    siguientes determinantes son nulos:
+    $$
+a)\left|\begin{array}{ccc}
+  7 & 1 & 3 \\
+  3 & 2 & 1 \\
+  10 & 3 & 4 \\
+\end{array}\right|\hspace{5mm}
+b)\left|\begin{array}{ccc}
+  a & b & c \\
+  -a & -b & -c \\
+  d & e & f \\
+\end{array}\right|\hspace{5mm}
+c)\left|\begin{array}{ccc}
+  1 & 2 & 3 \\
+  2 & 3 & 4 \\
+  3 & 4 & 5 \\
+\end{array}\right|\hspace{5mm}
+d)\left|\begin{array}{cccc}
+  1^2 & 2^2 & 3^2 & 4^2 \\
+  2^2 & 3^2 & 4^2 & 5^2 \\
+  3^2 & 4^2 & 5^2 & 6^2 \\
+  4^2 & 5^2 & 6^2 & 7^2 \\
+\end{array}\right|
+    $$
+    
+    \n
+    a) Comprobar que la ecuación de un plano que pasa por tres
+    puntos $(a_1,a_2,a_3)$, $(b_1,b_2,b_3)$, $(c_1,c_2,c_3)$ del
+    espacio es
+    $$
+\left|\begin{array}{cccc}
+  1 & x_1 & x_2 & x_3 \\
+  1 & a_1 & a_2 & a_3 \\
+  1 & b_1 & b_2 & b_3 \\
+  1 & c_1 & c_2 & c_3 \\
+\end{array} \right| =0
+    $$
+    y hallar la ecuación cartesiana del plano que pasa por los
+    puntos $(1,2,1)$, $(-1,3,0)$, $(2,1,3)$.
+
+    b) Escribir la ecuación de una recta del plano que pasa por
+    los puntos $(a,b)$, $(c,d)$ del plano y hallar la ecuación
+    cartesiana de la recta del plano que pasa por los puntos
+    $(-1,-2)$, $(2,2)$.
+    
+    
+    \n a) Siendo $a_0+a_1x+a_2x^2+a_3x^3=P(x)$ un polinomio de
+    grado 3, hallar sus coeficientes para que
+    $P(0)=2,\,P(1)=1,\,P(2)=-1,\,P(3)=0$.
+
+Sol: $2+\frac{5}{6}x-\frac{5}{2}x^2+\frac{2}{3}x^3$.
+
+    b)Demostrar que siempre se puede encontrar un polinomio de
+    grado 3 que cumpla las condiciones $\{P(x_i)=y_i\}_{i=1}^4$
+    siempre que todos los $x_1,\ldots,x_4$ sean distintos.
+
+    c) Generalizar el resultado b): dados n+1 pares de puntos
+    $\{x_i,y_i\}_{i=1}^{n+1}$ con $x_1,\ldots,x_{n+1}$ distintos,
+    hay un único polinomio $P(x)$ de grado $n$ que cumple
+    $P(x_i)=y_i,\,i=1,\ldots,n+1$.
+
+    Obsérvese que la parte c) nos indica cómo hallar una función
+    polinómica de grado $n$ que pase por $n+1$ puntos del plano
+    siempre y cuando no haya dos puntos en la misma vertical.
+    
+    
+    \n a) Obtener, en términos de los determinantes de los
+    menores diagonales de la matriz $A$,
+    $$
+    |A-\lambda I|=\left|\begin{array}{ccc}
+      a_{11}-\lambda & a_{12} & a_{13} \\
+      a_{21} & a_{22}-\lambda & a_{23} \\
+      a_{31} & a_{32} & a_{33}-\lambda \\
+    \end{array}
+    \right|$$
+    (Indicación: descomponer las filas en sumandos con y sin
+    $\lambda$).
+
+    b) Aplicar la fórmula obtenida para hallar los siguientes
+    determinantes:
+    $$
+    |A-\lambda I|=\left|\begin{array}{ccc}
+      1-\lambda & 2 & 1 \\
+      0 & 3-\lambda & 1 \\
+      3 & 1 & 2-\lambda \\
+    \end{array}
+    \right|,\hspace{1cm}\left|\frac{1}{3}\left(%
+\begin{array}{ccc}
+  2 & 1 & -2 \\
+  -1 & -2 & -2 \\
+  -2 & 2 & -1 \\
+\end{array}%
+\right)-\lambda I
+    \right|    $$
+    
+    sol: $-{\lambda}^{3}  + {6 \lambda^{2} } - {7 \lambda} + 2$, $	
+-{\lambda}^{3}  - \frac{1}{3}{\lambda}^{2}  + \frac{1}{3}\lambda + 1$
+
+    \n Encontrar los valores de $a$ para que las siguientes
+    matrices sean invertibles:
+    $$
+    a)\left(\begin{array}{ccc}
+      a & 1 & 1 \\
+      1 & a & 1 \\
+      0 & 1 & a \\
+    \end{array}\right),\hspace{1cm}b)\left(%
+\begin{array}{ccc}
+  -1 & -1 & 1 \\
+  1 & 4 & -a \\
+  -1 & a & 0 \\
+\end{array}%
+\right),\hspace{1cm}c)\left(%
+\begin{array}{ccc}
+  -1 & a & a \\
+  a & -1 & a \\
+  a & a & -1 \\
+\end{array}%
+\right)
+    $$
+Sol: a) $a\not=1$, $a\not=\frac{-1+\sqrt{5}}{2}$ y $a\not=\frac{-1-\sqrt{5}}{2}$  \quad b) $a\not=2$ y $a\not=-2$ \quad c) $a\not=-1$ y $a\not=\frac{1}{2}$.
+    
+    \n Sean matrices cuadradas $A\in M_{m\times m}$, $B\in M_{n\times n}$, $C\in M_{m\times
+    n}$ y $D\in M_{(m+n)\times(m+n)}$ una matriz que se descompone
+    por bloques como
+    $$
+    D=\left(%
+\begin{array}{cc}
+  A & C \\
+  0 & B \\
+\end{array}%
+\right).
+    $$
+
+    a) Demostrar que $|D|=|A||B|$ utilizando la descomposición
+    $$
+    \left(%
+\begin{array}{cc}
+  A & C \\
+  0 & B \\
+\end{array}%
+\right)=\left(%
+\begin{array}{cc}
+  I_m & 0 \\
+  0 & B \\
+\end{array}%
+\right)\left(%
+\begin{array}{cc}
+  A & C \\
+  0 & I_n \\
+\end{array}%
+\right)
+    $$
+    b) Demostrar, utilizando una descomposición similar, la misma
+    igualdad $|D|=|A||B|$, en el caso
+    $$
+    D=\left(%
+\begin{array}{cc}
+  A & 0 \\
+  C & B \\
+\end{array}%
+\right)
+    $$
+    (Nótese que ahora $C\in M_{n\times m}$).
+    
+    c) Calcula el determinante
+$$\left| \begin{array}{cccccccc}
+1 & -1 & 2 \\
+   &  1  & 7 \\
+   &      &  3 \\
+   &      &      & 2 \\
+   &      &      & 4  & -2 \\
+   &      &      & 1  & 4   &  5   \\
+   &      &      &     &      &      & 2 & 3 \\
+   &      &      &     &      &      &    & 2  
+\end{array}\right|$$
+
+Sol: -240.
+
+\n Estudiar si son independientes en su espacio vectorial correspondiente los siguientes conjuntos. En el caso en que sean linealmente dependientes, expresar uno de ellos como combinación lineal de los restantes:
+
+\apartado $\{(1, 2, 0), (0, 1, 1)\} \subset \mathbb{R}^3$, 
+
+\apartado $\{(1, 2, 0), (0, 1, 1), (1, 1, 0)\} \subset \mathbb{R}^3$,
+
+\apartado $\{(1, 2, 0), (0, 1, 1), (1, 1, -1)\} \subset \mathbb{R}^3$,
+
+\apartado $\{(1, 2, 0), (0, 1, 1), (1, 1, 0), (3, 2, 1)\} \subset \mathbb{R}^3$,
+
+\apartado $\{(i, 1 - i), (2, -2i - 2)\} \subset \mathbb{C}^2$,
+
+\apartado $\{(i, 1, -i), (1, i, -1)\} \subset \mathbb{C}^3$.
+
+\apartado $$\left\{\left(\begin{matrix} 0 & 1 \\ 0 & -2\end{matrix}\right),
+\left(\begin{matrix}
+1 & -1 \\ 
+0 & 1 
+\end{matrix}\right),
+\left(\begin{matrix}
+-2 & 5 \\ 
+0 & -8
+\end{matrix} \right) \right\} \subset \mathcal{M}_{2\times 2}(\mathbb{R})$$ 
+
+
+\apartado Los polinomios $\{1, x - 2, (x - 2)^2, (x - 2)^3\} \subset P_{\mathbb{R}}^3[x]$.
+
+
+\n \apartado Demostrar que si $\{f_1(x), f_2(x), \cdots , f_k (x)\}$ son funciones tales que existen $\{a_1 , a_2 ,\cdots, a_k \}$ verificando 
+$$\left| \begin{array}{cccc}
+f_1 (a_1 ) &f_2 (a_1 ) &  \cdots & f_k (a_1 ) \\
+f_1 (a_2 )& f_2 (a_2 ) & \cdots & f_k (a_2 ) \\
+\vdots & \vdots & & \vdots \\
+f_1(a_k) & f_2(a_k) & \cdots & f_k(a_k) 
+\end{array} \right| \not=0$$
+son funciones linealmente independientes. 
+
+\vspace{0.2cm}
+
+Demuestra los siguientes enunciados utilizando el apartado anterior:
+
+\apartado Los polinomios 
+$\{1, x - 2, (x - 2)^2,\cdots, (x - 2)^n \} \subset P_{\mathbb{R}}^n[x]$ 
+son linealmente independientes.
+
+\apartado Para cualquier $a\in \mathbb{R}$, los polinomios  
+$\{1, x - a, (x - a)^2, \cdots, (x - a)^n\} \subset P_{\mathbb{R}}^n[x]$ son linealmente independientes para cualquier $n\in \mathbb{N}$.
+
+
+%\n Comprobar que los siguientes conjuntos de vectores son bases de los correspondientes espacios vectoriales: (son las llamadas bases can\'onicas) 
+
+%\apartado $\{(1, 0, 0, \ldots , 0), (0, 1, 0, \ldots , 0), (0, 0, 1, \ldots , 0), \ldots , (0, 0, 0, \ldots , 1)\} \subset \mathbb{R}^n$. 
+
+%\apartado $\left\{\left(\begin{matrix}
+%1 & 0\\ 
+%0  & 0\end{matrix} \right),
+%\left(\begin{matrix}
+%0 & 1\\
+%0 & 0\end{matrix} \right),
+%\left(\begin{matrix}
+%0 & 0\\
+%1 & 0\end{matrix} \right),
+%\left(\begin{matrix}
+%0 & 0 \\
+%0 & 1 \end{matrix} \right)\right\}
+%\subset \mathcal{M}_{2\times2} (\mathbb{R})$
+
+%\apartado $\{1, x, x^2,\cdots , x^n\} \subset P^n_\mathbb{R} (x)$.
+
+\vspace{0.2cm}
+
+\n Estudiar si los siguientes conjuntos son bases de los espacios vectoriales dados: 
+
+\apartado $\{(1, 0, 0, 1), (1, 0, 1, 0), (0, 1, 1, 0), (0, 1, 0, 1)\} \subset \mathbb{R}^4$
+
+\apartado $\{(1, 0, 0, 1), (1, 0, 1, 0), (0, 2, 1, 0), (0, 1, 0, 1)\} \subset \mathbb{R}^4$.
+
+\apartado $\left\{ \left(
+\begin{matrix}
+1 & 0\\
+0 & 1\end{matrix} \right), 
+\left( \begin{matrix}
+1 &0 \\
+1 &0\end{matrix} \right),
+\left( \begin{matrix}
+ 0 &2 \\
+1 &0\end{matrix} \right),
+\left( \begin{matrix} 
+0 &1 \\
+0 & 1 \end{matrix}\right)
+\right\}\subset \mathcal{M}_{2\times 2} (\mathbb{R})$.
+
+\apartado $\left\{ \left(\begin{matrix}
+1&  0\\ 
+1 & 1
+\end{matrix}\right),
+\left( \begin{matrix}
+0 &1\\ 
+1 &1\end{matrix}\right),
+\left( \begin{matrix}
+1 &1\\ 
+1 &2\end{matrix}\right),
+\left(\begin{matrix}
+0 &1\\
+1 & 0\end{matrix}\right)\right.\subset \mathcal{M}_{2\times2} (\mathbb{R})$.
+
+\vspace{0.2cm}
+
+\n Encontrar bases de los siguientes subespacios vectoriales de 
+$\mathcal{M}_{3\times3} (\mathbb{R})$:
+ 
+\apartado Las matrices diagonales. 
+
+\apartado Las matrices triangulares superiores. 
+
+\apartado Las matrices triangulares inferiores. 
+
+\apartado Las matrices sim\'etricas. 
+
+\apartado Las matrices antisim\'etricas. 
+
+
+\n \apartado Siendo $\{e_1 , e_2 , \ldots , e_n \}$ una base de $\mathbb{R}^n$, demostrar que los vectores: 
+$$\begin{array}{cccccc}u_1 =  e_1,& 
+u_2 =   e_1 + e_2 ,&
+\cdots, &
+u_{n-1} = e_1 + e_2 + \cdots + e_{n-1} ,&
+u_n =  e_1 + e_2 + \cdots + e_{n-1}+e_n
+\end{array}$$ 
+son otra base de $\mathbb{R}^n$.
+
+\apartado Hallar las coordenadas de los vectores $(n, n- 1, \ldots , 2, 1)$ y $(1, 2, \cdots , n - 1, n)$ de $\mathbb{R}^n$, en la base 
+$\{u_1 , u_2 , \ldots, u_n \}$.
+
+\vspace{0.2cm}
+
+\n Hallar las coordenadas del vector $(3, 2, -1, 0)$ de $\mathbb{R} ^4$ 
+en la base $$B=\{(1, 0, 0, 1), (1, 0, 1, 0), (0, 2, 1, 0), (0, 1, 0, 1)\}.$$
+ 
+%\vspace{0.2cm}
+
+
+
+\vspace{0.2cm}
+
+    
+   
+
+
+
+\end{document}

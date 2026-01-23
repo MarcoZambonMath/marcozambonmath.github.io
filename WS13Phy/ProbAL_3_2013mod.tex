@@ -1,0 +1,392 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+
+%% Para las columnas
+\usepackage{multicol}
+\usepackage{amssymb,amsmath,eepic,fancyhdr}
+\usepackage{latexsym}
+\usepackage{datenumber}
+
+
+%% Para numeraci?n autom?tica
+\newcounter{nroproblema}
+\setcounter{nroproblema}{1}
+\newcounter{nroapartado}
+\setcounter{nroapartado}{1}
+
+\newcommand{\n}{%
+    \vspace{.1in}\noindent{\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+
+\newcommand{\nn}{%
+    \vspace{.1in}\noindent \hskip.4cm {\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+
+
+\newcommand{\apartado}{\vspace*{0.2cm}\hspace*{0.2cm}%
+   {\bf \alph{nroapartado})}
+   \addtocounter{nroapartado}{1}%
+   }
+
+% \newcommand{\A}{{\bf (A)\; }} % De problemas de Andrei
+\newcommand{\A}{} % De problemas de Andrei
+
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\K}{{\mathbb{K}}}
+
+
+\newcommand{\rpol}[1]{\mathcal P^{\R}_{#1}}
+\newcommand{\kpol}[1]{\mathcal P^{\K}_{#1}}
+
+\newcommand{\cuatrox}[1][x]{\mbox{$\Bigg(\begin{array}{c}
+    #1_1\\[-4pt] #1_2\\[-4pt] #1_3\\[-4pt] #1_4\end{array}\Bigg)$}}
+\newcommand{\cuatroy}{\cuatrox[y]}
+\newcommand{\cuatroz}{\cuatrox[z]}
+
+% \newcommand{\cpol}[1]{\mbox{$\mathcal P^{\C}_{#1}}$}
+
+
+
+
+%% márgenes
+
+% Anterior:
+
+%\setlength{\unitlength}{1mm} \addtolength{\voffset}{-15mm}
+%\addtolength{\textheight}{30mm} \addtolength{\hoffset}{-20mm}
+%\addtolength{\textwidth}{45mm}
+
+\setlength{\unitlength}{1mm} \addtolength{\voffset}{-18mm}
+\addtolength{\textheight}{40mm} \addtolength{\hoffset}{-20mm}
+\addtolength{\textwidth}{43mm}
+
+
+
+
+\begin{document}
+
+
+
+% \begin{center}{\bf {\Large \'ALGEBRA I. HOJAS 2 -- 3 VERS 2 (PRELIMINAR)   }}\end{center}
+
+
+
+\begin{flushright}
+1${}^o$ de grado en Física, curso 2013/14
+
+\today
+\end{flushright}
+
+
+\begin{center}{\bf {\Large \'ALGEBRA I. HOJA 3}}\end{center}
+
+ \vskip.5cm
+
+
+%\noindent{Nota: Las hojas est\'an colgatas tambi\'en en la p\'agina web de del curso
+%\begin{verbatim}http://www.uam.es/personal_pdi/ciencias/mzambon/WS12.html\end{verbatim}}
+
+
+
+\n Sea $\mathcal{M}_{m\times n}(\mathbb{K})$ el conjunto de  matrices $m\times n$ sobre el
+cuerpo $\mathbb{K} = \mathbb{R}$ ó $\mathbb{C}$. Comprobar que en $\mathcal{M}_{m\times n}(\mathbb{K})$
+\begin{enumerate}\itemsep=-2pt
+    \item La suma es asociativa.
+    \item Cada matriz tiene un elemento
+    opuesto (inverso aditivo).
+    \item Sea $m=n$. Entonces el producto de matrices es distributivo (a derecha y a izquierda), con
+    respecto a la suma de
+    matrices.
+\end{enumerate}
+
+\vskip-2mm
+
+\n
+Dada la matriz \enspace
+    $
+    A=\left(%
+\begin{array}{cc}
+  1 & 0 \\
+  1 & 0 \\
+\end{array}%
+\right),
+$ \enspace
+comprobar que no existe una matriz $B$ tal que $AB=I=BA$.
+
+    \n ¿Es cierta para matrices cuadradas la fórmula
+    $(A+B)^2=A^2+2AB+B^2$? Probarla o dar un
+    contraejemplo. Determinar qué sucede en el caso especial de
+    las matrices $2\times 2$ de la forma
+    $\left(
+\begin{array}{cc}
+  u & -v \\
+  v & u \\
+\end{array}
+\right).$
+¿Es el producto de tales matrices conmutativo? Si son
+distintas de la matriz 0 ¿tienen siempre un inverso multiplicativo?
+
+    \n Comprobar que el producto de dos matrices puede ser nulo
+    sin que lo sean ninguno de los factores, hallando el producto de las
+    matrices $A$ y $B$ en los siguientes ejemplos:
+        \begin{multicols}{2}
+\begin{enumerate}
+    \item [a)] $A=\left(%
+\begin{array}{cc}
+  1 & 1 \\
+  1 & 1 \\
+\end{array}
+\right), \ B=\left(
+\begin{array}{c}
+  1 \\
+  -1 \\
+\end{array}
+\right)$;
+    \item [b)] $A=\left(
+\begin{array}{cc}
+  3 & 6 \\
+  1 & 2 \\
+\end{array}
+\right), \
+B=\left(
+\begin{array}{c}
+  -2 \\
+  1 \\
+\end{array}
+\right)$;
+    \item [c)] $A=\left(
+\begin{array}{cc}
+  5 & 6
+\end{array}
+\right),
+\
+B=\left(
+\begin{array}{c}
+  -6 \\
+  5
+\end{array}
+\right)$;
+    \item [d)] $A=\left(%
+\begin{array}{cc}
+  1 & 0 \\
+  1 & 0  \\
+\end{array}
+\right),
+\
+B=\left(
+\begin{array}{cc}
+  0 & 0 \\
+  1 & 1 \\
+\end{array}
+\right).$
+\end{enumerate}
+    \end{multicols}
+\vskip-.3cm
+
+
+    \n ¿Es el producto de matrices asociativo? No suponemos que las matrices son cuadradas,
+pero sí que los productos están bien definidos.
+Por ejemplo, si $A$ es $2\times 1$, $B$ es $1\times 2$ y $C$ es $2\times 2$, ¿se cumple siempre
+que  $(AB)C =A(BC)$?
+
+
+
+
+
+%\begin{center}{\bf {\Large \'ALGEBRA I. HOJA 4}}\end{center}
+%
+%\vspace{0.3cm}
+%
+%\
+
+
+
+
+\n   ¿Es cierto que $AB=0\Rightarrow BA=0$?
+
+
+    \n Hallar todas las matrices $2\times 2$ reales, cuyo cuadrado
+es $-I$.
+
+
+
+    \n
+Dadas las matrices \enspace
+    $
+    C=\left(
+\begin{array}{ccc}
+  6 & -2 & 0 \\
+  2 & 0 & 1 \\
+  1 & 1 & 0 \\
+\end{array}
+\right),\ D=\left(
+\begin{array}{ccc}
+  2 & 0 & 0 \\
+  0 & 4 & 0 \\
+  0 & 0 & 6 \\
+\end{array}
+\right)
+$
+
+\smallskip
+\noindent
+determinar, qué transformación se hace en la matriz $C$
+si la multiplicamos por la izquierda por la matriz diagonal
+$D$. Ver, qué sucede si la multiplicación por la matriz diagonal
+se hace por la derecha.
+
+    ¿Cuáles son las matrices diagonales que conmutan con todas las
+    demás?
+
+    \n Demostrar que una matriz no diagonal nunca conmuta
+    con todas las demás. Deducir de este ejercicio y del anterior
+    la forma general de las matrices que conmutan con todas las demás.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage %                     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \n
+     Se dice que una matriz cuadrada es \textit{elemental} si se obtiene de la
+    matriz identidad, haciendo alguna de las siguientes transformaciones:
+    \begin{enumerate}\itemsep=-2pt
+        \item [a)] Permutar dos filas.
+        \item [b)] Sumarle a una fila otra distinta, multiplicada por un número.
+        \item [c)] Multiplicar una fila por un número distinto de cero.
+    \end{enumerate}
+    Escribir todas las matrices elementales $2\times 2$ y unos cuantos ejemplos de matrices
+    elementales $3\times 3$.
+
+    Escoger una matriz $A$ cualquiera y comprobar que al
+    multiplicarla por la izquierda por una matrix elemental $B$,
+    $A$ se somete a la misma transformación que se había
+    aplicado para obtener la matriz elemental $B$. 
+    %Generalizar el resultado.
+
+    \n Una matriz \textit{simétrica} (respectivamente, \textit{antisimétrica}) es aquella que cumple
+    $A=A^T$ (respectivamente, $A={-}A^T$), siendo $A^T$ la matriz traspuesta de $A$.
+
+    Probar
+    que una matriz antisimétrica tiene nulos todos los elementos
+    en la diagonal principal.
+
+%    \n Una matriz que es a la vez simétrica y antisimétrica ha de ser la
+%    matriz nula (todos sus elementos son 0).
+
+    \n Probar que:
+    \begin{enumerate}\itemsep=-2pt
+        \item Dada una matriz cuadrada $A$, la matriz
+        $1/2(A+A^T)$ es simétrica.
+        \item Dada una matriz cuadrada $A$, la matriz
+        $1/2(A-A^T)$ es antisimétrica.
+        \item Toda matriz cuadrada se puede escribir como suma
+        de una matriz simétrica y otra antisimétrica.
+    \end{enumerate}
+
+
+\
+
+\noindent
+
+    Entre las matrices cuadradas complejas se definen las matrices
+    \textit{hermíticas} como aquellas que verifican
+    $a_{ij}=\overline{a_{ji}}\;\forall i,j$ (o bien,
+    $A=\overline{A^T}$). Respectivamente, las
+    \textit{antihermíticas} como aquellas que verifican
+    $A=-\overline{A^T}$.
+Demostrar lo siguiente:
+
+    \nn Todos los elementos de la
+    diagonal principal de una matriz hermítica son reales.
+
+    \nn Todos los elementos de la
+    diagonal principal de una matriz antihermítica son imaginarios puros.
+
+%    \n Una matriz antihermítica tiene todos los elementos de la
+%    diagonal principal imaginarios puros.
+
+    \nn Una matriz a la vez hermítica y antihermítica ha de ser
+    la matriz nula.
+
+    \nn Toda matriz cuadrada compleja se puede escribir como
+    suma de una matriz hermítica y otra antihermítica.
+
+\
+
+    \n Comprobar que el producto de matrices simétricas no siempre es
+    una matriz simétrica, haciendo el cálculo en los casos:
+
+\medskip
+
+1) $A=\left(%
+\begin{array}{ccc}
+  1 & 0 & 1 \\
+  0 & 1 & 0 \\
+  1 & 0 & 0 \\
+\end{array}%
+\right)$,
+\enspace
+$B=\left(%
+\begin{array}{ccc}
+  1 & 0 & 0 \\
+  0 & 2 & 0 \\
+  0 & 0 & 2 \\
+\end{array}%
+\right)$\, ;
+\qquad
+2)
+% Sin embargo, sí es simétrico en el caso:
+$A=\left(%
+\begin{array}{ccc}
+  1 & 4 & 1 \\
+  4 & 3 & 4 \\
+  1 & 4 & 1 \\
+\end{array}%
+\right), $
+\enspace
+$B=\left(%
+\begin{array}{ccc}
+  0 & 0 & 1 \\
+  0 & 1 & 0 \\
+  1 & 0 & 0 \\
+\end{array}%
+\right)$.
+\medskip
+
+
+\noindent    Comprobar que en el caso 1), $AB= (BA)^T$, mientras que en el
+    caso 2), $AB=BA$ (esto es, $A$ y $B$ \textit{conmutan}).
+
+    \n Demostrar que dos matrices simétricas $A$ y $B$
+    conmutan si y sólo si su producto es una matriz simétrica.
+    Encontrar matrices simétricas que conmuten y las que no conmuten,
+    distintas de las del ejercicio anterior.
+
+    \n Probar que si $A$ es simétrica y $B$ antisimétrica, $A$
+    y $B$ conmutan si y sólo si su producto es una matriz
+    antisimétrica.
+
+    \n Demostrar que toda matriz simétrica real o compleja $2\times 2$ que
+    conmute con
+    $
+    \left(%
+\begin{array}{cc}
+  1 & 1 \\
+  0 & 1 \\
+\end{array}%
+\right)
+$
+ % \enspace
+    es un múltiplo de la identidad.
+
+
+
+\end{document}

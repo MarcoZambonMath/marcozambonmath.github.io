@@ -1,0 +1,561 @@
+\documentclass[12pt,a4paper]{article}
+
+%% Para acentos
+\usepackage[spanish,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+
+% Para fuentes postscript
+%\usepackage{type1ec}
+%\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+
+%% Para mates
+\usepackage{amsmath,amssymb,latexsym}
+
+%% Para gráficos
+\usepackage{graphicx}
+
+%% Para gráficos realizados con LatexCad
+%\usepackage{latexcad}
+
+
+%% Para numeración automática
+\newcounter{nroproblema}
+\setcounter{nroproblema}{1}
+\newcounter{nroapartado}
+\setcounter{nroapartado}{1}
+\newcommand{\n}{%
+    \vspace{.1in}\noindent{\bf \arabic{nroproblema})\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%\phantom{l}
+\newcommand{\apartado}{\vspace*{0.2cm}\hspace*{0.5cm}%
+   {\bf \alph{nroapartado})}
+   \addtocounter{nroapartado}{1}%
+   }
+
+
+%% Abreviaturas comunes (para evitar usar misMacros.mcr)
+\newcommand{\ds}{\displaystyle}
+\newcommand{\df}{\mathop=\limits^{\sf def}}
+
+% Para maquetación
+\setlength{\parindent}{0pt}
+\usepackage[hmargin={1.5cm,1.5cm},vmargin={1.5cm,1.5cm}]{geometry}
+
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\K}{{\mathbb{K}}}
+
+
+\begin{document}
+
+\begin{flushright}
+1${}^o$ de grado en Física, curso 2013/14
+
+\today
+\end{flushright}
+
+
+\begin{center}{\bf {\Large \'ALGEBRA I. HOJA 6}}\end{center}
+
+
+%\begin{enumerate}
+
+
+\n
+Se considera el espacio vectorial $M_n(\R)$.
+Calcular la dimensi\'on del subespacio
+$$
+    T= \{A\in M_n(\R)\colon \mathrm{tr}(A)=0\}\,.
+$$
+
+ (V\'ease el ejercicio 7 de la hoja 4 para la definici\'on de traza).
+
+
+
+
+
+
+
+
+
+
+ \n  Hallar la matriz en las bases can\'onicas de la aplicaci\'on del espacio de los polinomios de grado
+$\leq 3$ en $\mathbb{R}^4$ dada por $f(p(x))=(p(-1),p(1),p(-2),p(2))$.
+
+\vspace{0.2cm}
+
+{\it Observación:} En esta hoja de ejercicios,
+cuando nos referimos a vectores columna en $\mathbb{R}^n$,
+omitimos el símbolo de transposición. Estrictamente hablando,
+aqu\'\i \/ se trata del vector $(p(-1),p(1),p(-2),p(2))^T$.
+
+
+\vspace{0.2cm}
+
+\n Hallar las matrices en las bases can\'onicas de las siguientes aplicaciones:
+
+\apartado La aplicaci\'on $A$ de $\mathbb{R}^3$ en $\mathbb{R}^3$ dada por
+$A(x, y, z ) = (x - y + 2z , x + y, 2x + 2y + z )$.
+
+\apartado La aplicaci\'on $B$ de $\mathbb{C}^2$ en $\mathbb{C}^2$ dada por
+$B(z_1 , z_2 ) = (iz_1 + 2z_2 , z_1 - iz_2 )$.
+
+\apartado La aplicaci\'on $C$ de $\mathbb{R}^3$ en $\mathbb{R}^3$ dada por
+$C (x, y, z ) = (x + z , y, x + y + z )$.
+
+\apartado La aplicaci\'on $D$ de $\mathbb{C}^2$ en $\mathbb{C}^3$ dada por
+$D(z_1 , z_2 ) = (iz_1 + z_2 , z_1 + iz_2 , z_1- iz_2 )$.
+
+\apartado La aplicaci\'on $E$ de $\mathbb{R}^2$ en $\mathbb{R}^4$ dada por
+$E(x, y) = (x, x + y, 2x, x + 2y)$.
+
+\vspace{0.2cm}
+
+\n  Dada la aplicaci\'on de $\mathbb{R}^2$ en $\mathbb{R}^4$ por la matriz:
+$$\left( \begin{array}{cc}
+1& 0\\
+0& 1\\
+1& 0\\
+0&1\end{array}\right)$$
+en las bases can\'onicas, hallar la matriz de dicha aplicaci\'on en las bases
+$\{(0, 1), (1, 1)\}$ de $\mathbb{R}^2$
+y
+$\{(1, 1, 0, 0), (0, 1, 1, 0), (0, 0, 1, 1)(0, 0, 0, 1)\}$ de $\mathbb{R}^4$.
+
+\vspace{0.2cm}
+
+\n  Dada la aplicaci\'on de $\mathbb{R}^2$ en $\mathbb{R}^4$ por la matriz:
+$$\left( \begin{array}{cc}
+1& 0 \\
+0& 1 \\
+1& 0 \\
+0 &1\end{array}\right)$$
+en las bases $\{(0, 1), (1, 1)\}$ de $\mathbb{R}^2$
+y $\{(1, 1, 0, 0), (0, 1, 1, 0), (0, 0, 1, 1)(0, 0, 0, 1)\}$ de $\mathbb{R}^4$, hallar
+la matriz de dicha aplicaci\'on en las bases can\'onicas.
+
+
+\vspace{0.2cm}
+
+\n Hallar, haciendo un cambio de base, la expresi\'on matricial en la base can\'onica de la
+aplicaci\'on lineal $f$ de $\mathbb{R}^3$ en $\mathbb{R}^3$ tal que: $$f (1, 1, 0) = (1, 1, 1),\quad f (1, 0,
+-1) = (0, 1, 1) \text{ y }\quad f (1, -1, 1) =
+(1, 2, 2).$$
+
+
+\vspace{0.2cm}
+
+\n Determinar cu\'al es el n\'ucleo y cu\'al es la imagen:
+
+\apartado de una proyecci\'on ortogonal de $\mathbb{R}^2$ sobre una de sus rectas.
+
+\apartado de una proyecci\'on ortogonal de $\mathbb{R}^3$ sobre una de sus rectas.
+
+\apartado de una proyecci\'on ortogonal de $\mathbb{R}^3$ sobre uno de sus planos.
+
+\apartado de una simetr\'ia ortogonal de $\mathbb{R}^2$ respecto a una de sus rectas.
+
+\apartado de una simetr\'ia ortogonal de $\mathbb{R}^3$ respecto a una de sus rectas.
+
+\apartado de una simetr\'ia ortogonal de $\mathbb{R}^3$ respecto a uno de sus planos.
+
+
+ \vspace{0.2cm}
+
+\n Dada la aplicaci\'on lineal $f : \mathbb{R}^5 \rightarrow \mathbb{R}^4$ en las bases can\'onicas por la matriz:
+$$\left( \begin{array}{ccccc}
+1 &-2 &-1& 0& -1\\
+1 &1 &1 &2& 0\\
+2 &0 &3& 5&-3\\
+0 &3& 2& 2& 1 \end{array}\right).
+$$
+\vskip-.2cm
+
+\apartado Hallar una base del n\'ucleo de $f$.
+
+\apartado Seleccionar las ecuaciones del n\'ucleo de $f$.
+
+\apartado Hallar una base de la imagen de $f$.
+
+\apartado Hallar las ecuaciones cartesianas de la imagen de $f$.
+
+
+\vspace{0.2cm}
+
+\n  Comprobar que es posible hallar una aplicaci\'on definida en $\mathbb{R}^3$ con imagen en $\mathbb{R}^3$, tal que:
+
+\apartado Su n\'ucleo es el plano de ecuaci\'on $x + y + z = 0$ y su imagen es la recta $x = y = 2z$.
+
+\apartado Su imagen es el plano de ecuaci\'on $x + y + z = 0$ y su n\'ucleo es la recta $x = y = 2z$.
+
+\apartado Hallar las matrices correspondientes en la base can\'onica.
+\vspace{0.2cm}
+
+\n  Comprobar que es posible hallar una aplicaci\'on definida en $\mathbb{R}^4$ con imagen en $\mathbb{R}^4$, tal que
+tanto su n\'ucleo como su imagen sean el subespacio de ecuaciones:
+ $$\left. \begin{array}{cccccc}
+x_1 +& x_2 + &x_3 +&x_4 &= 0 \\
+&x_2 + &x_3 &  &= 0 \end{array}\right\}$$
+Hallar la matriz de dicha aplicaci\'on en la base can\'onica de $\mathbb{R}^4$.
+\vspace{0.2cm}
+
+\n  Sea $f$ un isomorfismo en $\mathbb{R}^3$ y $g:\mathbb{R}^3\to \mathbb{R}^3$
+otra aplicaci\'on lineal tal que la dimensi\'on de la imagen de
+$g \circ f$ es 2.
+
+\apartado ?`Cu\'al es el rango de la matriz de $g$?
+
+\apartado ?`C\'ual es la dimensi\'on de la imagen de $f \circ g$?
+
+
+
+\n Encontrar los valores de $a$ para los que los vectores
+$\{(a, 0, 1), (0, 1, 1), (2, -1, a)\}$ formen una base de $\mathbb{R}^3$.
+
+\vspace{0.2cm}
+
+
+
+
+
+\n Comprobar que una base de $\mathbb{C}$ considerado como espacio vectorial sobre $\mathbb{C}$ est\'a formada
+por $\{1\}$, pero una base de $\mathbb{C}$ considerado como espacio vectorial sobre $\mathbb{R}$ es $\{1, i\}$. Estos dos espacios
+vectoriales tienen distinta dimensi\'on.
+
+\vspace{0.2cm}
+
+\vspace{0.2cm}
+
+
+
+% \n Siendo
+%$B_1= \{v_1=(1, 1, 0, 0), v_2=(0, 1, 0, -1), v_3=(0, 1, 1, 0), v_4=(0, 0, 0, 1)\}$
+%y $B_2= \{w_1=(1, 0, 0, 1), w_2=(1, 0, 1, 0), w_3=(0, 2, 1, 0), w_4=(0, 1, 0, 1)\}$ dos bases de $\mathbb{R}^4$, hallar:
+%
+%\apartado Las coordenadas del vector $3w_1 + 2w_2 + w_3- w_4$ en la base $B_1=\{v_1 , v_2 , v_3 , v_4 \}$.
+%
+%\apartado Las coordenadas del vector $3v_1- v_3 + 2v_2$ en la base $B_2=\{w_1 , w_2 , w_3 , w_4 \}$.
+%
+%\apartado La matriz de cambio de base de $B_1$ a $B_2$.
+%
+%\apartado La matriz de cambio de base de $B_2$ a $B_1$.
+%
+%\vspace{0.2cm}
+
+
+
+\n \apartado Escribir las matrices de cambio de base en el espacio de los polinomios de grado menor o igual
+que $3$ con coeficientes reales entre las bases
+\enspace $B_1=\{1, x-1, (x-1)^2, (x
+-1)^3 \}$ \enspace y \enspace $B_2=\newline \{1, x+1, (x+1)^2, (x+1)^3\}$.
+
+\apartado Hallar las coordenadas del polinomio $1 + x + x^2 + x^3$ directamente en las dos bases y comprobar que est\'an relacionadas por las matrices de cambio de base.
+
+
+
+
+
+    \n Calcular  los determinantes
+    siguientes:
+\vskip-.3cm
+    $$
+a)\left|%
+\begin{array}{ccc}
+  0 & 2 & 4 \\
+  1 & 1 & 3 \\
+  3 & 3 & 3 \\
+\end{array}%
+\right|\ b)\left|%
+\begin{array}{ccc}
+  0 & -1 & 1 \\
+  1 & 0 & 1 \\
+  2 & -1 & -1 \\
+\end{array}%
+\right|\ c)\left|%
+\begin{array}{ccc}
+  -2 & 1 & 1 \\
+  -3 & 2 & 1 \\
+  1 & -1 & 1 \\
+\end{array}%
+\right|\ d)\left|%
+\begin{array}{cccc}
+  0 & -1 & -1 & 1 \\
+  1 & 0 & -1 & 1 \\
+  2 & -1 & -3 & -1 \\
+  0 & 1 & -1 & 0 \\
+\end{array}%
+\right|
+$$
+
+Sol: 12, -4, -1, -8.
+
+    \n Calcular los determinantes de las matrices dadas a
+    continuación:
+    $$
+a)\left|\frac{1}{7}\left(%
+\begin{array}{ccc}
+  3 & 2 & -6 \\
+  6 & -3 & 2 \\
+  2 & 6 & 3 \\
+\end{array}%
+\right) \right|
+\hspace{1cm} b)\left|\frac{1}{9}\left(%
+\begin{array}{ccc}
+  -8 & -1 & -4 \\
+  -4 & 4 & 7 \\
+  1 & 8 & -4 \\
+\end{array}%
+\right) \right|
+    $$
+
+    Sol: a) -1,  b) 1.
+
+%    \n Demostrar que los
+%    siguientes determinantes son nulos:
+%\vskip-.4cm
+%    $$
+%a)\left|\begin{array}{ccc}
+%  7 & 1 & 3 \\
+%  3 & 2 & 1 \\
+%  10 & 3 & 4 \\
+%\end{array}\right|\hspace{5mm}
+%b)\left|\begin{array}{ccc}
+%  a & b & c \\
+%  -a & -b & -c \\
+%  d & e & f \\
+%\end{array}\right|\hspace{5mm}
+%c)\left|\begin{array}{ccc}
+%  1 & 2 & 3 \\
+%  2 & 3 & 4 \\
+%  3 & 4 & 5 \\
+%\end{array}\right|\hspace{5mm}
+%d)\left|\begin{array}{cccc}
+%  1^2 & 2^2 & 3^2 & 4^2 \\
+%  2^2 & 3^2 & 4^2 & 5^2 \\
+%  3^2 & 4^2 & 5^2 & 6^2 \\
+%  4^2 & 5^2 & 6^2 & 7^2 \\
+%\end{array}\right|\, .
+%    $$
+%\vskip-.4cm
+
+
+\n Sean $A,B$ dos matrices cuadradas no nulas tales que $AB=0$.
+
+\apartado Demostrar que al menos una de las matrices $A,B$ tiene determinante nulo;
+
+\apartado Demostrar que ambas matrices tienen determinante nulo.
+
+    \n a) Obtener, en términos de los determinantes de los
+    menores diagonales de la matriz $A$,
+    $$
+    |A-\lambda I|=\left|\begin{array}{ccc}
+      a_{11}-\lambda & a_{12} & a_{13} \\
+      a_{21} & a_{22}-\lambda & a_{23} \\
+      a_{31} & a_{32} & a_{33}-\lambda \\
+    \end{array}
+    \right|$$
+    (Indicación: descomponer las filas en sumandos con y sin
+    $\lambda$).
+
+    b) Aplicar la fórmula obtenida para hallar los siguientes
+    determinantes:
+    $$
+    |A-\lambda I|=\left|\begin{array}{ccc}
+      1-\lambda & 2 & 1 \\
+      0 & 3-\lambda & 1 \\
+      3 & 1 & 2-\lambda \\
+    \end{array}
+    \right|,\hspace{1cm}\left|\frac{1}{3}\left(%
+\begin{array}{ccc}
+  2 & 1 & -2 \\
+  -1 & -2 & -2 \\
+  -2 & 2 & -1 \\
+\end{array}%
+\right)-\lambda I
+    \right|    $$
+
+    sol: $-{\lambda}^{3}  + {6 \lambda^{2} } - {7 \lambda} + 2$, $
+-{\lambda}^{3}  - \frac{1}{3}{\lambda}^{2}  + \frac{1}{3}\lambda + 1$
+
+
+    \n Sean matrices cuadradas $A\in M_{m\times m}$, $B\in M_{n\times n}$, $C\in M_{m\times
+    n}$ y $D\in M_{(m+n)\times(m+n)}$ una matriz que se descompone
+    por bloques como
+    $$
+    D=\left(%
+\begin{array}{cc}
+  A & C \\
+  0 & B \\
+\end{array}%
+\right).
+    $$
+
+    a) Demostrar que $|D|=|A||B|$ utilizando la descomposición
+    $$
+    \left(%
+\begin{array}{cc}
+  A & C \\
+  0 & B \\
+\end{array}%
+\right)=\left(%
+\begin{array}{cc}
+  I_m & 0 \\
+  0 & B \\
+\end{array}%
+\right)\left(%
+\begin{array}{cc}
+  A & C \\
+  0 & I_n \\
+\end{array}%
+\right)
+    $$
+    b) Demostrar, utilizando una descomposición similar, la misma
+    igualdad $|D|=|A||B|$, en el caso
+    $$
+    D=\left(%
+\begin{array}{cc}
+  A & 0 \\
+  C & B \\
+\end{array}%
+\right)
+    $$
+    (Nótese que ahora $C\in M_{n\times m}$).
+
+    c) Calcula el determinante
+$$\left| \begin{array}{cccccccc}
+1 & -1 & 2 \\
+   &  1  & 7 \\
+   &      &  3 \\
+   &      &      & 2 \\
+   &      &      & 4  & -2 \\
+   &      &      & 1  & 4   &  5   \\
+   &      &      &     &      &      & 2 & 3 \\
+   &      &      &     &      &      &    & 2
+\end{array}\right|$$
+
+Sol: -240.
+
+%\n Estudiar si son independientes en su espacio vectorial correspondiente los siguientes conjuntos. En el caso en que sean linealmente dependientes, expresar uno de ellos como combinación lineal de los restantes:
+%
+%\apartado $\{(1, 2, 0), (0, 1, 1)\} \subset \mathbb{R}^3$,
+%
+%\apartado $\{(1, 2, 0), (0, 1, 1), (1, 1, 0)\} \subset \mathbb{R}^3$,
+%
+%\apartado $\{(1, 2, 0), (0, 1, 1), (1, 1, -1)\} \subset \mathbb{R}^3$,
+%
+%\apartado $\{(1, 2, 0), (0, 1, 1), (1, 1, 0), (3, 2, 1)\} \subset \mathbb{R}^3$,
+%
+%\apartado $\{(i, 1 - i), (2, -2i - 2)\} \subset \mathbb{C}^2$,
+%
+%\apartado $\{(i, 1, -i), (1, i, -1)\} \subset \mathbb{C}^3$.
+%
+%\apartado \enspace $\left\{\left(\begin{matrix} 0 & 1 \\ 0 & -2\end{matrix}\right),
+%\left(\begin{matrix}
+%1 & -1 \\
+%0 & 1
+%\end{matrix}\right),
+%\left(\begin{matrix}
+%-2 & 5 \\
+%0 & -8
+%\end{matrix} \right) \right\} \subset \mathcal{M}_{2\times 2}(\mathbb{R})$
+%
+%
+%\apartado Los polinomios $\{1, x - 2, (x - 2)^2, (x - 2)^3\} \subset P_{\mathbb{R}}^3[x]$.
+
+
+\n \apartado Demostrar que si $\{f_1(x), f_2(x), \cdots , f_k (x)\}$ son funciones tales que existen $\{a_1 , a_2 ,\cdots, a_k \}$ verificando
+$$\left| \begin{array}{cccc}
+f_1 (a_1 ) &f_2 (a_1 ) &  \cdots & f_k (a_1 ) \\
+f_1 (a_2 )& f_2 (a_2 ) & \cdots & f_k (a_2 ) \\
+\vdots & \vdots & & \vdots \\
+f_1(a_k) & f_2(a_k) & \cdots & f_k(a_k)
+\end{array} \right| \not=0$$
+entonces   $\{f_1(x), f_2(x), \cdots , f_k (x)\}$
+son funciones linealmente independientes.
+
+\vspace{0.2cm}
+
+Demuestra los siguientes enunciados utilizando el apartado anterior:
+
+\apartado Los polinomios
+$\{1, x - 2, (x - 2)^2,\cdots, (x - 2)^n \} \subset P_{\mathbb{R}}^n[x]$
+son linealmente independientes.
+
+\apartado Para cualquier $a\in \mathbb{R}$, los polinomios
+$\{1, x - a, (x - a)^2, \cdots, (x - a)^n\} \subset P_{\mathbb{R}}^n[x]$ son linealmente independientes para cualquier $n\in \mathbb{N}$.
+
+
+%\n Comprobar que los siguientes conjuntos de vectores son bases de los correspondientes espacios vectoriales: (son las llamadas bases can\'onicas)
+
+%\apartado $\{(1, 0, 0, \ldots , 0), (0, 1, 0, \ldots , 0), (0, 0, 1, \ldots , 0), \ldots , (0, 0, 0, \ldots , 1)\} \subset \mathbb{R}^n$.
+
+%\apartado $\left\{\left(\begin{matrix}
+%1 & 0\\
+%0  & 0\end{matrix} \right),
+%\left(\begin{matrix}
+%0 & 1\\
+%0 & 0\end{matrix} \right),
+%\left(\begin{matrix}
+%0 & 0\\
+%1 & 0\end{matrix} \right),
+%\left(\begin{matrix}
+%0 & 0 \\
+%0 & 1 \end{matrix} \right)\right\}
+%\subset \mathcal{M}_{2\times2} (\mathbb{R})$
+
+%\apartado $\{1, x, x^2,\cdots , x^n\} \subset P^n_\mathbb{R} (x)$.
+
+\vspace{0.2cm}
+
+\n Encontrar bases de los siguientes subespacios vectoriales de
+$\mathcal{M}_{3\times3} (\mathbb{R})$:
+
+\apartado Las matrices diagonales.
+
+\apartado Las matrices triangulares superiores.
+
+\apartado Las matrices triangulares inferiores.
+
+\apartado Las matrices sim\'etricas.
+
+\apartado Las matrices antisim\'etricas.
+
+
+\n \apartado Siendo $\{e_1 , e_2 , \ldots , e_n \}$ una base de $\mathbb{R}^n$, demostrar
+que los vectores:
+\vspace{-.4cm}
+$$
+\begin{array}{cccccc}u_1 =  e_1,&
+u_2 =   e_1 + e_2 ,&
+\cdots, &
+u_{n-1} = e_1 + e_2 + \cdots + e_{n-1} ,&
+u_n =  e_1 + e_2 + \cdots + e_{n-1}+e_n
+\end{array}
+$$
+\vskip-.3cm
+son otra base de $\mathbb{R}^n$.
+
+\apartado Hallar las coordenadas de los vectores $(n, n- 1, \ldots , 2, 1)$ y $(1, 2, \cdots , n - 1, n)$ de $\mathbb{R}^n$, en la base
+$\{u_1 , u_2 , \ldots, u_n \}$, donde los $u_i$ est\'an definidos como arriba y $\{e_1 , e_2 , \ldots , e_n \}$ es la base can\'onica de $\mathbb{R}^n$.
+
+\vspace{0.2cm}
+
+\n Hallar las coordenadas del vector $(3, 2, -1, 0)$ de $\mathbb{R} ^4$
+en la base $$B=\{(1, 0, 0, 1), (1, 0, 1, 0), (0, 2, 1, 0), (0, 1, 0, 1)\}.$$
+
+%\vspace{0.2cm}
+
+
+
+\vspace{0.2cm}
+
+
+
+
+
+
+\end{document}

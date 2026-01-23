@@ -1,0 +1,147 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+
+%% Para las columnas
+\usepackage{multicol}
+
+
+\usepackage{amssymb, amsmath}
+\usepackage{latexsym}
+\usepackage{multicol}
+
+
+%% Para numeraci?n autom?tica
+\newcounter{nroproblema}
+\setcounter{nroproblema}{1}
+\newcounter{nroapartado}
+\setcounter{nroapartado}{1}
+\newcommand{\n}{%
+    \vspace{.1in}\noindent{\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+\newcommand{\apartado}{\vspace*{0.2cm}\hspace*{0.2cm}%
+   {\bf \alph{nroapartado})}
+   \addtocounter{nroapartado}{1}%
+   }
+
+%% m?genes
+
+\setlength{\unitlength}{1mm} \addtolength{\voffset}{-15mm}
+\addtolength{\textheight}{30mm} \addtolength{\hoffset}{-15mm}
+\addtolength{\textwidth}{30mm}
+
+
+\begin{document}
+
+\begin{center}{\bf {\Large \'ALGEBRA I. HOJA 2}}\end{center}
+
+\noindent{Nota: Las hojas est\'an colgatas tambi\'en en la p\'agina web de del curso
+\begin{verbatim}http://www.uam.es/personal_pdi/ciencias/mzambon/WS12.html\end{verbatim}}
+
+
+\n  Probar que el tri\'angulo formado por los puntos (-3, 5, 6), (-2, 7, 9) y
+(2, 1, 7) es un tri\'angulo rectangulo. Hallar los otros ángulos.
+
+\n Probar que los puntos  (2, 1, 4), (1, -1, 2), (3, 3, 6) están en la
+misma recta.
+
+\
+
+Resolver los Ejercicios del libro (LADW) en las páginas 5 (del 1.1 al 1.6) y 11 (del 2.1 al 2.6).
+
+\
+
+
+\n ¿Cuales de las siguientes familias de vectores forman un sistema de generadores de $\mathbb{R}^3$?
+\begin{enumerate}
+\item $\{(1,2,3),(1,2,5)\}$
+\item $\{(1,2,3),(1,2,5),(0,0,-4)\}$
+\item $\{(1,2,3),(1,2,5),(0,0,-4),(1,1,1)\}$
+\end{enumerate}
+
+\n ¿Cuales de las 3 familias de vectores que aparecen en el ejercicio anterior son linealmente independientes? 
+
+\n ¿Cuales de las 3 familias de vectores que aparecen en el ejercicio anterior forman una base de $\mathbb{R}^3$?
+
+\n Dado el espacio vectorial complejo $\mathbb{C}^2$, determinar si la familia de  
+vectores $\{(1,1+2i),(i,-2+i)\}$ es una base de $\mathbb{C}^2$.
+
+\n  Sea L la recta que pasa por 
+(-2, 1, 3) y   (1, 2, 4). Hallar el punto de L más próximo al origen, y la distancia
+mínima.
+
+
+Respuestas: $(-16/11, 13/11, 35/11), \sqrt{150/11}.$
+
+\n Hallar el área del tri\'angulo con vertices $(3, 0, 2), (6, 1, 4), (2, 1, 0)$.
+
+
+\n Comprobar que $((a,b),(c,d))_1:= ac - 2 ad - 2bc + 5bd$ define un producto escalar
+en el plano real.
+
+\n Calcular las normas de los vectores $u=(1,2)$  y $v=(4,5)$ 
+con respecto al producto escalar habitual $(\cdot, \cdot)_h$  y con respecto al producto 
+$((a,b),(c,d))_1= ac - 2 ad - 2bc + 5bd$. Calcular también $(u, v)_h$ y $(u, v)_1$.
+
+\n Sea $M_{m,n}(\mathbb{R})$ el espacio de matrices $m\times n$ sobre $\mathbb{R}$, 
+sea $B^t = B^T$ la matriz traspuesta de $B$, y sea  $tr (A)$ la
+traza de la matriz cuadrada  $A = (a_{ij})_{i,j = 1}^n$, definida mediante
+$tr (A) := \sum_{i=1}^n a_{ii}$.
+Probar
+que la traza define un producto escalar en $M_{m,n}(\mathbb{R})$ mediante $(A,B):= tr(B^t A)$.
+
+\n Probar que $\left\{\left( \begin{matrix}1 & 0 \\
+0 & 0\end{matrix} \right), \left( \begin{matrix}0 & 1 \\
+0 & 0\end{matrix} \right), \left( \begin{matrix}0 & 0 \\
+1 & 0\end{matrix} \right), \left( \begin{matrix}0 & 0 \\
+0 & 1\end{matrix} \right)\right\}$ es una base ortonormal de  
+$M_{2,2}(\mathbb{R})$, con producto escalar $(A,B)= tr(B^T A)$.
+
+\n Sea $P(\mathbb{R})$ el espacio de polinomios  sobre $\mathbb{R}$. Probar
+que $(f,g):= \int_0^1 f(t) g(t) dt$ define un producto escalar en $P(\mathbb{R})$.
+
+
+
+
+
+\n Hallar el ángulo entre los vectores $e_1$ y $(1,1,1)$ en $\mathbb{R}^3$.
+
+\n Sean $u= (z_1, z_2)$ y $v = (w_1, w_2)$ vectores en $\mathbb{C}^2$. Comprobar que $(u,v)_1:= 
+z_1 \overline{w_1}  + (1+i)z_1 \overline{w_2} + (1-i)z_2 \overline{w_1} + 3 z_2 \overline{w_2}$ define un producto escalar
+en $\mathbb{C}^2$.
+
+\n Calcular las normas de los vectores $u=(1 - i,2 + 3i)$  y $v=(4 + 2i, 5 + i)$ 
+con respecto al producto escalar habitual $(\cdot, \cdot)_h$  y con respecto al producto $(u,v)_1:= 
+z_1 \overline{w_1}  + (1+i)z_1 \overline{w_2} + (1-i)z_2 \overline{w_1} + 3 z_2 \overline{w_2}$. 
+Calcular también $(u, v)_h$ y $(u, v)_1$.
+
+\n Decidir razonadamente si la siguiente afirmación es verdadera o falsa:
+$$
+\left(\int_{99 \pi/200}^{\pi/2} \sen x\cos x dx\right)^2 \le \int_{99 \pi/200}^{\pi/2} \left(\sen x\right)^2 dx 
+\int_{99 \pi/200}^{\pi/2} \left(\cos x \right)^2dx.$$
+%%
+
+
+\end{document}
+
+
+
+
+\n Sea $P_2(\mathbb{R})$ el espacio de polinomios sobre $\mathbb{R}$ de grado $\le 2$, con
+el  producto escalar
+$(f,g):= \int_0^1 f(t) g(t) dt$. Hallar una base para el complemento ortogonal del subespacio generado por $1 + 3t$.
+
+\n Hallar una base para el complemento ortogonal del subespacio generado por $(1,2,3)$ en $\mathbb{R}^3$. 
+
+\n Decidir razonadamente si los siguientes conjuntos, con las  adici\'on y multiplicaci\'on por escalares definidas de manera natural, forman espacios vectoriales:
+\begin{enumerate}
+\item   $\{f\colon [0,1]\to \mathbb{R} \text{ tal que } f \text{ es continua}\}$
+\item   $\{f\colon [0,1]\to \mathbb{R}_+ \text{ tal que } f \text{ es continua}\}$, donde $\mathbb{R}_+$ denota los n\'umeros positivos,
+\item    $\{f\colon [0,1]\to \mathbb{R} \text{ tal que }  f \text{ es continua}\}$,
+\item $P_n(\mathbb{R})$, el espacio de polinomios reales de grado $\le n$ (donde $n$ es un n\'umero entero positivo fijado),
+\item  el espacio de polinomios reales de grado \emph{igual} a $n$.\end{enumerate}
+
+\n Sea $P(\mathbb{R})$ el espacio de polinomios  sobre $\mathbb{R}$. Comproba que,  con las  adici\'on y multiplicaci\'on por escalares definidas de manera natural,  es una espacio vectorial. Existe una base de 
+$P(\mathbb{R})$?

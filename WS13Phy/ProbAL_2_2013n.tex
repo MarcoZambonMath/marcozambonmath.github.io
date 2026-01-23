@@ -1,0 +1,277 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+
+%% Para las columnas
+\usepackage{multicol}
+\usepackage{amssymb,amsmath,eepic,fancyhdr}
+\usepackage{latexsym}
+\usepackage{datenumber}
+
+
+%% Para numeraci?n autom?tica
+\newcounter{nroproblema}
+\setcounter{nroproblema}{1}
+\newcounter{nroapartado}
+\setcounter{nroapartado}{1}
+\newcommand{\n}{%
+    \vspace{.1in}\noindent{\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+\newcommand{\apartado}{\vspace*{0.2cm}\hspace*{0.2cm}%
+   {\bf \alph{nroapartado})}
+   \addtocounter{nroapartado}{1}%
+   }
+
+% \newcommand{\A}{{\bf (A)\; }} % De problemas de Andrei
+\newcommand{\A}{} % De problemas de Andrei
+
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\K}{{\mathbb{K}}}
+
+
+\newcommand{\rpol}[1]{\mathcal P^{\R}_{#1}}
+\newcommand{\kpol}[1]{\mathcal P^{\K}_{#1}}
+
+\newcommand{\cuatrox}[1][x]{\mbox{$\Bigg(\begin{array}{c}
+    #1_1\\[-4pt] #1_2\\[-4pt] #1_3\\[-4pt] #1_4\end{array}\Bigg)$}}
+\newcommand{\cuatroy}{\cuatrox[y]}
+\newcommand{\cuatroz}{\cuatrox[z]}
+
+% \newcommand{\cpol}[1]{\mbox{$\mathcal P^{\C}_{#1}}$}
+
+
+
+
+%% m?genes
+
+\setlength{\unitlength}{1mm} \addtolength{\voffset}{-18mm}
+\addtolength{\textheight}{35mm} \addtolength{\hoffset}{-18mm}
+\addtolength{\textwidth}{40mm}
+
+
+
+
+
+\begin{document}
+
+
+\begin{flushright}
+1${}^o$ de grado en Física, curso 2013/14
+
+\today
+\end{flushright}
+
+
+\begin{center}{\bf {\Large ÁLGEBRA I. HOJA 2}}\end{center}
+
+% \vskip.5cm
+
+
+%\noindent{Nota: Las hojas est\'an colgatas tambi\'en en la p\'agina web de del curso
+%\begin{verbatim}http://www.uam.es/personal_pdi/ciencias/mzambon/WS12.html\end{verbatim}}
+
+
+
+\n \A
+Estudiar si los siguientes conjuntos son subespacios vectoriales
+de $\R^4$.
+\begin{enumerate}\itemsep=-2pt
+\item $A=\{(3x_2,x_2,x_4+x_2,x_4)^T\;|\;x_2,x_4\in \R\}$.
+
+\item $B=\{(x_1,x_2,x_3,x_4)^T\;|\;x_1\cdot x_2=0\}$.
+
+\item $C=\{(x_1,x_2,x_1,x_2)^T\;|\;x_1=1\}$.
+
+\item $D=\{(x_1,x_1,x_1,x_1)^T\;|\;x_1\in \R\}$.
+
+\item $E=\{(x_1,x_2,x_3,x_4)^T\;|\; x_1=t,x_2=t,x_3=2t,x_4=5t,
+t\in\R\}$.
+\end{enumerate}
+
+
+\n \A
+Comprueba si son o no espacios
+vectoriales sobre $\mathbb{R}$ los siguientes conjuntos con las operaciones
+indicadas:
+\begin{enumerate}
+\itemsep=-2pt
+\item $V=\{(x_1,x_2)^T\in \R^2\},\quad
+(x_1,x_2)^T+(y_1,y_2)^T=(x_1+y_1,0),\, \lambda(x_1,x_2)=(\lambda
+x_1,0)$.
+
+\item $V=\{(x_1,x_2)^T\in \R^2\mid x_1\not=0, x_2\not=0\},\quad
+(x_1,x_2)^T+(y_1,y_2)^T=(x_1y_1,x_2y_2)^T,\, \newline \lambda(x_1,x_2)^T=(\lambda
+x_1,\lambda x_2)^T$.
+\end{enumerate}
+
+\n
+Sea $\K$ el cuerpo de los n\'umeros reales ó bien el cuerpo de los n\'umeros complejos
+(es decir, $\K=\R$ \'o $\K=\C$).
+Dado un $n\in \N$,
+denotamos por $\kpol{n}$ el conjunto de polinomios de grado $\le
+n$ con coeficientes en $\K$.
+
+Decidir razonadamente si los siguientes conjuntos, con la adici\'on
+y multiplicación por escalares en $\K$ definidas de manera natural,
+forman espacios vectoriales:
+\begin{enumerate}
+\item  $\kpol{n}$.
+\item  el conjunto de polinomios en $\kpol{n}$ de grado \emph{igual} a $n$.
+\item   $\{f\colon [0,1]\to \mathbb{R} \text{ tal que } f \text{ es continua}\}$ ($\K=\R$).
+\item   $\{f\colon [0,1]\to \mathbb{R}_+ \text{ tal que } f \text{ es continua}\}$
+($\K=\R$), donde $\mathbb{R}_+$ denota los n\'umeros positivos.
+\end{enumerate}
+
+\n Sea ${\mathcal P}^\R$ el espacio de todos los polinomios  sobre $\mathbb{R}$. Comprobar que, con las  adici\'on y multiplicaci\'on por escalares
+definidas de manera natural,  es un espacio vectorial.
+?`Existe una base de ${\mathcal P}^\R$?
+
+
+\n ¿Cuáles de las siguientes familias de vectores forman un sistema de generadores de $\mathbb{R}^3$
+(con las operaciones usuales)?
+\begin{enumerate}
+\itemsep=-2pt
+\item $\{(1,2,3)^T,(1,2,5)^T\}$,
+\item $\{(1,2,3)^T,(1,2,5)^T,(0,0,-4)^T\}$,
+\item $\{(1,2,3)^T,(1,2,5)^T,(0,0,-4)^T,(1,1,1)^T\}$.
+\end{enumerate}
+
+\n ¿Cuáles de las 3 familias de vectores que aparecen en el ejercicio anterior son linealmente independientes?
+
+\n ¿Cuáles de las 3 familias de vectores que aparecen en el ejercicio anterior forman una base de~$\mathbb{R}^3$?
+
+\n Determinar si la familia de
+vectores $\{(1,1+2i)^T,(i,-2+i)^T\}$ es una base del espacio vectorial complejo
+ $\mathbb{C}^2$.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage %                   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\n \A
+Se considera el espacio vectorial real $\rpol{3}$.\\[-1.5\baselineskip]
+\begin{enumerate}\itemsep=-2pt
+\item ?`Es $W_1=\{ p(x)\in\rpol{3}\colon (x-1) \mbox{ divide }
+p(x)\}$ subespacio de $\rpol{3}$?
+
+\item ?`Es $W_2=\{ p(x)\in\rpol{3}\colon p(2)=0\}$ subespacio de
+$\rpol{3}$?
+
+\item Escribir, si es posible, los polinomios $1,x,x^2,x^3$ como
+combinaci\'on lineal del sistema  de vectores formado por
+$p(x)=1+x+x^2+x^3$ y sus tres primeras derivadas $p'(x), p''(x)$ y
+$p'''(x)$.
+\end{enumerate}
+
+
+\n \A
+Se consideran los subconjuntos $V$ y $W$ de $\C^4$ donde
+$$
+    V=\big\{(z_1,z_2,z_3,z_4)^T \in \C^4\colon\quad z_1=-i z_2+(1+i)z_3+z_4\big\}
+$$
+y las ecuaciones paramétricas de $W$ son
+\vskip-2mm
+$$
+\left.
+    \begin{array}{lll}
+   z_ 1 &   =&\mu+i\beta \\
+   z_ 2 &   =&\lambda+i\mu \\
+      z_3  &   =&i\lambda \\
+         z_4 &   =&\lambda+i\beta \\
+    \end{array}
+\right\}\, ,\hspace{1cm} \lambda,\,\mu,\,\beta\in\C.
+$$
+\begin{enumerate}
+
+\item Comprobar si $V$ y $W$ son subespacios de $\C^4$.
+
+\item Comprobar si es cierto que $W\subset V$.
+
+\item Responder a las mismas preguntas, si en las ecuaciones paramétricas de
+$W$ sólo se admiten $\lambda,\,\mu,\,\beta$ reales.
+
+\end{enumerate}
+
+
+\n \A
+El vector $v$ del espacio vectorial $\R^2$ tiene
+coordenadas $(1,2)$ respecto de la base $B=\{v_1,v_2\}$.
+Hallar las coordenadas de $v$ en la base $B'=\{u_1,u_2\}$ en $\R^2$,
+sabiendo que
+$$
+    v_1=3u_1+2u_2;
+    \qquad
+    v_2=4u_1-v_2\,.
+$$
+
+\n \A
+Estudiar cu\'ales de las siguientes aplicaciones son
+lineales entre los espacios vectoriales dados:\\[-1\baselineskip]
+\begin{enumerate}
+\renewcommand{\labelenumi}{
+%    \selectlanguage{english}
+    \makebox[30pt][r]{\roman{enumi})}
+    }
+    \itemsep=-2pt
+\item  $f_1\colon M_2(\R)\to M_2(\R)$ dada por $f_1(A)=AB$, donde
+$B=\left(\begin{array}{cc}1 &- 1\\1 &-1\end{array}\right)$.
+
+\item $f_2\colon M_2(\R)\to M_2(\R)$ dada por $f_2(A)=A+B$, con
+$B\in M_2(\R)$ fija.
+
+\item  $f_3\colon M_2(\R)\to M_2(\R)$ dada por $f_3(A)=AB-BA$,
+donde $B=\begin{pmatrix}
+    2  &  1  \\
+    0  &  2
+\end{pmatrix}$.
+
+\item  $f_4\colon M_2(\C)\to V$ dada por $f_4(A)=A+A^T$, donde
+$V=\{A\in M_2(\C)\colon A=A^T\}$.
+
+\item $f_5\colon M_2(\R)\to W$ dada por $f_5(A)=AA^T$, donde
+$W=\{A\in M_2(\R)\colon A=A^T\}$.
+
+\item $f_6\colon \rpol{n}\to \rpol{n}$ dada por $f_6(p(x))=
+p(x+1)$.
+
+\item $f_7\colon \rpol{n}\to \rpol{n}$ dada por $f_7(p(x))=
+p(x)+1$.
+
+\item  $f_ 8\colon \R^3\to \R^3$ dada por $f_{8}(v)= \lambda_0v$
+con $\lambda_0\in \R$ fijo.
+
+\item  $f_ 9\colon \R^3\to \R^3$ dada por $f_{9}(v)= v_0-v $ con
+$v_0\in \R^3$ fijo.
+
+\item  $f_ {10}\colon \R^3\to \R^3$ dada por
+$f_{10}(x_1,x_2,x_3)=(x_1,1,x_3)^T $.
+
+\item  $f_{11} \colon \R^3\to \R^3$ dada por
+$f_{11}(x_1,x_2,x_3)=(x_1^2-x_2^2,0,0)^T$.
+
+\item  $f_ {12}\colon \R^3\to \R^3$ dada por
+$f_{12}(x_1,x_2,x_3)=(x_1+x_2+x_3,x_1+x_2,x_3)^T $.
+
+%\item  $f_ {13}\colon \R^3\to \R^2$ dada por $f_{13}(x_1,x_2,x_3)=
+%(x_1-x_2,x_1+x_3)$.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

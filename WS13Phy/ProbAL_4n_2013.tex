@@ -1,0 +1,379 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+
+%% Para las columnas
+\usepackage{multicol}
+\usepackage{amssymb,amsmath,eepic,fancyhdr}
+\usepackage{latexsym}
+\usepackage{datenumber}
+
+
+%% Para numeraci?n autom?tica
+\newcounter{nroproblema}
+\setcounter{nroproblema}{1}
+\newcounter{nroapartado}
+\setcounter{nroapartado}{1}
+
+\newcommand{\n}{%
+    \vspace{.1in}\noindent{\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+
+\newcommand{\nn}{%
+    \vspace{.1in}\noindent \hskip.4cm {\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+
+
+\newcommand{\apartado}{\vspace*{0.2cm}\hspace*{0.2cm}%
+   {\bf \alph{nroapartado})}
+   \addtocounter{nroapartado}{1}%
+   }
+
+% \newcommand{\A}{{\bf (A)\; }} % De problemas de Andrei
+\newcommand{\A}{} % De problemas de Andrei
+
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\K}{{\mathbb{K}}}
+
+
+\newcommand{\rpol}[1]{\mathcal P^{\R}_{#1}}
+\newcommand{\kpol}[1]{\mathcal P^{\K}_{#1}}
+
+\newcommand{\cuatrox}[1][x]{\mbox{$\Bigg(\begin{array}{c}
+    #1_1\\[-4pt] #1_2\\[-4pt] #1_3\\[-4pt] #1_4\end{array}\Bigg)$}}
+\newcommand{\cuatroy}{\cuatrox[y]}
+\newcommand{\cuatroz}{\cuatrox[z]}
+
+% \newcommand{\cpol}[1]{\mbox{$\mathcal P^{\C}_{#1}}$}
+
+
+
+
+%% márgenes
+
+% Anterior:
+
+%\setlength{\unitlength}{1mm} \addtolength{\voffset}{-15mm}
+%\addtolength{\textheight}{30mm} \addtolength{\hoffset}{-20mm}
+%\addtolength{\textwidth}{45mm}
+
+\setlength{\unitlength}{1mm} \addtolength{\voffset}{-22mm}
+\addtolength{\textheight}{40mm} \addtolength{\hoffset}{-22mm}
+\addtolength{\textwidth}{46mm}
+
+
+
+
+\begin{document}
+
+
+
+% \begin{center}{\bf {\Large \'ALGEBRA I. HOJAS 2 -- 3 VERS 2 (PRELIMINAR)   }}\end{center}
+
+
+
+\begin{flushright}
+1${}^o$ de grado en Física, curso 2013/14
+
+\today
+\end{flushright}
+
+
+\begin{center}{\bf {\Large \'ALGEBRA I. HOJA 4}}\end{center}
+
+ \vskip.35cm
+
+
+%\noindent{Nota: Las hojas est\'an colgatas tambi\'en en la p\'agina web de del curso
+%\begin{verbatim}http://www.uam.es/personal_pdi/ciencias/mzambon/WS12.html\end{verbatim}}
+
+
+
+% \begin{center}{\bf {\Large \'ALGEBRA I. PARA LAS HOJAS POSTERIORES}}\end{center}
+
+
+
+%\n Estudiar si son subespacios vectoriales de $\mathbb{R}^2$ los siguientes subconjuntos:
+%
+%\apartado $S_1=\{(x, y) \in \mathbb{R}^2,\, y -x = 0\}$,
+%
+%\apartado $S_2 =\{(x, y) \in \mathbb{R}^2,\, y- x = 1\}$,
+%
+%\apartado $S_3 =\{(x, y) \in \mathbb{R}^2,\, xy = 0\}$,
+%
+%\apartado $S_4 =\{(x, y) \in \mathbb{R}^2,\, y = |x|\}$,
+%
+%\apartado $S_5 =\{(x, y) \in \mathbb{R}^2,\, |y| = |x|\}$,
+%
+%\apartado $S_6=\{(x,y) \in \mathbb{R}^2,\, x\geq 0 \}$.
+%
+%\vspace{0.2cm}
+
+
+
+\n Sea $V$ un espacio vectorial.
+
+\apartado Suponiendo que $v_1, v_2$ es una familia de vectores
+linealmente independiente, demostrar que la familia
+$2v_1+v_2, 3v_1+2v_2$ también lo es.
+
+\apartado Supongamos ahora que $v_1, v_2, v_3$ es un sistema de generadores de $V$.
+Demostrar que \newline $v_1+v_2, v_2+v_3, v_1+v_3$ forman también un sistema de generadores de $V$.
+
+\n Sea $V$ un espacio vectorial y $A$ una transformación lineal de $V$ a $V$.
+Dado un polinomio $p(t)=\sum_{k=0}^n a_k t^{n-k}$, ponemos $p(A)=\sum_{k=0}^n a_k A^{n-k}$
+(donde $A^0:=I_V$). Suponiendo que $p(0)=a_n=0$ y que $p(A)=I_V$, demostrar que
+$A$ es invertible.
+
+{\it Sugerencia:} Considerar primero el caso de un polinomio concreto, por
+ejemplo, escoger $p(t)=t^4-t$.
+
+
+
+%\n Sea $V$ un espacio vectorial y $A$ una transformación lineal de $V$ a $V$.
+%Supongamos que $A^n=I_V$ para algún número natural $n>1$. Demostrar que $A$ es invertible.
+
+
+
+\n Estudiar si son subespacios vectoriales del espacio vectorial real de funciones reales
+de variable real los siguientes subconjuntos:
+
+\apartado $S_1=\{f:\mathbb{R}\to\mathbb{R}  : \; f (0) = 0\}$; \qquad \qquad
+\apartado $S_2 = \{f:\mathbb{R}\to\mathbb{R} : \; f (1) = 0\}$;
+\vskip-.2cm
+
+\apartado $S_3 = \{f:\mathbb{R}\to\mathbb{R} : \; f (0) = 1\}$.
+
+
+%\n Averiguar si son subespacios vectoriales de los correspondientes espacios vectoriales los
+%siguientes subconjuntos:
+%
+%\apartado  El subconjunto de los polinomios de variable real y con coeficientes reales, dentro de las
+%funciones reales de variable real.
+%
+%\apartado El subconjunto de los polinomios de grado $\leq n$, de variable real y con coeficientes reales,
+%siendo $n$ fijo, dentro del espacio vectorial de las funciones reales de variable real.
+
+%\apartado El subconjunto de polinomios divisibles por $x-1$,  grado $\leq 3$,  de variable real y con
+%coeficientes reales,  como subconjunto del espacio vectorial  de los polinomios de variable real,
+% grado $\leq 3$, y con coeficientes reales.
+
+
+
+\n Averiguar si son subespacios vectoriales de $\mathcal{M}_{2\times 2}(\mathbb{R})$ los siguientes subconjuntos:
+
+\apartado Las matrices $2\times 2$ con n\'umeros racionales.
+
+\apartado Las matrices de n\'umeros reales de orden $2\times 2$ de traza cero. (Se llama traza de una
+matriz a la suma de los elementos de su diagonal).
+
+\apartado Las matrices de n\'umeros reales de orden $2\times 2$ de rango menor o igual que $1$
+(son las matrices, cuyas dos columnas son linealmente dependientes).
+
+\apartado Las matrices de n\'umeros reales de orden $2\times 2$ que conmutan con la matriz
+B, siendo B una matriz fija $2\times 2$.
+
+% \vspace{0.2cm}
+
+\n Averiguar si los siguientes subconjuntos son subespacios vectoriales de $\mathcal{M}_{n\times n}(K)$:
+
+\apartado Las matrices diagonales.
+
+\apartado Las matrices triangulares superiores.
+
+\apartado Las matrices sim\'etricas (las que satisfacen que $A^T=A$).
+
+\apartado Las matrices antisim\'etricas (las que satisfacen que $A=-A^T$).
+
+% \vspace{0.2cm}
+
+\vskip-.2cm
+
+
+
+
+
+
+\n
+{\bf a)}
+Halla
+$T\small\begin{pmatrix} 1 \\ 0\end{pmatrix}$ si $T:\R^2\longrightarrow\R^2$ es una aplicaci{\'o}n
+lineal de la que sabemos que
+\vskip-.3cm
+\[
+T
+\small
+\begin{pmatrix} 3 \\ 1
+\end{pmatrix}
+=
+\begin{pmatrix} 1 \\ 2
+\end{pmatrix}, \qquad
+T
+\small
+\begin{pmatrix} -1 \\ 0
+\end{pmatrix}
+=
+\begin{pmatrix} 0 \\ 1
+\end{pmatrix}\, .
+\]
+%
+%$T(3,1)=(1,2)$ y $T(-1,0)=(1,1)$.
+%
+
+{\bf b)} Lo mismo sabiendo que \enspace
+$T
+\small
+\begin{pmatrix} 4 \\ 1
+\end{pmatrix}
+=
+\begin{pmatrix} 1 \\ 1
+\end{pmatrix}, \;
+T
+\small
+\begin{pmatrix} 1 \\ 1
+\end{pmatrix}
+=
+\begin{pmatrix} 3 \\ -2
+\end{pmatrix}\, .
+$
+%
+%$T(4,1)=(1,1)$ y $T(1,1)=(3,-2)$.
+%
+
+
+% {\bf PRODUCTOS ESCALARES Y NORMAS MINIMAS:}
+
+
+\n Sea $M_{m,n}(\mathbb{R})$ el espacio de matrices $m\times n$ sobre $\mathbb{R}$,
+sea $B^T$ la matriz traspuesta de $B$, y sea  $tr (A)$ la
+traza de la matriz cuadrada  $A = (a_{ij})_{i,j = 1}^n$, definida mediante
+$tr (A) := \sum_{i=1}^n a_{ii}$.
+Probar
+que la traza define un producto escalar en $M_{m,n}(\mathbb{R})$ mediante $(A,B):= tr(B^T A)$.
+
+\n Sean $A,B$ matrices de tamaños $n\times m$ y $m\times n$, respectivamente.
+Demostrar que $tr(AB)=tr(BA)$.
+
+\n Probar que $\left\{\left( \begin{matrix}1 & 0 \\
+0 & 0\end{matrix} \right), \left( \begin{matrix}0 & 1 \\
+0 & 0\end{matrix} \right), \left( \begin{matrix}0 & 0 \\
+1 & 0\end{matrix} \right), \left( \begin{matrix}0 & 0 \\
+0 & 1\end{matrix} \right)\right\}$ es una base ortonormal de
+$M_{2,2}(\mathbb{R})$, con producto escalar $(A,B)= tr(B^T A)$.
+
+
+
+
+
+\n Sea $P(\mathbb{R})$ el espacio de polinomios  sobre $\mathbb{R}$. Probar
+que $(f,g):= \int_0^1 f(t) g(t) dt$ define un producto escalar en $P(\mathbb{R})$.
+
+
+
+\n
+\apartado Comprobar que $\big((a,b)^T,(c,d)^T\big)_1:= ac - 2 ad - 2bc + 5bd$ define un producto escalar
+en el plano real.
+
+\apartado Calcular las normas de los vectores $u=(1,2)^T$  y $v=(4,5)^T$
+con respecto al producto escalar habitual $(\cdot, \cdot)_h$  y con respecto al producto
+$(\cdot, \cdot)_1$. Calcular también $(u, v)_h$ y $(u, v)_1$.
+
+
+\n Hallar el ángulo entre los vectores $e_1$ y $(1,1,1)^T$ en $\mathbb{R}^3$.
+
+\n \apartado Sean $u= (z_1, z_2)^T$ y $v = (w_1, w_2)^T$ vectores en $\mathbb{C}^2$. Comprobar que
+\[
+(u,v)_1:=
+z_1 \overline{w}_1  + (1+i)z_1 \overline{w}_2 + (1-i)z_2 \overline{w}_1 + 3 z_2 \overline{w}_2
+\]
+define un producto hermítico en~$\mathbb{C}^2$.
+
+\apartado Calcular las normas de los vectores $u=(1 - i,2 + 3i)^T$  y $v=(4 + 2i, 5 + i)^T$
+con respecto al producto escalar habitual $(\cdot, \cdot)_h$  y con respecto al producto $(u,v)_1$.
+Calcular también $(u, v)_h$ y $(u, v)_1$.
+
+
+
+
+
+
+\n Decidir razonadamente si la siguiente afirmación es verdadera o falsa:
+$$
+\bigg(\int_{99 \pi/200}^{\pi/2} \sen x\cos x dx\bigg)^2 \le \int_{99 \pi/200}^{\pi/2} \left(\sen x\right)^2 dx
+\cdot \int_{99 \pi/200}^{\pi/2} \left(\cos x \right)^2dx.
+$$
+\vskip-.2cm
+
+\n  Sea L la recta que pasa por
+$(-2, 1, 3)^T$ y   $(1, 2, 4)^T$. Hallar el punto de L más próximo al origen, y la distancia
+mínima. \enspace
+\textit{Respuestas:} $(-16/11, 13/11, 35/11)^T, \sqrt{150/11}.$
+
+
+\n
+Escribiendo $y = y(x)$ (de modo que $x$ es la variable
+independiente), y con los datos siguientes, ha\-llar la
+correspondiente recta de regresión $y = a x + b$.
+
+Datos: $(x,y) = (1,1), (3,2), (4,4), (6,4), (8,5), (9,7), (11, 8),
+(14, 9)$.
+
+
+\n
+Encontrar el polinomio $y = ax^2+bx+c$
+que mejor se ajusta, en el sentido de los mínimos cuadrados,
+a los siguientes datos:
+ $(x,y) = (-2,0), (-1,0), (0,0), (1,1), (2,4)$.
+Comparar gráficamente estos datos con
+el polinomio.
+
+
+% Solución: $y(x)=(9x+5x^2)/10$.
+
+
+
+
+
+
+\n Escribir la matriz de la simetr\'ia (reflexión) de $\mathbb{R}^3$ respecto a:
+
+\apartado El plano de ecuaci\'on y = x. \qquad \qquad \qquad
+\apartado El plano de ecuaci\'on y = z .
+\vskip-.3cm
+
+\apartado El plano de ecuaci\'on x = z . \qquad \qquad \quad\;\,
+\apartado La recta de ecuaciones y = x, z = 0.
+\vskip-.3cm
+
+\apartado La recta de ecuaciones y = z , x = 0. \qquad
+\apartado La recta de ecuaciones x = z , y = 0.
+
+
+
+
+\n Hallar una base para el complemento ortogonal del subespacio generado por $(1,2,3)$ en $\mathbb{R}^3$.
+
+
+\n
+\apartado Sea $P_2(\mathbb{R})$ el espacio de polinomios sobre $\mathbb{R}$ de grado $\le 2$, con
+el  producto escalar
+$(f,g)_1:= \int_0^1 f(t) g(t) dt$. Hallar una base para el complemento ortogonal
+del subespacio generado por $1 + 3t$.
+
+\apartado Hacer lo mismo para el caso cuando el producto escalar en $P_2(\mathbb{R})$ se define por
+$(f,g)_2:= \int_{-1}^1 f(t) g(t) dt$.
+\vskip.2cm
+
+?`Coinciden los complementos ortogonales en estos
+dos casos?
+
+
+
+
+\end{document}

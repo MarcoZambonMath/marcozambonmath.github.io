@@ -1,0 +1,476 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+
+%% Para las columnas
+\usepackage{multicol}
+
+
+\usepackage{amssymb, amsmath}
+\usepackage{latexsym}
+\usepackage{multicol}
+
+
+%% Para numeraci?n autom?tica
+\newcounter{nroproblema}
+\setcounter{nroproblema}{1}
+\newcounter{nroapartado}
+\setcounter{nroapartado}{1}
+\newcommand{\n}{%
+    \vspace{.1in}\noindent{\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+\newcommand{\apartado}{\vspace*{0.2cm}\hspace*{0.2cm}%
+   {\bf \alph{nroapartado})}
+   \addtocounter{nroapartado}{1}%
+   }
+
+%% m?genes
+
+\setlength{\unitlength}{1mm} \addtolength{\voffset}{-30mm}
+\addtolength{\textheight}{55mm} \addtolength{\hoffset}{-15mm}
+\addtolength{\textwidth}{30mm}
+
+
+\begin{document}
+
+\begin{center}{\bf {\Large \'ALGEBRA I. HOJA 7}}\end{center}
+
+
+\n Averiguar si son lineales las siguientes aplicaciones: 
+
+\apartado La aplicaci\'on del espacio vectorial de las matrices cuadradas de orden $n$ en el espacio vectorial de las matrices antisim\'etricas de orden $n$ dada por $\mathcal{A}(B) = \tfrac{1}{2}(B- B^t)$.
+
+\apartado La aplicaci\'on traza definida en el espacio vectorial de las matrices cuadradas $3\times 3$ con entradas 
+reales sobre $\mathbb{R}$. 
+
+\apartado La aplicaci\'on del espacio vectorial de los polinomios de grado 
+$\leq n$ en \'este mismo espacio vectorial dada por $T(p(x)) = p(x- 1)$.
+
+\apartado La aplicaci\'on del espacio vectorial de los polinomios de grado 
+$\leq n$ en \'este mismo espacio vectorial dada por $T (p(x)) = p(x) - 1$. 
+
+\apartado La aplicaci\'on del espacio vectorial de las matrices cuadradas de orden $n$ en el mismo espacio vectorial dada por $P (A) = AB$ donde $B$ es una matriz fija. 
+
+\apartado La aplicaci\'on del espacio vectorial de las matrices cuadradas de orden $n$ en el mismo espacio dada por $Q(A) = A + B$ donde $B$ es una matriz fija. 
+
+\apartado La aplicaci\'on del espacio vectorial de las matrices cuadradas de orden $n$ en el mismo espacio 
+dada por $C (A) = AB - BA$ donde $B$ es una matriz fija. 
+
+ 
+
+\vspace{0.2cm}
+
+\n Escribir la matriz de un giro (rotación): 
+
+\apartado de noventa grados en sentido positivo (contrario al de las agujas del reloj), alrededor del origen en 
+$\mathbb{R}^2$.
+
+\apartado de \'angulo $\alpha$ en sentido positivo alrededor del origen en $\mathbb{R}^2$. 
+
+\vspace{0.2cm}
+
+\n Escribir la matriz de la simetr\'ia (reflexión) de $\mathbb{R}^3$ respecto a: 
+
+\apartado El plano de ecuaci\'on y = x. 
+
+\apartado El plano de ecuaci\'on y = z . 
+
+\apartado El plano de ecuaci\'on x = z . 
+
+\apartado La recta de ecuaciones y = x, z = 0. 
+
+\apartado La recta de ecuaciones y = z , x = 0. 
+
+\apartado La recta de ecuaciones x = z , y = 0. 
+
+\vspace{0.2cm}
+
+\n Escribir las matrices de las proyecciones ortogonales de $\mathbb{R}^3$ sobre los distintos 
+planos y rectas enunciados en el ejercicio anterior. 
+
+\vspace{0.2cm}
+
+Un {\em homomorfismo} de espacios vectoriales es una aplicación lineal $T:V\to W$.
+Un {\em endomorfismo} es un homomorfismo
+con el mismo espacio de partida y de
+llegada ($T:V\to V$). 
+Un {\em automorfismo} es un endomorfismo biyectivo, es decir, un 
+isomorfismo con el mismo espacio de partida y de
+llegada (por ejemplo, una rotación en $\mathbb{R}^2$).
+
+\vspace{0.2cm}
+
+
+
+\n Determinar la matriz que corresponde en las bases can\'onicas al endomorfismo de $\mathbb{R}^3$ que transforma los vectores 
+$\{(3, 2, 1),(0, 2, 1),(0, 0, 1)\}$ en los vectores $\{(1, 0, 0),(1, 1, 0),(1, 1, 1)\}$ respetando el orden.
+
+\apartado Calculando las im\'agenes de los vectores de la base can\'onica. 
+
+\apartado Planteando un cambio de base de la base can\'onica a la base $\{(3, 2, 1),(0, 2, 1),(0, 0, 1)\}$ 
+(si es que realmente es una base).
+\vspace{0.2cm}
+
+\n  Hallar la matriz en las bases can\'onicas de la aplicaci\'on del espacio de los polinomios de grado 
+$\leq 3$ en $\mathbb{R}^4$ dada por $f(p(x))=(p(-1),p(1),p(-2),p(2))$.
+
+\vspace{0.2cm}
+
+\n Hallar las matrices en las bases can\'onicas de las siguientes aplicaciones: 
+
+\apartado La aplicaci\'on $A$ de $\mathbb{R}^3$ en $\mathbb{R}^3$ dada por 
+$A(x, y, z ) = (x - y + 2z , x + y, 2x + 2y + z )$.
+ 
+\apartado La aplicaci\'on $B$ de $\mathbb{C}^2$ en $\mathbb{C}^2$ dada por 
+$B(z_1 , z_2 ) = (iz_1 + 2z_2 , z_1 - iz_2 )$.
+ 
+\apartado La aplicaci\'on $C$ de $\mathbb{R}^3$ en $\mathbb{R}^3$ dada por 
+$C (x, y, z ) = (x + z , y, x + y + z )$.
+ 
+\apartado La aplicaci\'on $D$ de $\mathbb{C}^2$ en $\mathbb{C}^3$ dada por 
+$D(z_1 , z_2 ) = (iz_1 + z_2 , z_1 + iz_2 , z_1- iz_2 )$.
+ 
+\apartado La aplicaci\'on $E$ de $\mathbb{R}^2$ en $\mathbb{R}^4$ dada por 
+$E(x, y) = (x, x + y, 2x, x + 2y)$.
+
+\vspace{0.2cm}
+
+\n  Hallar la matriz en las bases can\'onicas de la aplicaci\'on traza considerada en el espacio de 
+las matrices cuadradas de orden $2$ de n\'umeros reales con valores en $\mathbb{R}$. 
+
+\vspace{0.2cm}
+
+\n  Dada la aplicaci\'on de $\mathbb{R}^2$ en $\mathbb{R}^4$ por la matriz: 
+$$\left( \begin{array}{cc}
+1& 0\\ 
+0& 1\\ 
+1& 0\\ 
+0&1\end{array}\right)$$
+en las bases can\'onicas, hallar la matriz de dicha aplicaci\'on en las bases 
+$\{(0, 1), (1, 1)\}$ de $\mathbb{R}^2$  
+y 
+$\{(1, 1, 0, 0), (0, 1, 1, 0), (0, 0, 1, 1)(0, 0, 0, 1)\}$ de $\mathbb{R}^4$. 
+
+\vspace{0.2cm}
+
+\n  Dada la aplicaci\'on de $\mathbb{R}^2$ en $\mathbb{R}^4$ por la matriz: 
+$$\left( \begin{array}{cc}
+1& 0 \\
+0& 1 \\
+1& 0 \\
+0 &1\end{array}\right)$$
+en las bases $\{(0, 1), (1, 1)\}$ de $\mathbb{R}^2$ 
+y $\{(1, 1, 0, 0), (0, 1, 1, 0), (0, 0, 1, 1)(0, 0, 0, 1)\}$ de $\mathbb{R}^4$, hallar 
+la matriz de dicha aplicaci\'on en las bases can\'onicas. 
+
+\vspace{0.2cm}
+
+\n Hallar, haciendo un cambio de base, la expresi\'on matricial en la base can\'onica de la 
+aplicaci\'on lineal $f$ de $\mathbb{R}^3$ en $\mathbb{R}^3$ tal que: $$f (1, 1, 0) = (1, 1, 1),\quad f (1, 0, 
+-1) = (0, 1, 1) \text{ y }\quad f (1, -1, 1) = 
+(1, 2, 2).$$ 
+
+\n Hallar la matriz de la aplicaci\'on lineal del ejercicio 7:
+
+\apartado en la base $\{(3, 2, 1)(0, 2, 1)(0, 0, 1)\}$.
+
+\apartado en la base $\{(1, 0, 0)(1, 1, 0)(1, 1, 1)\}$. 
+
+\apartado Comprobar que las matrices obtenidas anteriormente est\'an relacionadas con la matriz del 
+endomorfismo en la base can\'onica por las matrices de cambio de base correspondientes entre las bases. 
+
+\vspace{0.2cm}
+
+\n Utilizando cambios de base calc\'ulense las matrices en las bases can\'onicas de:
+
+\apartado La simetr\'ia ortogonal de $\mathbb{R}^3$ respecto a la recta generada por el vector $( -1, 1, -1)$.
+ 
+\apartado La proyecci\'on ortogonal de $\mathbb{R}^3$ sobre el plano de ecuaci\'on $x + y + z = 0$. 
+
+\apartado Las rotaciones vectoriales de noventa grados de $\mathbb{R}^3$ respecto a la recta de ecuaciones: $x + y = 0, z = 0$.
+
+\vspace{0.2cm}
+
+\n Determinar cu\'al es el n\'ucleo y cu\'al es la imagen: 
+
+\apartado de una proyecci\'on ortogonal de $\mathbb{R}^2$ sobre una de sus rectas. 
+
+\apartado de una proyecci\'on ortogonal de $\mathbb{R}^3$ sobre una de sus rectas. 
+
+\apartado de una proyecci\'on ortogonal de $\mathbb{R}^3$ sobre uno de sus planos. 
+
+\apartado de una simetr\'ia ortogonal de $\mathbb{R}^2$ respecto a una de sus rectas. 
+
+\apartado de una simetr\'ia ortogonal de $\mathbb{R}^3$ respecto a una de sus rectas. 
+
+\apartado de una simetr\'ia ortogonal de $\mathbb{R}^3$ respecto a uno de sus planos. 
+
+
+\vspace{0.2cm}
+
+\n Hallar las ecuaciones cartesianas y una base de los n\'ucleos y de las im\'agenes de las aplicaciones lineales del ejercicio 9.
+
+\vspace{0.2cm}
+
+\n Dada la aplicaci\'on lineal $f : \mathbb{R}^5 \rightarrow \mathbb{R}^4$ en las bases can\'onicas por la matriz: 
+$$\left( \begin{array}{ccccc}
+1 &-2 &-1& 0& -1\\ 
+1 &1 &1 &2& 0\\ 
+2 &0 &3& 5&-3\\ 
+0 &3& 2& 2& 1 \end{array}\right).$$
+
+\apartado Hallar una base del n\'ucleo de $f$.
+
+\apartado Seleccionar las ecuaciones del n\'ucleo de $f$.
+
+\apartado Hallar una base de la imagen de $f$.
+
+\apartado Hallar las ecuaciones cartesianas de la imagen de $f$.
+
+\vspace{0.2cm}
+
+\n Siendo A la matriz: 
+$$A=\left( \begin{array}{ccccc}
+-1 &1& 1& 0\\ 
+0 &0 &1 &1 \\
+0& 1& 0& 0\\ 
+1& 0& 0 &1 \end{array}\right).$$
+
+\apartado Hallar $c$ para que el sistema $Ax = b$ tenga soluci\'on en los dos casos siguientes: \\
+ $b = (1, 0, 1, c)^t$ y $b = (1, 0, c, 1)^t$.
+ 
+\apartado En los casos anteriores, ?`es el sistema compatible determinado o indeterminado?
+
+
+\vspace{0.2cm}
+
+\n \apartado Hallar las ecuaciones cartesianas y una base del n\'ucleo y de la imagen de la aplicaci\'on 
+lineal de $\mathbb{R}^4$ en $\mathbb{R}^4$ (endomorfismo) dada por la matriz: 
+ $$\left( \begin{array}{ccccc}
+2& 0& -1 &-2\\ 
+-2& 4 &-1& 2\\ 
+2& 2& -2& -2\\ 
+-2 &2 &0 &2 \end{array}\right).$$
+
+La uni\'on de las dos bases encontradas correspondientes al n\'ucleo y a la imagen es un conjunto 
+de cuatro vectores. ?`Es una base de $\mathbb{R}^4$? ?`Podr\'iamos conseguir una base de $\mathbb{R}^4$ como uni\'on de otras 
+bases distintas del n\'ucleo y de la imagen de estas aplicaciones?
+
+\apartado Responder a las mismas cuestiones para la aplicaci\'on lineal $g$ dada por 
+ $$\left( \begin{array}{ccccc}
+2 &1 &0 &-1\\ 
+-1& 1& 1& 2\\ 
+1& 2& 1 &1 \\
+0& 3 &2 &0  \end{array}\right).$$
+
+
+\vspace{0.2cm}
+
+\n  Dada la aplicaci\'on lineal de $\mathbb{R}^4$ en $\mathbb{R}^4$ (endomorfismo) por la matriz: 
+ $$\left( \begin{array}{ccccc}
+1 &2 &3 &1\\ 
+-1& 0& -1& 1\\ 
+1& 3& 4& 2\\ 
+-1& 0& -1& 1 \end{array}\right).$$
+Hallar la dimensi\'on del subespacio vectorial $f (L) 
+\subset \mathbb{R}^4$ en los dos casos siguientes: 
+
+\apartado $L \equiv x_3 = 0$. 
+
+\apartado $L \equiv  x_1 + x_3 - x_4 = 0$.
+
+ 
+?`Hay alg\'un hiperplano de $\mathbb{R}^4$ , cuya imagen es otro hiperplano? (Un hiperplano de $\mathbb{R}^n$ es un 
+subespacio vectorial de dimensi\'on $n- 1$).
+
+ 
+\vspace{0.2cm}
+
+\n  Dada la aplicaci\'on lineal de $\mathbb{R}^4$ en $\mathbb{R}^4$ (endomorfismo) por la matriz: 
+ $$\left( \begin{array}{ccccc}
+1& 1& 0& 0\\ 
+0& 1& 1& 0\\ 
+0& 0 &1 &1\\ 
+1& 0& 0& 1 \end{array}\right).$$
+
+\apartado Hallar las ecuaciones cartesianas del subespacio vectorial $f (L) \subset \mathbb{R}^4$ si $L \equiv x_3 - x_4 = 0$.
+ 
+\apartado Hallar las ecuaciones cartesianas de un subespacio vectorial $L\not= \mathbb{R}^4$, tal que su imagen sea un 
+hiperplano de $\mathbb{R}^4$ . (Un hiperplano de $\mathbb{R}^n$ es un subespacio vectorial de dimensi\'on $n - 1$). 
+
+\apartado ?`Hay alg\'un hiperplano de $\mathbb{R}^4$ , cuya imagen sea una recta? 
+
+\vspace{0.2cm}
+
+\n  Cualquier matriz puede expresarse como suma de una matriz sim\'etrica y de una matriz 
+antisim\'etrica. Considerar en 
+$\mathcal{M}_{3\times 3} (\mathbb{R})$ las aplicaciones lineales: 
+
+\apartado La que hace corresponder a cada matriz su matriz sim\'etrica sumando. 
+
+\apartado La que hace corresponder a cada matriz su matriz antisim\'etrica sumando. 
+
+Hallar el n\'ucleo y la imagen de cada aplicaci\'on. 
+\vspace{0.2cm}
+
+\n  Comprobar la f\'ormula de las dimensiones en todas las aplicaciones lineales de los ejercicios 
+anteriores en las que se han calculado n\'ucleo e imagen. 
+\vspace{0.2cm}
+
+\n  Comprobar que es posible hallar una aplicaci\'on definida en $\mathbb{R}^3$ con imagen en $\mathbb{R}^3$, tal que: 
+
+\apartado Su n\'ucleo es el plano de ecuaci\'on $x + y + z = 0$ y su imagen es la recta $x = y = 2z$.
+ 
+\apartado Su imagen es el plano de ecuaci\'on $x + y + z = 0$ y su n\'ucleo es la recta $x = y = 2z$. 
+
+\apartado Hallar las matrices correspondientes en la base can\'onica. 
+\vspace{0.2cm}
+
+\n  Comprobar que es posible hallar una aplicaci\'on definida en $\mathbb{R}^4$ con imagen en $\mathbb{R}^4$, tal que 
+tanto su n\'ucleo como su imagen sean el subespacio de ecuaciones: 
+ $$\left. \begin{array}{cccccc}
+x_1 +& x_2 + &x_3 +&x_4 &= 0 \\
+&x_2 + &x_3 &  &= 0 \end{array}\right\}$$
+Hallar la matriz de dicha aplicaci\'on en la base can\'onica de $\mathbb{R}^4$. 
+\vspace{0.2cm}
+
+\n  Compru\'ebese que:
+
+\apartado La composici\'on de dos aplicaciones lineales es una aplicaci\'on lineal y 
+
+\apartado La matriz de la composici\'on de ellas es el producto de sus matrices. 
+\vspace{0.2cm}
+
+\n  Sea $f$ un isomorfismo en $\mathbb{R}^3$ y $g$ otra aplicaci\'on lineal
+tal que la dimensi\'on de la imagen de 
+$g \circ f$ es 2.
+ 
+\apartado ?`Cu\'al es el rango de la matriz de $g$? 
+
+\apartado ?`C\'ual es la dimensi\'on de la imagen de $f \circ g$? 
+
+
+
+\n Hallar las coordenadas de $\left(\begin{matrix} 1& 1 \\ 1 & 1 \end{matrix}\right)$ en la base
+$$\left\{ \left(\hspace{-5pt}\begin{array}{c@{\hspace{5pt}}c}
+1 &0 \\ 
+1 & 1\end{array} \hspace{-5pt}\right), \left(\hspace{-5pt}\begin{array}{c@{\hspace{5pt}}c}0 & 1\\  
+1 &1\end{array} \hspace{-5pt}\right), \left(\hspace{-5pt}\begin{array}{c@{\hspace{5pt}}c}1& 1 \\
+1 & 2\end{array}\hspace{-5pt} \right),\left(\hspace{-5pt}\begin{array}{c@{\hspace{5pt}}c}
+0& 1 \\
+1 & 0\end{array} \hspace{-5pt}\right) \right\} \subset \mathcal{M}_{2\times 2} (\mathbb{R}) $$
+
+\vspace{0.2cm}
+
+\n Encontrar los valores de $a$ para los que los vectores 
+$\{(a, 0, 1), (0, 1, 1), (2, -1, a)\}$ formen una base de $\mathbb{R}^3$.
+
+\vspace{0.2cm}
+
+ 
+\n Hallar los n\'umeros complejos $z$ para los cuales los vectores: 
+$\{(z + i, 1, i), (0, z + 1, z ),$ $(0, i, z - 1)\}$ no forman una base considerados como vectores del espacio vectorial complejo $\mathbb{C}^3$ sobre $\mathbb{C}$. 
+\vspace{0.2cm}
+
+
+\n Comprobar que una base de $\mathbb{C}$ considerado como espacio vectorial sobre $\mathbb{C}$ est\'a formada 
+por $\{1\}$, pero una base de $\mathbb{C}$ considerado como espacio vectorial sobre $\mathbb{R}$ es $\{1, i\}$. Estos dos espacios 
+vectoriales tienen distinta dimensi\'on. 
+
+\vspace{0.2cm}
+
+\vspace{0.2cm}
+
+\n Calcular la dimensi\'on y extraer una base del subespacio de $\mathbb{R}^5$ generado por $$\{(1, 0, 1, 0, 1), (0, 1, 1, 0, 1), (1, 1, 3, 1, 1), (0, 0, 1, 1, 1), (0, -1, 1, 2, 1)\}.$$
+
+\vspace{0.2cm}
+
+\n Encontrar una base de $\mathbb{R}^4$ que contenga a los vectores 
+$\{(0, 0, 1, 1), (1, 1, 0, 0)\}$.
+
+\vspace{0.2cm}
+
+\n Calcular seg\'un los valores de $\alpha$, $\beta$  y $\gamma$ la dimensi\'on del subespacio vectorial: 
+$$E =\mathcal{L}\{(1, 1, 0), (2, 1, \alpha), (3, 0, \beta ), (1,\gamma , 1)\}$$ 
+
+\vspace{0.2cm}
+
+\n Dado el subespacio vectorial de las matrices cuadradas $2\times 2$ generado por 
+$$\left\{\left( \begin{matrix} 
+1 &0 \\
+0 &1 \end{matrix}\right),\left( \begin{matrix} 
+0 &1 \\
+1 &0 \end{matrix}\right),\left( \begin{matrix} 
+1 &1 \\
+1 &1 \end{matrix}\right),\left( \begin{matrix} 
+1 &-1\\ 
+-1 &1\end{matrix}\right)\right\}$$ 
+extraer una base del subespacio considerado, de este sistema de generadores.
+
+\vspace{0.2cm}
+
+\n Dado el subespacio vectorial de los polinomios de grado $3$ generado por los vectores: 
+$\{x^2- 1, x^2+ 1, x^3 + 4, x^3\}$ extraer una base de este sistema de generadores. 
+
+\vspace{0.2cm}
+
+ 
+\n Siendo 
+$B_1= \{v_1=(1, 1, 0, 0), v_2=(0, 1, 0, -1), v_3=(0, 1, 1, 0), v_4=(0, 0, 0, 1)\}$ 
+y $B_2= \{w_1=(1, 0, 0, 1), w_2=(1, 0, 1, 0), w_3=(0, 2, 1, 0), w_4=(0, 1, 0, 1)\}$ dos bases de $\mathbb{R}^4$, hallar: 
+
+\apartado Las coordenadas del vector $3w_1 + 2w_2 + w_3- w_4$ en la base $B_1=\{v_1 , v_2 , v_3 , v_4 \}$. 
+
+\apartado Las coordenadas del vector $3v_1- v_3 + 2v_2$ en la base $B_2=\{w_1 , w_2 , w_3 , w_4 \}$. 
+
+\apartado La matriz de cambio de base de $B_1$ a $B_2$.
+
+\apartado La matriz de cambio de base de $B_2$ a $B_1$.
+
+\vspace{0.2cm}
+
+
+\n \apartado Hallar las matrices de cambio de base en 
+$\mathcal{M}_{2\times 2} (\mathbb{R})$ entre las siguientes bases: 
+$$B_1=\left\{\left( \begin{matrix}
+1& 0\\ 
+0 &1 \end{matrix}\right),
+\left( \begin{matrix}
+1&1\\ 
+0 &0\end{matrix}\right) ,
+\left( \begin{matrix}
+0 &1 \\
+1 &0\end{matrix}\right) ,
+\left( \begin{matrix}
+1 &0 \\
+0 &0\end{matrix}\right) \right\}$$ $$y \quad B_2=\left\{\left( \begin{matrix}- 
+1 &0 \\
+1 &1\end{matrix}\right) ,\left( \begin{matrix}
+0 &-1 \\
+1 &1\end{matrix}\right) ,\left( \begin{matrix}
+1 &1 \\
+0&-1\end{matrix}\right),\left( \begin{matrix}
+1 &1 \\
+-1 &0 \end{matrix}\right)\right\}$$
+\apartado Hallar las coordenadas de la matriz
+$\left(\begin{matrix}
+1 &1\\ 
+1 &1\end{matrix}\right)$
+directamente en las dos bases anteriores y comprobar que est\'an relacionadas por las matrices de 
+cambio de base. 
+
+\vspace{0.2cm}
+
+\n \apartado Escribir las matrices de cambio de base en el espacio de los polinomios de grado menor o igual que $3$ con coeficientes reales entre las bases 
+$B_1=\{1, x-1, (x-1)^2, (x 
+-1)^3 \}$ y $B_2=\{1, x+1, (x+1)^2, (x+1)^3\}$.
+
+\apartado Hallar las coordenadas del polinomio $1 + x + x^2 + x^3$ directamente en las dos bases y comprobar que est\'an relacionadas por las matrices de cambio de base. 
+
+
+
+
+
+\end{document}

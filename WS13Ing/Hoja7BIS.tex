@@ -1,0 +1,219 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx,amssymb,latexsym,amsmath,verbatim}
+\usepackage{sans}
+\usepackage{graphicx,amssymb,latexsym,amsmath}
+\renewcommand{\thepage}{}
+\renewcommand{\baselinestretch}{1}
+\setlength{\parindent}{2em} \setlength{\textwidth}{18cm}
+\setlength{\textheight}{24cm} \setlength{\topmargin}{-1cm}
+\setlength{\oddsidemargin}{-1cm}
+%\hyphenation{va-rie-da-des
+%va-rie-dad pa-ra-le-lo a-si-mi-la a-pro-ve-cha-bles u-ni-for-me
+%u-ni-for-me-men-te si-guien-te si-guien-tes re-su-mien-do
+%ha-bi-tua-les}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Para empezar una interrogativa: ?`  %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Para partir una matriz en cajas:         %%%%%
+%% \[ \left(\begin{array}{c|c} A&B          %%%%%
+%% \\ \cline{1-2} C&D\end{array}\right) \]  %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%SETS OF NUMBERS
+%\newcommand{\R}{\mbox{${\bf R}$}}                  %reals
+\newcommand{\R}{\mbox{${\mathbb R}$}}               %reals
+%\newcommand{\C}{\mbox{${\bf C}$}}                  %complex
+\newcommand{\C}{\mbox{${\mathbb C}$}}
+%\newcommand{\N}{\mbox{${\bf N}$}}                  %natural numbers
+\newcommand{\N}{\mbox{${\mathbb N}$}}
+%\newcommand{\Z}{\mbox{${\bf Z}$}}                  %integers
+\newcommand{\Z}{\mbox{${\mathbb Z}$}}
+%\newcommand{\Q}{\mbox{${\bf Q}$}}                  %rationals
+\newcommand{\Q}{\mbox{${\mathbb Q}$}}
+\newcommand{\gp}{\mbox{${\bf F}_{p}$}}             % Fp
+\newcommand{\pea}{\mbox{$ {\bf Z}_{p}$}}           %p-adic integers
+\newcommand{\zn}{\mbox{${\bf Z}/{n}$}}             %Z/n
+\newcommand{\zp}{\mbox{${\bf Z}/{p}$}}             %Z/p
+\newcommand{\Zh}{\mbox{$\hat{{\bf Z}}$}}           %Z^
+\newcommand{\xp}{\mbox{${\bf F}_{p}^{*}$}}         %units Fp
+
+%GREEK LETTERS
+\newcommand{{\ff}}{\mbox{$\varphi$}}                   %phi
+\newcommand{\fp}{\mbox{$\varphi_{p}$}}               %phi_p
+\newcommand{\al}{\mbox{$\alpha$}}                    %alpha
+\newcommand{\be}{\mbox{$\beta$}}                     %beta
+\newcommand{\px}{\mbox{$\varepsilon$}}               %epsilon
+\newcommand{\Ga}{\mbox{$\Gamma$}}                    %capital gamma
+\newcommand{\ga}{\mbox{$\gamma$}}                    %small gamma
+
+%LOGIC SYMBOLS
+\newcommand{\ex}{\mbox{$\exists$}}                   %there is
+\newcommand{\fa}{\mbox{$\forall$}}                   %forall
+\newcommand{\stf}{\mbox{$\models$}}                  %satisfies
+\newcommand{\y}{\mbox{$\wedge$}}                     %and
+%\newcommand{\o}{\mbox{$\vee$}}                       %or
+\newcommand{\si}{\mbox{$\Longrightarrow$}}           %implies
+\newcommand{\ekiv}{\mbox{$\Longleftrightarrow$}}     %equiv
+
+%OTHERS
+\newcommand{\dm}{\mbox{$\preceq$}}                   %dominates
+
+
+
+
+\begin{document}
+
+\small
+
+\noindent{\sf Universidad Aut\'onoma de Madrid  \hfill Álgebra. Curso 2013--14}
+\vspace{0.1cm}
+\hrule
+\vspace{0.1cm}
+\noindent{\sf Ingeniería Inform\'atica}
+\vspace{0.1cm}
+\begin{center}
+{\bfseries  ÁLGEBRA. HOJA 7.}
+\end{center}
+
+\begin{enumerate}
+%\renewcommand{\theenumi}{\bf\arabic{enumi})\ }
+\renewcommand{\labelenumi}{\bf\arabic{enumi})\ }
+%\renewcommand{\theenumii}{\alph{enumii})\ }
+\renewcommand{\labelenumii}{\alph{enumii})\ }
+\medskip
+
+
+
+
+\item
+Decide si el vector $\vec{v}=(1,0,1,0)$ es combinaci\'on lineal de los vectores $\{\vec{v}_1, \vec{v}_2, \vec{v}_3\} \subset \mathbb{R}^4$
+para $$\vec{v}_1=(1,1,0,1),\ \vec{v}_2=(1,0,1,1)\ \ \hbox{y}\ \ \vec{v}_3=(1,0,0,-1).$$
+
+ 
+\    
+    
+\item  Halla una base y calcula la dimensión de los siguientes subespacios vectoriales.
+
+a)  $\mathbb S\subset \R^4$
+definido por:
+$$ \mathbb S= \left\{ \begin{array}{l} 
+x_1-x_2+x_3-x_4=0\\
+x_1-x_2=0 \\
+x_3-x_4=0\\
+x_1-x_4=0
+ \end{array}
+\right.
+$$
+
+
+b)  $\mathbb S\subset \R^4$
+definido por:
+$$ \mathbb S= \left\{ \begin{array}{l} 
+x_1-x_2+x_3-x_4=0\\
+x_1-x_2-2x_3-x_4=0 \\
+ \end{array}
+\right.
+$$
+
+ 
+\
+
+\item  Halla una base de los siguientes subespacios vectoriales:
+
+\vspace{0.15cm}
+
+a)  $\mathbb S\subset \R^4$
+generado por los vectores $\{\vec{v}_1, \vec{v}_2, \vec{v}_3, \vec{v}_4\} \subset \mathbb{R}^4$
+donde
+$$\vec{v}_1=(1,-1,0,0),\ \vec{v}_2=(2,0,-1,-1),\ \vec{v}_3=(1,0,0,-1),\ 
+\vec{v}_4=(1,-1, 1, -1).$$
+
+\vspace{0.15cm}
+
+b)  $\mathbb S\subset \R^3$
+generado por $\{\vec{v}_1, \vec{v}_2, \vec{v}_3, \vec{v}_4\} \subset \mathbb{R}^3$
+siendo 
+$$\vec{v}_1=(1,-1,0), \ \vec{v}_2=(1,0,-1), \ \vec{v}_3=(2,-1,-1),\ \vec{v}_4=(-1,-1, 2).$$
+
+%%%%%% de la hoja 9 de 2011
+
+\item
+Sea $U$ el subespacio de $\R^4$ generado por $(1, 1, -1, 2)$ y $(-1, 2, 3, 3)$.
+Sea $V$ el subespacio de $\R^4$ generado por $(1,7,3,12)$ y $(-4,5,1,1)$.
+Sea $W = U+V$.
+
+\textbf{a)}  Halla bases de los subespacios $U$, $V$ y $W$. Indica cu\'al es la dimensi\'on de $U\cap V$.
+%\color{black}
+
+\textbf{b)} Halla un sistema ecuaciones de $W$ con el menor n\'umero de ecuaciones.
+
+\textbf{c)} Demuestra que $(2,-3,5,7) \notin W$.
+
+\textbf{d)} Demuestra que el vector $\vec w = (27,0,27,57)$ est\'a en $W$ y halla $\vec u \in U$ y $\vec v \in V$ tales que $\vec w = \vec u + \vec v$.
+ 
+
+\item
+Sea $U$ el subespacio de $\R^4$ generado por los vectores $(1, 4, -2, 3)$ y $(2, 3, -1, 1)$.
+Sea $V$ el subespacio de ecuaciones
+{\setlength\arraycolsep{.1em}
+\[
+\left. \begin{array}{rrrrrrrrr}
+ x_1 &-& 2x_2 &+& x_3 &+& 3x_4 &= & 0\\ 
+ 2x_1 &-& 2x_2 &-& x_3 &+& x_4 &=& 0\\
+ x_1 &+& 3x_2 &-& 4x_3 &+& x_4 &=& 0
+\end{array}
+\right\}
+\]
+}%
+Sea $W$ el subespacio suma $U+V$.
+
+\textbf{a)} Demuestra que $W$ es la suma directa de $U$ y $V$, es decir, demuestra que $W = U \oplus V$.
+
+\textbf{b)} Demuestra que el vector $\vec w = (19,-72,90,-75)$ est\'a en $W$.
+Halla $\vec u \in U$ y $\vec v \in V$ tales que $\vec w = \vec u + \vec v$.
+
+\item Sea $a \in \R$.
+Sea $U$ el subespacio vectorial de $\R^4$ dado por las ecuaciones 
+{\setlength\arraycolsep{.1em}
+\[
+\left. \begin{array}{rrrrrrrrr}
+ x_1 &+& 2x_2 &-& x_3 &+& 2x_4 &=& 0\\ 
+ 2x_1 &+& x_2 &+& x_3 &-& x_4 &=& 0\\
+\end{array}
+\right\}
+\]
+}%
+Sea $V$ el subespacio vectorial de $\R^4$ dado por las ecuaciones 
+{\setlength\arraycolsep{.1em}
+\[
+\left. \begin{array}{rrrrrrrrr}
+ 3x_1 &+& x_2 & &  &+& 2x_4 &=& 0\\ 
+ -x_1 & & &+& x_3 &+& a x_4 &=& 0\\
+\end{array}
+\right\}
+\]
+}%
+\textbf{a)} Halla los valores de $a$ para los que $U \cap V \neq \{\vec 0\}$.
+Para esos valores, calcula una base de $U \cap V$ y un sistema de ecuaciones de $U \cap V$ con el menor n\'umero de ecuaciones.
+
+\textbf{b)} Para $a=-4$, halla $\vec u \in U$ y $\vec v \in V$ tales que $(3,1,-2,2) = \vec u + \vec v$.
+
+\item Sean $U$ y $V$ subespacios vectoriales de $\R^n$ tales que $U \subset V$.
+Halla $U \cap V$ y $U + V$.
+
+
+
+
+
+\end{enumerate}
+
+
+
+
+
+
+\end{document}
+
