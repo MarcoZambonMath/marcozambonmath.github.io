@@ -1,0 +1,123 @@
+\documentclass[11pt, letterpaper, oneside]{amsart}
+\usepackage[spanish]{babel} %to use spanish. For questions use ?` not ?'
+
+\headheight=8pt     \topmargin=0pt \textheight=624pt
+\textwidth=432pt \oddsidemargin=18pt \evensidemargin=18pt
+ 
+\usepackage{amsmath,latexsym, amsmath, amssymb, amsfonts, amscd}
+\usepackage{amsthm}
+\usepackage{t1enc}
+\usepackage[mathscr]{eucal}
+\usepackage{indentfirst}
+\usepackage{graphicx, pb-diagram}
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+\usepackage{enumerate}
+\usepackage[all]{xy}
+%\usepackage{showkeys}
+\usepackage{url}
+\usepackage[ocgcolorlinks]{hyperref}
+\usepackage[latin1]{inputenc}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{pbl}[thm]{Problem}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{con}[thm]{Conjecture}
+\newtheorem{claim}[thm]{Claim}
+
+\theoremstyle{definition}
+\newtheorem{defi}[thm]{Definition}
+\newtheorem{pdef}[thm]{Proposition-Definition}
+
+\theoremstyle{remark}
+\newtheorem{remark}[thm]{Remark}
+\newtheorem{ep}[thm]{Example}
+\newtheorem{eps}[thm]{Examples}
+
+
+
+
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\bt}{\mathbf{t}}                  %target
+\newcommand{\bs}{\mathbf{s}}                  %source
+
+
+\newcommand {\mcomment}[1]{{\marginpar{*}\scriptsize{\bf Marco:}\scriptsize{\ #1 \ }}}
+\newcommand {\acomment}[1]{{\marginpar{*}\scriptsize{\bf Alberto:}\scriptsize{\ #1 \ }}}
+\newcommand{\tJ}{\tilde{J}}
+\newcommand{\Gs}{\Gamma_s}
+\newcommand{\Gc}{\Gamma_c}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\tP}{\tilde{P}}
+\newcommand{\hP}{\hat{P}}
+\newcommand{\sh}{\sharp}
+\newcommand{\un}{\underline}
+\newcommand{\sctc}{\bs^{-1}(C)\cap \bt^{-1}(C)}
+\newcommand{\stpttp}{\bs^{-1}(\tP)\cap \bt^{-1}(\tP)}
+%\newcommand{}{}
+\begin{document}
+
+\title{Breve descripci\'on de mi area de investigaci\'on\\
+(con enlaces a los t\'erminos principales)\\}
+\author{ Marco Zambon}
+%(en violeta)
+\date{\today}
+%\begin{abstract}
+%\end{abstract}
+
+\maketitle
+%\tableofcontents.
+%Las matem\'aticas puras est\'an divididas (simplificando un poco) en 3 areas: \'algebra, an\'alisis y geometr\'ia. Yo
+%trabajo principalmente en el area de geometr\'a diferencial,
+%utilizando tambi\'en t\'ecnicas algebraicas y que provienen de la f\'isica. 
+
+Mi investigaci\'on est\'a centrada en la \htmladdnormallink{geometr\'ia de Poisson}{http://en.wikipedia.org/wiki/Poisson_manifold}, una pariente estrecha de la \htmladdnormallink{geometr\'ia simpl\'ectica}{http://en.wikipedia.org/wiki/Symplectic_manifold}. Ambas originaron como la herramienta matem\'atica para describir la mec\'anica cl\'asica, pero las cuestiones m\'as propriamente geom\'etricas fueran investigadas m\'as tarde (se puede decir que la   geometr\'ia de Poisson naci\'o con un trabajo de Alan Weinstein en 1983). 
+
+Unos ejemplo de tales cuestiones geom\'etricas son:  ?` dada una variedad de Poisson $M$, como se puede construir un cociente de $M$ que eredita una estructura de Poisson? ?`Cuales variedades pueden ser embebidas en variedades de Poisson?
+Las herramientas que aparecen en este tipo de problemas incluyen las formas diferenciales, los grupos de Lie, los campos vectoriales, las foliaciones  etc.
+ 
+A cada variedad de Poisson se le puede asociar un \htmladdnormallink{algebroide de Lie}{http://en.wikipedia.org/wiki/Lie_algebroid}, que bajo unas condiciones corresponde a  un \htmladdnormallink{groupoide de Lie}{http://en.wikipedia.org/wiki/Lie_groupoid}. La pregunta de cuales variedades de Poisson posseen un grupoide de Lie fu\'e resulta unos a\~nos atr\'as, utilizando  t\'ecnicas relacionadas con conexiones en fibrados vectoriales, topolog\'ia y teor\'ia de campos.\\
+
+Hay varios otros tema en que trabajo y  que est\'an relacionados con la geometr\'ia de Poisson.
+
+En 2003 Hitchin introdujo la noci\'on de \htmladdnormallink{estructura generalizada compleja}{http://en.wikipedia.org/wiki/Generalized_complex_structure} (GC), que permite de unificar la geometr\'ia simpl\'ectica y la geometr\'ia compleja. La geometr\'ia GC presenta unos aspectos 
+muy interesantes que la diferencian de las geometr\'ias cl\'asicas:  por ejemplo, en lugar de utilizar el fibrado tangente $TM$ utiliza la suma directa $TM\oplus T^*M$. 
+Una variedad GC tiene una estructura de Poisson can\'onica, as\'i que 
+t\'ecnicas de geometr\'ia de Poisson resultan \'utiles. 
+
+Las \htmladdnormallink{foliaciones}{http://en.wikipedia.org/wiki/Foliation} \textcolor{red}{singulares}  son interesantes porque tienen un groupoide de holonom\'ia asociado.
+
+La \htmladdnormallink{teor\'ia de deformaciones}{http://en.wikipedia.org/wiki/Deformation_theory} de los objetos mencionados arriba es interesante y tiene un sabor m\'as alg\'ebrico.
+
+Las \htmladdnormallink{variedades graduadas}{http://en.wikipedia.org/wiki/Supermanifold} y las  \textcolor{red}{\'algebras $L_{\infty}$} (generalizaciones de los \htmladdnormallink{\'algebras de Lie}{http://en.wikipedia.org/wiki/Lie_algebra}) son objetos que aparecieron en f\'isica en los a\~nos 80 y que tienen una interpretaci\'on  tan geom\'etrica como algebraica. Mi inter\'es es de estudiar como ese tipo de objetos aparecen de manera natural a partir de la geometr\'ia cl\'asica (por exemplo, de una variedad con una $n$-forma cerrada), y como puedan ser utilizados para estudiar la geometr\'ia cl\'asica.
+
+
+
+
+
+ 
+ 
+ 
+ 
+%\textbf{Conventions:} \textbf{Acknowledgements:}
+
+%\bibliographystyle{habbrv}
+%\bibliography{bibmarco}
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% E N D %%%%%%%%%%%%%
