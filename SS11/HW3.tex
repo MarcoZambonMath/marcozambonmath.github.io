@@ -1,0 +1,147 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[]{amsmath,amsthm,amssymb,amscd}
+\usepackage[latin1]{inputenc}
+%\usepackage{fullpage}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+     
+\textheight 246mm
+     
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+     
+\textwidth 159mm
+
+
+%               Theorem Environments
+\theoremstyle{definition}
+\newtheorem{ex}{}
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%               Subquestions numbered with letters
+\renewcommand{\theenumi}{\textbf{\alph{enumi}}}
+
+%               Maths definitions
+
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+
+\begin{document}
+\noindent
+{\sffamily\large Marco Zambon 
+\hfill   a discutir:   Miercoles, 23/03/2011\\Geometr\'ia III, curso 2010-11}
+ 
+
+\noindent
+\hrulefill{}\\
+\begin{center}\bfseries\large\textsf{Hoja 3    \vspace{-2mm}}
+\end{center}
+
+\noindent
+%\hrulefill{}\\
+ 
+\begin{ex}
+$$Q:=\{(x,y):x\in[-1,1], y\in\{-1,1\}\}\cup \{(x,y): x\in\{-1,1\},y\in[-1,1]\}$$
+(el borde de un cuadrado) es  una subvariedad de $\RR^2$?
+\end{ex} 
+
+\begin{ex}[Facil]
+Sean $U$ un subconjunto abierto de $\RR^n$, $V$ un subconjunto abierto de $\RR^m$, y $f \colon U \to V$ una aplicaci\'on. 
+ Demuestra que $f$ es diferenciable en el sentido de las clases de calculo (es decir, como aplicaci\'on entre abiertos del espacio euclideo) si y solo si $f$, considerada como aplicaci\'on entre variedades diferenciales, es diferenciable.
+ \\
+ \textbf{Recuerda: } La estructura de  variedad diferencial  de $U$ es el \'atlas diferencial maximal que contiene la carta $Id_{U} \colon U \to U$.
+\end{ex}
+
+\begin{ex}[Facil]
+
+\begin{enumerate}
+\item Demuestra que: $$S:=\{(x,y,cos(x)cos(y)): x,y \in \RR\}$$
+es una subvariedad de $\RR^3$. 
+\item Demuestra que: $$g \colon S \to \RR, (x,y,z) \mapsto x+y+z^2$$
+es una aplicaci\'on diferenciable. Aqu\'i   $S$ tiene  la estructura de variedad diferencial dada como subvariedad de  $\RR^3$, y $\RR$ su estructura canonica  de variedad diferencial.
+\end{enumerate}
+
+\end{ex}
+
+
+\begin{ex}
+Sean $M, N$ variedades diferenciales y $f \colon M\to N$ una aplicaci\'on diferenciable. Demuestra que 
+$$\text{grafo}(f):=\{(q,f(q)):q\in M\}$$
+es una subvariedad de $M\times N$.
+\end{ex}
+
+
+
+
+\begin{ex} Sea $G$ un grupo, $X$ un conjunto. Sea $\theta \colon G \times X \to X$ una aplicac\'ion. Para cada $g\in G$, denota por $\theta_g$ la applicaci\'on $X \to X, x \mapsto \theta(g,x)$. Denota por $Biy(X)$ el grupo de biyecciones de $X$. Demuestra:
+
+\noindent $\theta$ es una acci\'on de $G$ en $X$ $\;\Leftrightarrow\;$   $\theta \colon G \to Biy(X), g \mapsto \theta_g$ es un homomorfismo de grupos. 
+
+\end{ex}
+
+
+ \begin{ex}
+Sea $n\in \NN$. Considera el grupo $\ZZ_n:=\ZZ/n\ZZ$ (el grupo c\'iclico de $n$ elementos)
+y para cada $m\in \ZZ$ denota por $[m]$ el elemento correspondiente en $\ZZ_n$.
+\begin{enumerate}
+\item
+Demuestra que 
+$$\Theta \colon \ZZ_n \times S^1 \to S^1,\;\;([m],z)\mapsto e^{2\pi i \frac{m}{n}}z$$
+es una acci\'on diferenciable de $\ZZ_n$ en la variedad $S^1:=\{z\in \CC:|z|=1\}$.
+\item
+ Demuestra que $S^1/\ZZ_n$ tiene una estructura de variedad diferencial tal que la proyecci\'on $\pi \colon S^1 \to S^1/\ZZ_n$ es un difeomorfismo local.
+\end{enumerate}
+\end{ex}
+ 
+\noindent \textbf{Girar pagina...} 
+\begin{ex}
+\begin{enumerate}
+\item Sean $M_i$ variedades diferenciales y $p_i\in M_i$, por $i=1,2$. Demuestra que la aplicaci\'on can\'onica
+$$\Phi \colon T_{(p_1,p_2)}(M_1\times M_2)\cong T_{p_1}M_1\times 
+T_{p_2}M_2,\;\;\; [(\gamma_1,\gamma_2)]_{M_1\times M_2} \mapsto ([\gamma_1]_{M_1},[\gamma_2]_{M_2})$$
+(donde $\gamma_i$ denota curvas diferenciables en $M_i$ con $\gamma_i(0)=p_i$) est\'a bien definida y es un isomorfismo de espacios vectoriales.
+
+\item Sea $M$ una variedad diferencial y $p\in M$. Sea
+$$i \colon M\to M\times M, q\mapsto (q,q).$$
+Calcula la derivada de $i$ en $p$, es decir,
+$$i_*(p)\colon T_pM \to T_{(p,p)}(M\times M)\cong T_{p}M\times 
+T_{p}M.$$
+\end{enumerate}
+\end{ex}
+%\begin{ex}
+%Sea $M$ una variedad diferencial y $\gamma_i \colon (-\epsilon, \epsilon)\to M$
+%curvas diferenciables ($i=1,2$) con $ \gamma_1(0)=\gamma_2(0)=:p$. Sea $(U,\phi)$ una carta de $M$ con $p\in U$, tal que $(\phi \circ \gamma_1)'(0)=(\phi \circ \gamma_2)'(0)$. Entonces para cada carta $(V,\psi)$ de $M$ con $p\in V$ tenemos 
+%$$(\psi \circ \gamma_1)'(0)=(\psi \circ \gamma_2)'(0).$$
+%\end{ex}
+
+
+
+ \end{document}
+ %%%%%%%
+ \begin{ex}
+
+\end{ex}
+
+ \begin{ex}
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{ex}
+ 
+ 
+ 
+ 

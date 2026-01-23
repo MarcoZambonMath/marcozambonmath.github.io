@@ -1,0 +1,235 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[]{amsmath,amsthm,amssymb,amscd}
+\usepackage[latin1]{inputenc}
+%\usepackage{fullpage}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+     
+\textheight 246mm
+     
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+     
+\textwidth 159mm
+
+
+%               Theorem Environments
+\theoremstyle{definition}
+\newtheorem{ex}{}
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%               Subquestions numbered with letters
+\renewcommand{\theenumi}{\textbf{\alph{enumi}}}
+
+%               Maths definitions
+
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\QQ}{\ensuremath{\mathbb Q}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+
+\begin{document}
+\noindent
+{\sffamily\large Marco Zambon 
+\hfill     23/05/2011\\Geometr\'ia III, curso 2010-11}
+ 
+
+%\noindent
+%\hrulefill{}\\
+\begin{center}\bfseries\large\textsf{Examen Final    \vspace{-2mm}}
+\end{center}
+
+ 
+%\hrulefill{}\\
+
+
+\noindent
+\hrulefill{}\\
+
+\noindent
+{\sffamily\large Tu nombre:
+\\
+Tu DNI: 
+
+}
+
+
+ 
+\begin{center}{\sffamily (deja esta tabla vac\'ia)}
+\end{center}
+\vspace*{-5mm}
+%\begin{table}[htdp]
+%\caption{}
+%\begin{center}
+%\begin{tabular}{|c|c|c|c|c|c||c|}
+%\hline
+%Ej. 1  &Ej. 2&Ej. 3&Ej. 4&Ej. 5&Ej. 6& Total puntos (de 100)\\
+%\hline
+%& & & & & &  \\
+%& & & & & &  \\
+%\hline
+%\end{tabular}
+%\end{center}
+%\label{default}
+%\end{table}
+ 
+
+\begin{table}[htdp]
+%\caption{}
+\begin{center}
+\begin{tabular}{|c|p{2cm} |}
+\hline
+&\\[-0.2cm]
+Ej. 1  &\\[0.2cm]
+\hline
+&\\[-0.2cm]
+Ej. 2  &\\[0.2cm]
+\hline
+&\\[-0.2cm]
+Ej. 3  &\\[0.2cm]
+\hline
+&\\[-0.2cm]
+Ej. 4  &\\[0.2cm]
+\hline
+&\\[-0.2cm]
+Ej. 5  &\\[0.2cm]
+\hline
+&\\[-0.2cm]
+Ej. 6  &\\[0.2cm]
+\hline\hline
+&\\[-0.2cm]
+Total (de 100) & \\[0.2cm]
+\hline
+\end{tabular}
+\end{center}
+\label{default}
+\end{table}
+\vspace*{-5mm}
+
+
+%%
+\noindent
+%\hrulefill{}\\
+\textsf{{\bf \sffamily  Instrucciones:} escribe en cada hoja tu nombre y el n\'umero del problema.\\
+Justifica todas tus respuestas.
+Puedes utilizar, cit\'andolos de manera apropriada, resultados que hemos obtenido en clase o en los ejercicios para casa.    \vspace{-2mm}}
+
+ \noindent
+\hrulefill{}\\
+%%%%
+ 
+\begin{ex}[8+8 puntos]
+Consideramos las siguientes superficies topol\'ogicas: la esfera $S^2$, el toro $\TT$ y el plano proyectivo $P_2(\RR)$.    
+\begin{enumerate}  \item > Es   $\TT$   homeomorfo a $P_2(\RR)\; \sharp P_2(\RR)$?
+\item > Es   $\TT \; \sharp \; P_2(\RR) \; \sharp \; S^2$   homeomorfo a $P_2(\RR)\; \sharp \;P_2(\RR) \sharp \; P_2(\RR)$?
+\end{enumerate}
+ \end{ex}
+
+\vspace{0.8cm}
+
+\begin{ex} [8+8 puntos]
+Sea $n\ge 1$, $S^n$ la esfera de dimension $n$, y  $P_n(\RR):=S^n/\sim$, donde la relaci\'on de equivalencia  es: $p \sim q \Leftrightarrow (q=p \text{ o bien } q=-p)$. Sea $\pi \colon S^n \to P_n(\RR)$ la proyecci\'on. 
+\begin{enumerate} 
+\item 
+ Sea $f\colon S^n \to \RR$ una funci\'on diferenciable. >Bajo qu\'e condiciones existe una funci\'on $h \colon P_n(\RR) \to \RR$ tal que $f=h \circ \pi$?
+\item Cuando $h$ existe, es $h$ diferenciable? \hspace{4cm}{{\bf \sffamily  el ejercicio continua...}}
+\end{enumerate}
+\textbf{Recuerda: }  La estructura de variedad diferencial en  $P_n(\RR)$ es tal que la proyecci\'on $\pi \colon S^2 \to P_n(\RR)$ es un difeomorfismo local.
+\end{ex}
+
+\vspace{0.8cm}
+
+ \begin{ex}  [8+8 puntos]
+ 
+Sea $$F \colon \RR^3 \to \RR,\;\;\; F(x_1,x_2,x_3)=x_1^2+x_2^2-x_3^2.$$ Considera tambi\'en el campo vectorial $X=x_3\pd{x_2}+x_2\pd{x_3}$ en $\RR^3$.
+ 
+ \begin{enumerate}\item >Qu\'e  $c\in \RR$ son valores regulares de $F$?
+\item > Es  $X_p\in T_p (F^{-1}(c))$ para cada valor regular $c$ de $F$ y cada $p\in 
+ F^{-1}(c)$?
+\end{enumerate}
+\end{ex}
+
+
+\vspace{0.8cm}
+
+
+
+\begin{ex}[8+8 puntos]
+$\text{}$
+\begin{enumerate}
+\item Considera $\RR^2$, con coordenadas $x$ y $y$. Calcula el flujo del campo vectorial $y \pd{x}$.
+\item  Sea $X$ un campo vectorial en una variedad diferencial $M$. 
+Denotamos $\Phi_t : M \to M$ al flujo de $X$ (supongamos  por simplicidad que est\'a definido para todos $t\in \RR$).
+Demuestra que
+$$\{p\in M : X_p=0\}=\{p\in M: \Phi_t(p)=p \text{ para todos }t\in \RR\}.$$  \end{enumerate}
+ \end{ex}
+
+
+\vspace{0.8cm}
+
+\begin{ex}[4+8+8 puntos] $\text{}$
+\begin{enumerate}
+\item Considera  $xdy\wedge dz\in \Omega^2(\RR^3)$. > Existe $\beta \in \Omega^1(\RR^3)$ con $d\beta=xdy\wedge dz$?
+\item Para cada $n\ge 1$ denotamos $\overrightarrow{0}$ al origen en $\RR^n$, e $Id \colon 
+\RR^n \to \RR^n$ la identidad. Sea $\alpha \in \Omega^1(\RR^n)$ tal que $(-Id)^*\alpha=\alpha$.
+Demuestra que $\alpha(v)=0$ para todos $v\in T_{\overrightarrow{0}}\RR^n$.
+%,  el espacio tangente a $\RR^n$ en la origen $\overrightarrow{0}\in \RR$.
+
+\item  >Para qu\'e $k\in\{0,\dots,n\}$ es 
+$$\{\alpha \in \Omega^k(\RR^n):(-Id)^*\alpha=\alpha\}\subset
+  \{\alpha \in \Omega^k(\RR^n): \alpha(v_1,\dots,v_k)=0 \;\; \forall  v_1,\dots,v_k\in T_{\overrightarrow{0}}\RR^n\} ?$$
+\end{enumerate}
+\noindent{\bf Recuerda:} si $F \colon M\to N$ es una aplicaci\'on entre variedades diferenciales y $\alpha\in \Omega^k(N)$, entonces $F^*\alpha \in \Omega^k(M)$ est\'a definida as\'i: para cada $p\in M$ y  $v_1,\dots,v_k\in T_pM$, tenemos 
+$$(F^*\alpha)_p(v_1,\dots,v_k)=\alpha_{F(p)}(F_*(p)v_1,\dots,F_*(p)v_k).$$
+\end{ex} 
+ 
+ 
+ 
+\vspace{0.8cm}
+
+\begin{ex}[8+8 puntos]  Sea $M$ una variedad diferencial y $g$ una m\'etrica Riemanniana en $M$.
+\begin{enumerate}
+\item Sea $F \in C^{\infty}(M)$. Para cada $p\in M$ y $v,w\in T_pM$ definimos $$(g^F)_p(v,w):=F(p)\cdot g_p(v,w).$$
+> Qu\'e condiciones tiene que cumplir $F$ para que $g^F$ sea una m\'etrica Riemanniana en $M$?
+\item Sea $F \in C^{\infty}(M)$ tal que $F(p)\ge 1$ para todos $p\in M$.
+>Es $d_{g^F}(p,q)\ge d_g(p,q)$ para todos $p,q\in M$?
+
+Aqu\'i $d_g$ denota la distancia en la variedad Riemanniana $(M,g)$, y 
+$d_{g^F}$ denota la distancia en la variedad Riemanniana $(M,g^F)$.
+\end{enumerate}
+\end{ex}
+
+
+
+ 
+
+ 
+
+ \end{document}
+ %%%%%%%
+ \begin{ex}
+
+\end{ex}
+
+ \begin{ex}
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{ex}
+ 
+ 
+ 
+ 

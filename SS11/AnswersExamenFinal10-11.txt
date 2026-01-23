@@ -1,0 +1,27 @@
+Respuestas al examen final de Geometria III (2010-11),
+por Marco Zambon.
+
+1) a) NO [el toro es orientable, lo otra superficie no]
+b) SI [tienen los mismos numeros de Euler, ambas no tienen borde y no
+son orientables]
+
+2) a) la condicion es: f(p)=f(-p) para todos puntos p de S^2
+b) SI [toma abiertos U en S^n tal que pi|_U es un difeomorfismo en su
+imagen, y usa su inversa para escribir explicitamente h|_{pi(U)}.]
+
+3) a) Todos numeros reales excepto cero
+b) SI [controla que F_*(p)(X_p)=0]
+
+
+4) a) El flujo es dado por Phi_t(x,y)=(x+yt,y)
+b) la inclusion de la izquierda en la derecha utiliza lo unicidad de
+las curvas integrales que pasan por  un punto dado en t=0. Lo otra
+inclusion vale por definicion de curva intergral.
+
+5) a) NO [d(xdy ^ dz) no es cero]
+b) Se demuestra que alpha(v)=-alpha(v) para todo vector tangent v en 0.
+c) para todos k impares (1,3,5 etc).  El argumento es similar a lo de  b)
+
+6) a) la condicion es: F(p)>0 para todo punto p de M.
+b) SI [utiliza simplemente la definicion de distancia, que es en
+terminos de lungitud de curvas]

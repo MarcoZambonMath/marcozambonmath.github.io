@@ -1,0 +1,306 @@
+
+
+
+\documentclass[11pt]{amsart}
+\usepackage{latexsym, amsmath, amssymb, amsfonts, amscd}
+\usepackage{amsthm}
+\usepackage{t1enc}
+\usepackage{indentfirst}
+\usepackage{graphicx, pb-diagram}
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+\usepackage{enumerate}
+\usepackage[all]{xy}
+%\usepackage{showkeys}
+\usepackage{hyperref}
+\hypersetup{%no boxes in hyperref
+    pdfborder = {0 0 0}
+} 
+ \hypersetup{
+    colorlinks,
+    citecolor=blue,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\usepackage{url}
+
+
+
+
+
+
+
+
+\headheight=8pt     \topmargin=0pt \textheight=624pt
+\textwidth=432pt \oddsidemargin=18pt \evensidemargin=18pt
+\evensidemargin1.3cm \topmargin-0.7cm
+%\newcommand{}{}
+%\newcommand{}{}
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\bt}{\mathbf{t}}                  %target
+\newcommand{\bs}{\mathbf{s}}                  %source
+\newcommand {\mcomment}[1]{{\marginpar{*}\scriptsize{\bf Marco:}\scriptsize{\ #1 \ }}}
+\newcommand{\un}{\underline}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\kp}{K^{\perp}}
+\newcommand{\lp}{L^{\perp}}
+\newcommand{\he}{\hat{e}}
+\newcommand{\hep}{\hat{e'}}
+\newcommand{\te}{\tilde{e}}
+\newcommand{\Gb}{\Gamma_{bas}(\kp|_U)}
+\newcommand{\Gbw}{\Gamma_{bas}(\kp)}
+\newcommand{\ra}{\rangle}
+\newcommand{\la}{\langle}
+\newcommand{\Gbj}{\Gamma_{bas}(\kp\cap \cJ \kp )}
+\newcommand{\kpj}{\kp\cap \cJ \kp}\newcommand{\li}{\ensuremath{L_{\infty}}}
+
+\begin{document}
+%\theoremstyle{plain}
+\newtheorem{Thm}{Theorem}[section]
+\newtheorem{Prop}[Thm]{Proposition}
+\newtheorem{Lemma}[Thm]{Lemma}
+\newtheorem{Cor}[Thm]{Corollary}
+\newtheorem{Claim}[Thm]{Claim}
+\newtheorem{Fact}[Thm]{Fact}
+\theoremstyle{definition}
+\newtheorem{Def}[Thm]{Definition}
+\newtheorem{Ex}[Thm]{Example}
+\newtheorem{Exs}[Thm]{Examples}
+\theoremstyle{remark}
+\newtheorem{Remark}[Thm]{Remark}
+%\newcommand {\comment}[1]{{\marginpar{*}\scriptsize{\bf Comments:}\scriptsize{\ #1 \ }}}
+\title{Current  research interests}
+\author{Marco Zambon}
+%\address{}
+%\email{}
+\date{\today}
+%\begin{abstract}
+%\end{abstract}
+\maketitle
+%\tableofcontents
+ 
+My research\footnote{
+For a description of my research projects until about 2009, see
+\url{http://www.uam.es/personal_pdi/ciencias/mzambon/summaries12.pdf}} 
+  is  concerned  mainly with 
+\emph{Poisson geometry}, in the wide sense of the term. Poisson geometry arose from Weinstein's work in the 1980's \cite{We},
+and has  deep and rich connections to several other fields within geometry, algebra and mathematical physics.  
+
+More concretely, my research considers manifolds with certain additional structures: for instance  tensor fields, group-like structures, or special vector  bundle structures. The geometric structures on such spaces often induce algebraic structures, providing an interesting interplay between geometry  and algebra, or other geometric structures such as \emph{singular foliations}.  Examples of such spaces are    \emph{Poisson and Dirac manifolds},  
+\emph{generalized complex manifolds}, \emph{Lie groupoids}, \emph{Courant algebroids}.
+I use the formalism of
+\emph{(differential) graded manifolds} as a powerful and systematic tool to study both the above geometries and certain algebraic structures, such as \emph{\li-algebras}.\\
+
+In the following, I describe recent projects -- some of them ongoing --  that emerge from them. They
+are grouped by topic, as follows:
+\begin{enumerate}
+\item  Higher Lie theory
+\item Higher symplectic geometry
+\item Deformation theory 
+\item Singular foliation theory 
+\item Riemannian geometry
+\end{enumerate}
+
+\section{Higher Lie theory}
+Classically, one considers Lie groups, Lie algebras and their actions on manifolds, possibly endowed 
+with geometric structures.  However there are important examples of  classical  geometric structures whose symmetries are not given by mere Lie groups, but rather by
+ \emph{higher} Lie groups and  by {higher}  Lie algebras. The latter are  the \emph{$L_{\infty}$-algebras}  introduced by Lada and Stasheff \cite{LadaStasheff}, which proved to be an essential ingredient in Kontsevich's solution to the deformation quantization problem for Poisson manifolds.  Higher Lie groups and 
+Lie algebras caught lots of attention in recent years, and are being studied from several 
+perspectives, including category theory,  simplicial set theory, and graded geometry.
+%  (see the work of John Baez, Jacob Lourie, Dmitry Roytenberg et al.) 
+
+One of my aims is to study such ``higher'' actions, both at the  infinitesimal level  (actions of $L_{\infty}$-algebras) and at the global level (actions of higher Lie groups). The novelty here is 
+that I am focusing on actions rather than on the study of the acting objects. 
+
+In many cases   classical geometric structures can be encoded using so-called \emph{graded manifolds}. The 
+advantage of doing so, is that the definitions and properties of the geometric structures can be phrased 
+in a very concise and conceptual way. A further aim of mine is to express higher actions  explicitly in terms of 
+classical geometry,  using  the formalism of graded manifolds as a tool. 
+
+
+\subsection{Strict higher actions  (cf. \cite{BCMZ2}\cite{BCMZ}\cite{CZ2}\cite{ZZL})}\label{strictha}
+To a \emph{Lie algebroid} $A$ one can associate the degree 1 graded manifold $A[1]$, which furthermore is 
+endowed with a homological vector field (that is, $A[1]$ is an instance of \emph{differential graded  manifold}). 
+The space of vector fields on $A[1]$ is not only a graded Lie algebra, but actually a \emph{differential graded Lie 
+algebra (DGLA)}. Hence a natural notion of infinitesimal action is given by a morphism 
+of DGLAs into $A[1]$.  Such infinitesimal actions were integrated to actions of 
+strict Lie 2-groups -- i.e., group actions in the category of
+Lie groupoids rather than of smooth manifolds -- 
+ with Zhu in \cite{ZZL}, making 
+use of the theory of Mackenzie's doubles. This gives a conceptual explanation to the results I first derived with Cattaneo in \cite{CZ2},  where $A$ was the Lie algebroid associated to a Poisson manifold. 
+In \cite{CZ2} we further investigated reduction procedures under such actions.
+
+\emph{Courant algebroids} provide a framework for Dirac geometry and for Hitchin's generalized complex 
+geometry. In   \cite{BCG}, the authors define the  notion of extended action on a Courant 
+algebroid (the  structure that acts is more involved than simply a Lie algebra) and study the reduction by 
+an extended action. 
+The construction is remarkable, however there is no simple conceptual explanation of why it works. 
+In \cite{BCMZ}  with Bursztyn,  Cattaneo and  Mehta  we use the fact that 
+Courant algebroids correspond bijectively to degree 2 symplectic manifolds $\cM$ with a degree 3 self-commuting function $\cS$. We study strict  higher  actions on such graded manifolds $\cM$ (with and without moment map), and show that graded symplectic reduction on $\cM$ by hamiltonian actions recovers the results of \cite{BCG}. As a spin-off of the work on reduction in \cite{BCMZ}, we prove the Frobenius theorem for distributions on graded manifolds (see \cite{BCMZ2}  for a preliminary version). 
+
+
+\subsection{Non-strict higher actions (cf. \cite{RajMarco}\cite{ZZL2})} 
+The space of vector fields on a differential graded manifold $\cM$ is not just a Lie algebra but actually a 
+DGLA, so it is  an instance  of $L_{\infty}$-algebra. 
+%(a notion introduced by James Stasheff in the 90's ). 
+Hence it is natural to consider  infinitesimal actions on $\cM$ given as follows: \emph{non-strict morphisms} of $L_{\infty}$-algebras into the DGLA of vector fields on $\cM$. This means in particular that, even when the acting 
+$L_{\infty}$-algebra is a DGLA, we consider    morphisms in the category of $L_{\infty}$-algebras (``non-strict 
+actions'') rather than  morphisms in the category of DGLAs (``strict actions''). 
+
+The integration to a global action -- a natural continuation of the projects  described in \S \ref{strictha} -- is an 
+interesting problem and seems very hard. A first step, which is interesting in its own right, is taken in the work with   Mehta \cite{RajMarco}, where we establish the existence of the analogues of ``transformation 
+algebroids'' for such actions. In the linear case, that is when $\cM=V[1]$ for an $L_{\infty}$-algebra $V$,   such 
+actions are more general than the usual representations of $L_{\infty}$-algebras. The above 
+``transformation algebroids'' deliver a new notion of ``semidirect product'' of $L_{\infty}$-algebras. Special cases that  we spell out include  the adjoint representation of an $L_{\infty}$-algebra, the classical notion of $L_{\infty}$-module, and representations up to homotopy of Lie algebras.
+
+In \cite{ZZL2} with Zhu we study  distributions on $A[1]$, for $A$ a Lie algebroid, and show that involutive distributions are in bijection with classical data  known as \emph{infinitesimally multiplicative foliations}. We show that
+ images of non-strict actions usually do not define distributions on $A[1]$, and give sufficient conditions so that they do. 
+ 
+ 
+\section{Higher symplectic geometry}
+
+
+Recently Baez, Hoffnung and Rogers  \cite{BHR} realized  that the observables on a manifold endowed with a multisymplectic form  carry an $L_{\infty}$-algebra structure. This generalizes well-known facts from symplectic geometry and classical mechanics, and  establishes a link between multisymplectic geometry and higher Lie theory. From a physical point of view, multisymplectic forms
+-- closed, non-degenerate forms of any degree -- are relevant as they appear in  classical field theory and string theory.
+
+\subsection{Higher Dirac structures (cf. \cite{HDirac})}
+I extend the results of \cite{BHR} to ``higher Dirac structures'' (for instance, arbitrary closed differential forms), and   show that higher Dirac structures appear naturally in classical field theory too.
+Further I show that a manifold $M$ -- without any geometric structure -- induces $L_{\infty}$-algebra structures on  sequence $L_p$ of  complexes constructed out of the vector fields and differential forms on $M$, for every $p\ge 0$, generalizing a result of Roytenberg-Weinstein for $p=1$ \cite{rw}. There is a natural morphism relating the $L_{\infty}$-algebras $L_0$ and $L_1$, and 
+ I would like to show  that in full generality  there are natural morphisms relating $L_p$ to $L_{p+1}$. The relation between the $L_{\infty}$-algebras arising from multisymplectic (or higher Dirac) structures and the $L_p$'s  is given by the notion of prequantization, and should be studied further.
+ 
+\subsection{Homotopy moment maps    (cf. \cite{FRZ}\cite{FLRZ}\cite{Cons})}
+With Fr\'egier and Rogers  \cite{FRZ} we define the notion of \emph{homotopy moment map} as 
+a $L_{\infty}$-morphism from a Lie algebra into the $L_{\infty}$-algebra of observables of a multisymplectic manifold $(M,\omega)$. $L_{\infty}$-morphism are usually hard to construct and work with, however in 
+our main theorem we show that certain 1-step extensions of $\omega$ to cocycles in equivariant cohomology give rise to homotopy moment maps. As these extensions are easy to construct, we are able to exhibit many examples, extending classical examples in symplectic geometry. One of them is infinite dimensional:  the space of connections on a principal bundle over a compact orientable manifold of arbitrary dimension, extending the well-known Atyiah-Bott construction in symplectic geometry. 
+ 
+ We study the obstruction theory for the existence of a homotopy moment map. Further, we show that a homotopy moment map for $M$ can be transgressed to one for the loop space $LM$ (or for that matter, the space of maps from any compact orientable manifold into $M$). We remark that homotopy moment maps are intimately linked to several known notions in differential geometry and mathematical physics; for instance, an equivariant extension of a 
+a closed 3-form gives rise not only to a homotopy moment map, but also to an extended action (in the sense of \cite{BCG}) on the exact Courant algebroid twisted by $\omega$.
+ 
+
+
+Discussions  with Camille Laurent-Gengoux were the starting point for  \cite{FLRZ}. This paper gives a  cohomological interpretation  of general homotopy moment maps. More precisely, given an action of a Lie group $G$ on a manifold $M$, we construct a complex whose cocycles are pairs consisting of an invariant  form $\omega\in \Omega^{n+1}_{closed}(M)$ and a homotopy moment map for $(M,\omega)$. This characterization immediately gives a notion of equivalence for homotopy moment maps, and a provides a nice conceptual explanation for some of the results of \cite{FRZ}. 
+
+The work \cite{Cons} focuses on the differential geometry of multisymplectic manifolds $(M,\omega)$ in the presence of a moment map $(f)$. We show that there is an induced hierarchy of closed invariant forms, of degree less than $\omega$, each of which admits a  moment map induced by $f$. We propose some reduction procedures. Further, we show that given an invariant hamiltonian form $H$ of $M$, the dynamics generated by $H$ admits   conserved quantities that can be constructed out of the moment map $(f)$. 
+
+
+  
+ 
+
+
+\section{Deformation theory} 
+Given an algebraic or geometric structure, it is natural to ask about a description of the space of  ``small 
+perturbations'' (deformations) which are again a structure of the given type.  This is essentially the 
+subject of deformation theory, which as a subject arose in the 1960's with the work of  
+Gerstenhaber et al. on  associative algebras, and of Kodaira et al. on complex structures. 
+ Determining the algebraic structure that governs a certain deformation problem  allows to understand properties of the space of deformations.
+A principle, attributed to Deligne, states that all deformation problems in characteristic zero are governed by a DGLA. However, in practice, sometimes the most natural structure governing the deformation  problem is not a DGLA, but rather an $L_{\infty}$-algebra (quasi-isomorphic to a DGLA). 
+%In practice however it often happens that there is an $L_{\infty}$-algebra 
+
+\subsection{Simultaneous deformations (cf. \cite{FZgeo}\cite{FZalg})} 
+The main result of our   work  with   Fr\'egier  \cite{FZgeo} is a machinery which, given a pair of 
+algebraic or geometric structures (where the second one typically depends on the first 
+one) assures that their simultaneous deformations are governed by an $L_{\infty}$-algebra. The novelty is that we are not studying 
+deformations of one structure, but rather of two (interconnected) structures. This translates into the fact 
+that deformations are ruled not by DGLAs, as   happens in the most of the existing literature, but rather 
+by $L_{\infty}$-algebras. The equations governing deformations are then infinite sums, whose convergence we assure by introducing appropriate filtrations.  To the best of our knowledge, it is the first time that simultaneous deformations 
+are addressed systematically. 
+
+We apply our machinery to a series of geometric examples \cite{FZgeo}, one of them being deformations of the pair (Poisson 
+structures on a fixed manifold, coisotropic submanifolds), and another being deformations of (exact Courant algebroids, generalized complex structures). The results are all explicit, genuinely new, and we believe that they can be obtained in such a direct way only using our machinery.
+
+The paper \cite{FZalg} is devoted to algebraic examples, for instance  the pair (two Lie bialgebras, morphisms between them). The results obtained here  can be obtained also by operadic methods, even though the operadic approach is more lengthy and involved. 
+ 
+Further, our results  endow the set of deformations with a natural equivalence relation, stating therefore 
+which deformations are to be considered ``equivalent''. It is usually hard to spell out explicitly the equivalence relation, but we succeed in doing so for the pair (twisted Poisson structures, closed 3-forms), obtaining  symmetries that had not been considered in the literature before.  
+ 
+Our machinery is set up so that  deformations coincide with Maurer-Cartan  
+elements of certain $L_\infty$-algebras that we construct using  Voronov's derived bracket construction \cite{Vor}, starting from  simple data (so-called V-data). It is desirable to find a way to construct explicitly deformations (i.e., Maurer-Cartan   elements) in terms of the V-data alone, as this would give rise to new deformations in many examples. 
+
+\subsection{Deformations of coisotropic submanifolds (cf. \cite{OPPois})} 
+Oh-Park \cite{OP} determined that the
+% formal 
+deformations of a coisotropic submanifold of a symplectic manifold are governed by an $\li$-algebra. Later, Cattaneo-Felder \cite{CaFeCo2} associated an $\li$-algebra to any coisotropic submanifold $C$ of a Poisson manifold. This $\li$-algebra 
+depends on the jets of the Poisson structure along $C$, and in general does not govern the coisotropic deformations of $C$. In the work \cite{OPPois} with Sch\"atz we show that, if the Poisson structure is \emph{entire} in directions transverse to $C$, then the $\li$-algebra 
+ does   govern the coisotropic deformations of $C$. Here we are considering   {actual deformations}, not just formal ones. We show that the Poisson structure obtained inverting a symplectic form can be made entire, hence our results apply in the symplectic case. Further, applying a statement from \cite{FZgeo}, we provide an example showing that the problem of deforming both the coisotropic submanifold and the Poisson structure is formally obstructed, thereby providing a negative 
+  answer to a question raised in \cite{OP}.
+ %, where only formal deformations were considered.
+
+
+\section{Singular foliation theory} 
+Foliations on manifolds are a classical subject within differential geometry. Singular foliations are  less 
+classical, and arise naturally in the context of Lie algebroids and Poisson geometry. 
+A singular foliation on a manifold $M$ is a suitable choice of submodule of the module of vector fields on 
+$M$. It gives rise to a partition of $M$ into immersed submanifolds of varying dimension, called leaves. Given a singular foliation, Androulidakis-Skandalis \cite{AndrSk}  constructed an associated topological groupoid, called \emph{holonomy groupoid}, and obtained applications in non-commutative geometry (\'a la Connes).
+
+\subsection{Singular foliations (cf. \cite{AZ2}\cite{AZ1})}
+
+The remarkable construction of the holonomy groupoid $H$ in \cite{AndrSk} is   quite abstract. In a series of works with Androulidakis, our aim to determine the exact relation between the construction and the geometry of the singular foliation. This is of independent differential-geometric interest, and further simplifies results of Androulidakis-Skandalis in   non-commutative geometry.
+
+In   \cite{AZ1} with Androulidakis we give a condition that
+assures that the 
+ restriction of $H$ to a leaf $L$ is a Lie groupoid integrating  an obvious Lie algebroid $A_L$ associated to $L$.
+ This result is important as it allows to ``do differential geometry'' on $H$, and is a non-trivial
+since $H$ is defined as a quotient with no obvious smoothness properties. The condition is the discreteness  of a certain ``essential isotropy group'', and is analog to the Crainic-Fernandes obstruction to the integrability of Lie algebroids \cite{CrFeLie}. Later on Debord \cite{De13} proved that
+the essential isotropy groups are always discrete, and as a consequence 
+the   restriction of $H$ to a leaf $L$ is always a Lie groupoid integrating   $A_L$.
+
+The geometric notion of holonomy on a singular foliation, unlike the regular case, can not be phrased solely in terms of paths in the leaves. 
+In   \cite{AZ2} with Androulidakis we 
+define this notion introducing the concept of \emph{holonomy transformation}, and establish that there is an injective map   from $H$ to the set of holonomy transformations.  
+By differentiation we obtain the notion of linearized holonomy.
+
+ We show that  the linearized holonomy is given by a Lie groupoid action on the normal bundle $NL$. Further, the linearization at $L$ of 
+our singular foliation (a singular foliation on $NL$, which we refer to as the normal model)
+is given exactly by this action.
+This allows us to show that, under a compactness assumption, a foliation is isomorphic to the normal model if{f} it is the foliation of a proper Lie groupoid. The latter condition not practical as it is hard to check, however it provides some progress toward the singular version of the Reeb stability theorem: the statement that, under certain conditions, the foliation is isomorphic to the normal model. 
+We remark in passing that  nearby the singular foliation admits the structure of a singular Riemannian foliation.
+
+
+
+\section{Riemannian geometry} \label{riemgeo}
+
+\subsection{The geodesic closing lemma (cf. \cite{BessaZ})}
+We consider  with  Bessa \cite{BessaZ} a question in global Riemannian geometry, which also belongs to the 
+class of ``closing lemmas'' in dynamical systems: how can one perturb a Riemannian metric admitting an almost periodic geodesic to a 
+Riemannian metric admitting a periodic geodesic? 
+
+
+We remark that recently Rifford 
+\cite{Rifford} 
+gave an elegant construction that settles this question (with $C^1$-small perturbations)  under the assumption that the underlying manifold  be compact. 
+
+Without assuming that the manifold be compact, a na\"ive construction consists of deforming the almost periodic geodesic to a closed curve $C$, 
+considering a natural metric in a tubular neighborhood of $C$ for which $C$ is a geodesic, and then applying 
+a partition of unity argument.  The main technical difficulty is given by estimates.  We expect   this 
+procedure to involve a  $C^1$-small deformation of the metric. 
+In the above construction, a  tubular neighborhood of $C$ is identified with the normal bundle to $C$ by 
+means of the normal exponential map. Using a tubular version of harmonic coordinates might lead to a 
+$C^2$-small deformation of the metric, providing a  qualitative improvement of the construction. However 
+this would require carrying on hard estimates,  involving analytic techniques. 
+
+
+
+\bibliographystyle{halpha}
+\bibliography{/Users/marcozambon/Desktop/Dropbox/Math/mybib}
+
+\end{document}
+
+ 
+
+ 

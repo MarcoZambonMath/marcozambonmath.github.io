@@ -1,0 +1,161 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[]{amsmath,amsthm,amssymb,amscd}
+\usepackage[latin1]{inputenc}
+%\usepackage{fullpage}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+     
+\textheight 246mm
+     
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+     
+\textwidth 159mm
+
+
+%               Theorem Environments
+\theoremstyle{definition}
+\newtheorem{ex}{}
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%               Subquestions numbered with letters
+\renewcommand{\theenumi}{\textbf{\alph{enumi}}}
+
+%               Maths definitions
+
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\QQ}{\ensuremath{\mathbb Q}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+
+\begin{document}
+\noindent
+{\sffamily\large Marco Zambon 
+\hfill     29/03/2011\\Geometr\'ia III, curso 2010-11}
+ 
+
+%\noindent
+%\hrulefill{}\\
+\begin{center}\bfseries\large\textsf{Examen Parcial: soluciones    \vspace{-2mm}}
+\end{center}
+
+ 
+%\hrulefill{}\\
+
+ \noindent
+\hrulefill{}\\
+\textsf{Aqu\'i pongo, para cada problema, una soluci\'on. Est\'a claro que puede haber otras soluci\'ones tambi\'en! \vspace{-2mm}}
+
+\noindent
+\hrulefill{}\\
+
+ 
+\begin{ex}\emph{[8 puntos]    
+Considera la variedad topol\'ogica con borde $$M:=\{(x,y):x,y \in \RR,  1 \le \sqrt{x^2+y^2}\le 2\}$$
+y considera esta relaci\'on de equivalencia   en $M$: cada punto de $M$ es equivalente s\'olo a s\'i mismo excepto  los puntos del borde $\{(x,y): \sqrt{x^2+y^2}=1\}\cup \{(x,y): \sqrt{x^2+y^2}=2\}$, para los que se cumple
+$$(x,y) \sim (2x,2y)$$
+para cada $(x,y) \in M$ con $\sqrt{x^2+y^2}=1$.\\
+Construye un homeomorfismo del cociente  $M/\sim$ a una superficie en
+la lista del teorema de clasificaci\'on de superficies compactas y conexas.\\
+}
+
+Construimos un homeomorfismo de $M/\sim$ al toro $S^1 \times S^1$.
+Utilizamos la identificaci\'on $\RR^2\cong \CC, (x,y)\mapsto x+i y$ para simplificar\footnote{Para escribir la demonstraci\'on en terminos de $\RR^2$ utiliza $|x+iy|=\sqrt{x^2+y^2}$ para $x,y \in \RR$ y $e^{i\theta}=cos(\theta)+i sin(\theta)$
+para $\theta\in \RR$.} 
+ la notaci\'on, es decir, tomamos $M=\{z\in \CC:1\le |z|\le 2\}$ y $z\sim 2 z$ para todos $z$ con $|z|=1$.
+La aplicaci\'on $$F \colon M \to S^1\times S^1, z\mapsto \left(\frac{z}{|z|},e^{2 \pi i |z|}\right)
+$$
+es claramente continua. $F$ es sobreyectiva: dados $(w_1,w_2)\in S^1\times S^1$,
+tenemos $F(w_1r)=(w_1,w_2)$ donde $r\in [1,2)$ est\'a determinado por $e^{2  \pi i r}=w_2$. Como  $1\le |z|\le 2$ para todos $z\in M$,  tenemos 
+\begin{align*}
+F(z)=F(z') \Leftrightarrow &
+ |z|-|z'|\in \ZZ \text{ y } \frac{z}{|z|}=\frac{z'}{|z'|}\\
+\Leftrightarrow &(|z|=|z'| \text{ o bien } |z|=1,|z'|=2 \text{ o bien }|z|=2,|z'|=1) \text{ y }
+\frac{z}{|z|}=\frac{z'}{|z'|}\\
+\Leftrightarrow &z=z' \text{ o bien } |z|=1, z=\frac{z'}{2} \text{ o bien }|z'|=1, z'=\frac{z}{2}\\
+ \Leftrightarrow &
+z \sim z'.    
+\end{align*}
+Ademas $M$ es compacta y el toro $S^1 \times S^1$ es Hausdorff, por lo tanto podemos utilizar el ejercicio 3 de la hoja 1 y concluir que la aplicaci\'on $$\tilde{F} \colon M/\sim \to S^1 \times S^1,$$ determinada por $\tilde{F} \circ \pi = F$ donde $\pi \colon M \to M/\sim$ es la proyecci\'on canonica, es un homeomorfismo.
+\end{ex}
+
+\begin{ex}\emph{ [7 puntos]
+Sea $P_2(\RR)$ el plano proyectivo y $\TT:=S^1\times S^1$ el toro. > A qu\'e superficie en la lista de superficies compactas y conexas es homeomorfa la suma conexa $$P_2(\RR) \; \sharp \;  \TT\;\;?$$  
+Demuestra.\\}
+
+Utilizamos el    teorema de clasificaci\'on de superficies compactas y conexas (sin borde), que clasifica dichas superficies por su orientabilidad y numero de Euler. 
+$P_2(\RR) \; \sharp \;  \TT$ no es orientable, porque $P_2(\RR)$ no lo es (contiene una banda de M\"obius). Tenemos $$\chi(P_2(\RR) \; \sharp \;  \TT)=
+\chi(P_2(\RR))+ \chi(\TT)-2=1+0-2=-1.$$
+Por lo tanto $P_2(\RR) \; \sharp \;  \TT$ es homeomorfo 
+%a una suma conexa de varias copias de $P_2(\RR)$ con $\chi=-1$, es decir, a
+ $P_2(\RR)  \; \sharp \;  P_2(\RR)  \; \sharp \;  P_2(\RR)$, ya que esta no es orientable y tiene numero de Euler $-1$.
+\end{ex}
+ 
+
+\begin{ex} \emph{ [8 puntos]
+> Es verdad que $\RR$, con su topolog\'ia canonica, admite un numero infinito de estructuras  de variedad diferencial (distintas entre s\'i)? Demu\'estralo.\\
+}
+
+S\'i, es verdad. Para cada $n\in \NN_{\ge 0}$ sea ${\cal A}_{2n+1}$
+el atlas diferencial maximal que contiene el homeomorfismo $\phi_{2n+1} \colon \RR \to \RR, x \mapsto x^{2n+1}$. Los ${\cal A}_{2n+1}$ son distintos dos a dos: dados $n,m \in \NN_{\ge 0}$, digamos con $n<m$, tenemos que $\phi_{2n+1} \notin {\cal A}_{2m+1}$ porque el cambio de coordenadas $\phi_{2n+1}\circ(\phi^{2m+1})^{-1} \colon \RR \to \RR$ es $x^{\frac{2n+1}{2m+1}}$ y por lo tanto no es diferenciable en zero. 
+\end{ex}
+
+
+
+
+
+\begin{ex}[7 puntos]\emph{
+Sea $M$ una variedad diferencial de dimensi\'on $n$, $S$  una subvariedad de $M$ de dimensi\'on $k$, y $p$ un punto de $S$. Demuestra que existe un entorno abierto $U$ de $p$ en $M$ y una aplicaci\'on diferenciable $F \colon U \to \RR^{n-k}$ tal que
+$$U\cap S= F^{-1}(0).$$\\
+}
+
+Por definici\'on de subvariedad, existe una carta $(U,\phi)$ de la variedad diferencial $M$ adaptada a $S$ y con $p\in U$. Es decir, $U$ es un entorno abierto de $p$ en $M$ y $\phi \colon U \to \phi(U)$ es un difeomorfismo a un abierto de $\RR^n$   tal que $\phi(U\cap S)=\phi(U)\cap (\RR^{k}\times \{0\})$, donde $\{0\}$ es la origen en $\RR^{n-k}$. Considera la aplicaci\'on $$F:= \pi \circ \phi \colon U \to \RR^{n-k}$$ donde $\pi \colon \RR^{n}\to \RR^{n-k}$ es la proyecci\'on a las \'ultimas $n-k$ componentes. $F$ es diferenciable porque bajo la carta $\phi$ corresponde  a $\pi$, que es una aplicaci\'on diferenciable entre abiertos del espacio euclideo, o alternativamente porque $F$ es la composici\'on de dos aplicaci\'ones diferenciables.
+Ademas \begin{align*}
+F^{-1}(0)&=\phi^{-1}(\pi^{-1}(0))\\
+&=\phi^{-1}(\RR^{k}\times \{0\})\\
+&=\phi^{-1}(\phi(U)\cap (\RR^{k}\times \{0\})    )\\
+&= U\cap S.   
+\end{align*}
+\end{ex}
+
+ 
+
+%\begin{ex}  
+%Demuestra que 
+%$$T \;\;\sharp \;\; C\cong T-(D_1 \cup D_2)$$
+%donde $T=S^1\times S^1$ es el toro, $C=S^1\times [0,1]$ el cilindro, y $D_i\subset T$ (por $i=1,2$) son discos cerrados tal que $D_1\cap D_2=\emptyset$.
+%\end{ex} 
+
+
+
+
+
+
+ \end{document}
+ %%%%%%%
+ \begin{ex}
+
+\end{ex}
+
+ \begin{ex}
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{ex}
+ 
+ 
+ 
+ 

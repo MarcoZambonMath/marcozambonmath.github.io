@@ -1,0 +1,480 @@
+\documentclass[12pt]{amsart}
+\usepackage{latexsym, amsmath, amssymb, amsfonts, amscd}
+\usepackage{amsthm}
+\usepackage{t1enc}
+\usepackage{indentfirst}
+\usepackage{graphicx, pb-diagram}
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+\usepackage{enumerate}
+\usepackage[all]{xy}
+%\usepackage{showkeys}
+\usepackage{url}
+\headheight=8pt     \topmargin=0pt \textheight=624pt
+\textwidth=432pt \oddsidemargin=18pt \evensidemargin=18pt
+\evensidemargin1.3cm \topmargin-0.7cm
+%\newcommand{}{}
+%\newcommand{}{}
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\bt}{\mathbf{t}}                  %target
+\newcommand{\bs}{\mathbf{s}}                  %source
+\newcommand {\mcomment}[1]{{\marginpar{*}\scriptsize{\bf Marco:}\scriptsize{\ #1 \ }}}
+\newcommand{\un}{\underline}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\kp}{K^{\perp}}
+\newcommand{\lp}{L^{\perp}}
+\newcommand{\he}{\hat{e}}
+\newcommand{\hep}{\hat{e'}}
+\newcommand{\te}{\tilde{e}}
+\newcommand{\Gb}{\Gamma_{bas}(\kp|_U)}
+\newcommand{\Gbw}{\Gamma_{bas}(\kp)}
+\newcommand{\ra}{\rangle}
+\newcommand{\la}{\langle}
+\newcommand{\Gbj}{\Gamma_{bas}(\kp\cap \cJ \kp )}
+\newcommand{\kpj}{\kp\cap \cJ \kp}
+
+
+\theoremstyle{plain}
+\newtheorem{Thm}{Theorem}[section]
+\newtheorem{Prop}[Thm]{Proposition}
+\newtheorem{Lemma}[Thm]{Lemma}
+\newtheorem{Cor}[Thm]{Corollary}
+\newtheorem{Claim}[Thm]{Claim}
+\newtheorem{Fact}[Thm]{Fact}
+\theoremstyle{definition}
+\newtheorem{Def}[Thm]{Definition}
+\newtheorem{Ex}[Thm]{Example}
+\newtheorem{Exs}[Thm]{Examples}
+\theoremstyle{remark}
+\newtheorem{Remark}[Thm]{Remark}
+%\newcommand {\comment}[1]{{\marginpar{*}\scriptsize{\bf Comments:}\scriptsize{\ #1 \ }}}
+
+
+\begin{document}
+\title{Summary of past  research projects\\
+(until about 2009)}
+\author{Marco Zambon}
+%\address{}
+%\email{}
+\date{\today}
+ 
+\maketitle
+%\tableofcontents
+ 
+I give a brief description of my past   projects putting them into context. The projects are grouped by topic as follows:
+\begin{enumerate}
+\item  Reduction of submanifolds
+\item Coisotropic embedding problems 
+\item Prequantization and Lie groupoids 
+\item Averaging of submanifolds
+\end{enumerate}
+I follow roughly a chronological
+order within each section. 
+%The label {\tt Ongoing project} denotes work in progress.
+
+\section{Reduction of submanifolds}\label{reductions}
+We use the term \emph{reduction} to denote the following procedure: we
+consider a manifold $M$ endowed with a geometric (for instance
+symplectic, Poisson,...) structure, a suitable submanifold with a
+natural foliation, and endow  the leaf space of the submanifold with
+a geometric (symplectic, Poisson,...) structure. Standard examples
+are Marsden-Weinstein reduction in symplectic
+geometry and coisotropic reduction. 
+
+In this section I describe projects involving reduction in the frameworks of Jacobi-contact geometry (\textsection \ref{ctct}),  Dirac geometry (\textsection \ref{fal}), Poisson geometry (\textsection \ref{Zar}) and generalized geometry (\textsection \ref{branes}).
+\subsection{Reduction of Jacobi manifolds via contact groupoids (\cite{ZZ})}\label{ctct}
+  Willett \cite{willett}
+and Albert \cite{albert} independently developed reduction
+procedures for contact manifolds:   given a Hamiltonian action of a
+Lie group $G$ on a contact manifold $M$ with moment map $J:M
+\rightarrow {\mathfrak{g}}^*$ (the dual of the Lie algebra of $G$),
+they showed that the quotient of suitable preimages of $J$ by
+certain subgroups of $G$ are again contact manifolds.
+ However these ways to perform reduction are not as natural as their counterpart
+ in symplectic geometry (Marsden-Weinstein reduction). 
+ In the joint work  \cite{ZZ}
+  with  Zhu we perform
+ contact reduction using so-called contact groupoids instead of a group $G$. This generalizes Willett's and
+ Albert's results, puts contact reduction into a more natural framework and is also
+ suitable for computations.
+ 
+Recall that a contact manifold (i.e. manifold equipped with a 1-form
+$\theta$ satisfying a non-degeneracy condition)
+ is a special type of so-called \emph{Jacobi manifold}.
+   There are global objects associated to Jacobi
+ manifolds, called contact groupoids, which ``desingularize'' the
+ singular foliations with which Jacobi manifolds are equipped.
+ Lie groupoids are generalizations
+   of groups and are suitable to describe ``global'' behaviors;
+a \emph{contact groupoid} is just a Lie groupoid endowed with a  compatible
+contact 1-form.
+ Let $(M,\theta)$ be a
+contact manifold, $X$ a Jacobi manifold, $\Gamma$ the contact
+groupoid associated to $X$. The main result of \cite{ZZ} is that a
+very explicit starting data, namely  a (complete) map
+$J:M\rightarrow X$ preserving the Jacobi structures, naturally
+induces a (contact) groupoid action of $\Gamma$ on $M$, that the
+quotient $M/\Gamma$ has an induced (conformal) Jacobi structure, and
+its leaves are precisely given by the quotients $J^{-1}(x)/\Gamma_x$
+(where   $x \in X$ and $\Gamma_x\subset \Gamma$ is suitable Lie
+group). The contact form on a contact leaf is induced (up to a
+conformal factor) by the contact one-form $\theta$ on $M$.
+
+\subsection{Stretching of Dirac structures (\cite{CFZ})} \label{fal}
+A \emph{Dirac structure} over a manifold $M$ is given by a
+subbundle $L$ of $(TM\oplus T^*M,\langle \cdot,\cdot \rangle,
+[\cdot,\cdot]_{H})$ which is maximal isotropic w.r.t. the natural
+symmetric pairing $\langle \cdot,\cdot \rangle$ and closed  w.r.t.
+the $H$-twisted Courant bracket $[\cdot,\cdot]_{H}$, where $H$ is a
+fixed closed 3-form. When $H=0$ and $L$ projects surjectively onto
+$T^*M$ (resp. $TM$), then $L$ is necessarily the graph of a Poisson
+bivector (resp. of a closed 2-form). Viewing  Poisson and
+presymplectic manifolds as Dirac structures has an advantage: one
+can always push forward and pull back Dirac structures (at least
+pointwise) along maps, indeed also along Lagrangian relations.
+
+In \cite{CFZ}, with Calvo and Falceto, we produce
+new Dirac structures with the following recipe: start with a Dirac structure
+$(M,L)$, choose an isotropic subbundle $S \subset TM\oplus T^*M$,
+and define $D^S:=(D\cap S^{\perp})+S$. When it is smooth and closed
+under the Courant bracket, this is again a Dirac structure, the
+``stretching of $D$ along $S$''. 
+ An interesting example  is when
+$D$ is the graph of a Poisson bivector, because choosing $S\subset T^*M$
+suitably one recovers the so-called Dirac bracket, used by Dirac in
+his theory of constraints. The stretching construction can be interpreted in terms of reduction when suitable assumptions are satisfied.
+
+
+\subsection{An extension of the
+Marsden-Ratiu reduction  in Poisson geometry (\cite{CZ2}\cite{CZbilbao}\cite{FZ})}\label{Zar}
+The  Marsden-Ratiu reduction theorem \cite{MR} dates back to 1986, and
+provides conditions on a submanifold
+  $C$   of a Poisson manifold $(M,\pi)$ so that, extending certain functions on $C$ to annihilate a fixed
+ subbundle $E \subset TM|_C$, the quotient  $C/(E\cap TC)$ inherits a Poisson structure.
+In the  joint work \cite{CZ} with Falceto we argue that the assumptions of the original  Marsden-Ratiu theorem are too restrictive. We provide a reduction statement that works with much more general assumptions, and show that these are met in several cases of interest,
+such as slices transverse to zero level sets of symplectic moment maps. Incidentally, the Poisson structure on the quotient  $C/(E\cap TC)$ corresponds to the Dirac structure on $C$ obtained pulling back to $C$ the stretching of $graph(\pi)$ along $E$.
+
+
+A Poisson manifold $M$ can be equivalently  described by a self-commuting degree 2 function $S$ on the graded manifold $T^*[1]M$. A choice of   submanifold in $T^*[1]M$ is equivalent to a choice of a subbundle $E$ over a submanifold $C\subset M$. In \cite{CZ2}\cite{CZbilbao} with Cattaneo we show that performing pre-symplectic reduction in stages at the graded level
+%and setting conditions on $S$ so that it descends suitably to the quotient) 
+one not only recovers the Marsden-Ratiu reduction theorem,  but also improves slightly the extensions made in \cite{FZ} by Falceto and the author. 
+
+
+\subsection{Reduction of branes in generalized complex
+ geometry (\cite{JRZ}\cite{brane})}\label{branes}
+Recall that an \emph{Courant algebroid} is a vector bundle
+$E\rightarrow M$ endowed with a symmetric non-degenerate pairing on
+the fibers, a bracket on its space of sections, and a morphism
+$\pi:E\rightarrow TM$ satisfying compatibility conditions.
+ So-called \emph{exact} Courant algebroids are
+all isomorphic to $(TM\oplus T^*M,\langle \cdot,\cdot \rangle,
+[\cdot,\cdot]_{H}, \pi=pr_{TM})$ that appeared in \S\ref{fal} for some $H$, but the isomorphism depends on an arbitrary choice, so
+that it is preferable to work with an abstract exact Courant
+algebroid  $E$. In \S\ref{fal} we  defined  the notion of
+Dirac structure $L\subset E$, and here we recall Hitchin's notion of
+\emph{generalized complex structure} \cite{Gu}: it is an endomorphism
+$\cJ:E\rightarrow E$ preserving the symmetric pairing
+$\la\cdot,\cdot \ra$, squaring to $-1$ and satisfying an
+integrability condition. Generalized complex structures allow for the
+first time to threat on the same footing symplectic and complex
+structures,  and became an intense object of study for physicists
+because they might be the right framework for mirror-symmetry and might
+relate the $A$ and $B$-model in string theory. The symmetries of
+our exact Courant algebroid $E$ of course also act on $\cJ$, and
+the only geometric feature of $\cJ$ which is invariant and intrinsic
+is the Poisson structure $\Pi$ that it induces on $M$.
+
+Bursztyn-Cavalcanti-Gualtieri \cite{BCG} carry out the
+reduction of exact Courant algebroids, Dirac structures and generalized complex structures
+in the presence of a group action, generating in particular
+non-trivial examples of generalized complex structures.  In
+\cite{brane} I carry out the reductions of these three structures
+assuming that the symmetries arise not from a group action but
+rather from an isotropic subbundle of $E$ with base some submanifold $C$ of $M$.
+ This is interesting in
+its own right, it sheds light on the the role played by the
+so-called \v{S}evera class of $E$ (an element of $H^3(M,\RR))§$, and
+can be used to produce new examples of generalized complex
+structures (a ``dream'' would be to give an answer by this method to the
+long-standing open question of whether there exists a complex
+structure on $S^6$). However the main point of
+\cite{brane} is to show that a natural class of submanifolds, called
+\emph{branes} in the physics literature    and \emph{generalized
+complex submanifolds} by Gualtieri \cite{Gu}, are coisotropic
+(w.r.t. the Poisson structure $\Pi$), and that their quotients
+$\un{C}$ are generalized complex manifold again. In addition
+$\un{C}$ is   a ``space-filling'' brane for the reduced structure.
+ A remarkable fact is that the above reduction works  even if one drops the integrability
+condition on the brane; hence we hope to construct new examples of
+generalized complex structures with this procedure.
+ 
+One of the reduction procedures developed in \cite{brane} is the reducion by distributions of Dirac structures. In \cite{JRZ} with Jotz and Ratiu  we provide an alternative, more geometric proof of this procedure, and further we present applications to reduction under group actions which are proper but not necessarily free. 
+%%%%%%%%
+
+\section{Coisotropic embedding problems}
+We investigate the geometry of coisotropic
+submanifolds in symplectic manifolds (\textsection \ref{gotay}) and Poisson manifolds (\textsection \ref{prepois}). Further we use the geometry of coisotropic subgroups of Poisson-Lie groups to make a statement about Lie bialgebras (\textsection \ref{PLG}).
+
+Recall that
+a \emph{coisotropic} submanifold $C$ of Poisson manifold $(P,\pi)$
+is one such that $\sharp N^*C \subset TC$, where $N^*C\subset
+T^*P|_C$ is the annihilator of $TC$ and $\sharp:T^*P\rightarrow
+TP$ is just the contraction with the bivector $\pi$. The (usually
+singular) distribution $\sharp N^*C$, called characteristic distribution, is always 
+integrable and the leaf
+space is a Poisson manifold whenever it is smooth. For more details see \cite{SubmSurvey}, where I present a survey on submanifolds of Poisson manifolds.
+
+
+\subsection{Deformations of coisotropic submanifolds (\cite{coisoemb})}\label{gotay}
+ A coisotropic submanifold $C$ of a symplectic manifold $(M,\omega)$ is one where the
+ symplectic orthogonal   $TC^{\omega}$ is contained in $TC$.
+Being a coisotropic submanifold is a quite rigid condition (except
+in special cases such as the lagrangian one);  I could establish \cite{coisoemb}
+ that, notwithstanding this rigidity, the topological type of the foliation integrating
+ $TM^{\omega}$
+ is \emph{not} invariant
+  under  perturbations of the coisotropic submanifold. Furthermore, I could show that the space
+   of coisotropic submanifolds nearby a given one $N$  does not have a (Frechet) manifold structure.
+The topic of this work is closely related to the remarkable
+ work \cite{op} of Oh and Park that was completed at the same time.
+There it is shown that the deformation problem is governed by
+the structures of a $L_{\infty}$-algebra on the space of sections of
+$\wedge^{\bullet}NC$ (where $NC$ is the normal bundle to $C$), and one of my examples from \cite{coisoemb} is used to explain how the $L_{\infty}$-algebra degenerates in the presence of a transverse foliation. This
+$L_{\infty}$ structure is attached to coisotropic submanifolds of
+Poisson manifolds too \cite{CaFeCo2}, and is the same that appears in
+\S \ref{prepois} below.
+
+\subsection{Coisotropic embeddings in  Poisson manifolds (\cite{CZbis}\cite{CZ})}\label{prepois} Coisotropic
+submanifolds of Poisson manifolds (see \S\ref{reductions}) have been considered because they represent convenient boundary conditions
+(``branes'') in various sigma models. However more general kinds of
+submanifolds $C$ of a Poisson manifold $P$, satisfying merely a
+constant rank condition and called \emph{pre-Poisson submanifolds},
+turn out to be suitable choices for branes \cite{CaFa1}.  The space
+of invariant functions on a pre-Poisson submanifold is a Poisson
+algebra, however one can usually not apply Kontevich's theorem
+\cite{K} to determine whether it admits a deformation quantization.
+
+
+
+In the joint work \cite{CZ} with Cattaneo we show that a pre-Poisson
+submanifold can be embedded coisotropically in a so-called
+Poisson-Dirac submanifold $\tilde{P}$ of $P$ (and that $\tilde{P}$
+is essentially unique). We deduce a statement about deformation
+quantization and the existence of an $L_{\infty}$ structure associated
+to every pre-Poisson submanifold. In \cite{CZbis} we give some examples
+of pre-Poisson submanifolds of duals of Lie algebras and study further properties.
+% In future work it will be of interest to study also
+%submanifolds $D$ of $M$ which don't satisfy the constant rank
+%condition above but which can nevertheless be embedded
+%coisotropically in a Poisson-Dirac submanifold $\tilde{P}$ of $P$,
+%in particular to compare the Poisson Sigma model constructions for
+%the Poisson manifolds $P$ and $\tilde{P}$  (both with $D$ as brane)
+%and deduce statements about deformation quantization. 
+%A related
+%problem considers the restriction map $N(I)\rightarrow
+%C^{\infty}(\tilde{P})$, where $\tilde{P}$ is a cosymplectic
+%submanifold, $I$ its vanishing ideal and $N(I)$ its
+%Poisson-normalizer in $C^{\infty}(P)$. This restriction map is a
+%Poisson algebra morphism, and we want to investigate whether it
+% quantizes to a morphism of associative algebras between
+%the spaces of quantized functions.
+
+
+
+ The second part of \cite{CZ} deals
+with a different embedding problem: given an abstract Dirac manifold
+$(M,L)$, we show that it can be embedded coisotropically into some
+Poisson manifold if and only iff the characteristic distribution
+$TM\cap L$ has constant rank, generalizing a well-know theorem of
+Gotay in the symplectic setting. However the problem of proving the
+uniqueness of the Poisson manifold, even after imposing dimensional
+restrictions to it, is still open.
+
+\subsection{A construction of coisotropic subalgebras of Lie bialgebras  (\cite{liebi})}\label{PLG}
+The starting point is given by considering  maps between Poisson manifolds which are not Poisson morphisms, but whose graphs are pre-Poisson submanifolds (see \S \ref{prepois}).
+A natural example is the left translation on a Poisson-Lie group $G$. Analyzing further this example leads to a way to  produce so-called coisotropic subalgebras of the Lie bialgebra $\g$ of $G$, i.e. Lie subalgebras of $\g$ whose annihilators are Lie subalgebras of $\g^*$. Hence we are able to make algebraic statements on the bialgebra $\g$ using the geometry of the underlying Lie-Poisson group $G$. 
+ Our procedure is systematic and  computationally friendly, leading to very explicit results for instance when $\g$ corresponds to a simple complex Lie algebra. This is interesting as there seems to be no  systematic way to produce coisotropic subalgebras; on the other hand our examples are always even dimensional, so they surely do not encompass all coisotropic subalgebras.
+
+
+\section{Prequantization and  Lie groupoids}
+
+In this section we discuss projects concerning  prequantization:
+prequantization of Dirac manifolds (\textsection \ref{alan}), a study of the groupoids associated to the prequantization spaces (\textsection \ref{cc}).
+% and of how groupoids behave when one quotients suitable the base space (\textsection \ref{Philly}). We also link Morita equivalence of Poisson manifolds to prequantization (\textsection \ref{CCpoitiers}).
+
+
+\subsection{Geometric structures on prequantization
+spaces (\cite{WZ})}\label{alan} Geometric quantization is a
+geometric construction, developed by Kostant and Souriau in the
+70's, to quantize a symplectic manifold $(P,\omega)$, in the sense
+that it produces a suitable representation for the Poisson algebra
+$C^{\infty}(P)$. This can be carried out only when $\omega$
+represents an integer cohomology class, and its first step
+(\emph{prequantization}) consists of constructing a suitable circle
+bundle $\pi:Q\rightarrow P$ with connection (which turns out to be a contact 1-form) 
+ whose curvature is $\omega$. Geometric quantization turned out
+to be useful in representation theory and provides interesting
+geometry.
+Poisson and more generally Dirac manifolds (see \S\ref{fal}) also
+carry a Poisson algebra structure.
+ In the work \cite{WZ}  with
+Weinstein we clarified the geometric structures with which the
+prequantizing circle bundles $Q$ of symplectic, Poisson and Dirac
+manifolds $P$ are endowed. The notion of prequantizability used
+there was first formulated in \cite{Va} and implies the one of
+\cite{CrZ} and \cite{BCZ}; in some respects
+the notion of prequantizability we used is not as well-behaved, but
+it presents non-trivial and interesting geometric features.  We have
+the following diagram, where in the top row we characterize the
+geometric structure on the prequantization circle bundles $Q$ of the
+ prequantizable manifolds $P$ beneath it:
+ \[  \xymatrix{ \{Q\;\;\; contact\} \ar[d]^{\pi} & \subset \;\;\;\;\; \{Q\;\;\; {Jacobi}\}  \ar[d]^{\pi} 
+& \subset\;\;\;\;\; \{Q \;\;\;{Jacobi-Dirac}\} \ar[d]^{\pi}\\
+\{P \;\;\;{symplectic}\}  & \subset \;\;\;\;\; \{P\;\;\; {Poisson}\} & \subset\;\;\;\;\;\;\;\;\;\;\;\;\; \{P\;\;\;
+{Dirac}\}}
+\]
+\subsection{Groupoids of prequantization spaces  (\cite{ZZ2})}\label{cc}
+The joint work \cite{ZZ2} with Zhu considers the geometric relation
+between the Lie groupoids associated to the spaces considered in
+\cite{WZ} (see \S\ref{alan}). If a Dirac (or, more
+restrictively, just a symplectic or Poisson) manifold $P$ is
+prequantizable in the sense of \cite{Va} then its
+symplectic groupoid $\Gamma_s(P)$ is automatically prequantizable,
+and it is known that one can put a unique structure of contact
+groupoid on the corresponding circle bundle $\Gamma_c(P)$. It is
+natural to wonder about the relation between the prequantization $Q$
+of $P$ and the prequantization of the symplectic groupoid $\Gamma_s(P)$.
+Diagrammatically we are in the following situation, where
+superscripts indicate dimensions:
+\[
+\xymatrix{ \Gamma_c(Q)^{2n+3} \ar[d]\ar@<-1ex>[d] &
+\Gamma_c(P)^{2n+1} \ar[d]\ar@<-1ex>[d] \ar[r] &
+ \Gamma_s(P)^{2n} \ar[dl]\ar@<-1ex>[dl] \\
+Q^{n+1} \ar[r]^{\pi} & P^n &  }
+\]
+ We
+show that the $S^1$ action on $Q$ lifts to $\Gamma_c(Q)$, the
+(pre-)contact groupoid of $Q$, whose Albert-Willett reduction
+(see \S\ref{ctct}) is exactly  $\Gamma_c(P)$. It is
+interesting that both the (pre-)contact and groupoid structure
+descend to the quotient $\Gamma_c(P)$; the proof is a combination of
+finite dimensional techniques and constructions in certain path
+spaces, closely related to the Poisson-Sigma model. This geometric picture could prove to be useful
+in Weinstein's quantization program via symplectic groupoids.
+
+%\subsection{Groupoids of reduced Poisson manifolds ({\tt Ongoing projects} \cite{CZred},\cite{AGM})}\label{Philly}
+%Given a coisotropic submanifold $C$ of a Poisson manifold $P$ (see Section \ref{reductions}),
+% under
+%some regularity assumption, the quotient $\underline{C}$ of $C$ by
+%its characteristic foliation is a Poisson manifold. Cattaneo and
+%Felder characterized the relations between such $\underline{C}_0$
+%and $\underline{C}_1$ by saying that the quotient of the coisotropic
+%$\bt^{-1}(C_1)\cap \bs^{-1}(C_0)$ is a dual pair for
+%$\underline{C}_0$ and $\underline{C}_1$ \cite{CaFeCo1} (and saw this
+%as a classical analog of a quantized bimodule). When $C_0=C_1=C$
+%coincide, one expects the symplectic manifold
+%$\underline{\bt^{-1}(C)\cap \bs^{-1}(C)}$   to be the symplectic
+%groupoid of $\underline{C}$. In general this is not so (but it is
+%when $C$ is a symplectic leaf); to obtain a groupoid structure on
+%the quotient one should quotient by the action of a normal
+%subgroupoid, for which one orbit can consist of several disconnected
+%characteristic leaves. In the on-going joint project \cite{CZred}
+%with Cattaneo we plan to show that if the symplectic groupoid of $P$
+%is prequantizable and various conditions (one of which being an
+%integrality condition involving the characteristic leaves of $C$)
+%are satisfied, then the symplectic groupoid of $\underline{C}$ is
+%also prequantizable.
+
+ %A particular case, by the results described in
+%Subsection \ref{prepois}, is obtained by taking $C$ to be an
+%abstract Dirac manifold with constant rank characteristic
+%distribution. This case is interesting in its own right, and a result we obtained is a
+%simple description of the contact groupoid of a Poisson manifold
+%in terms of paths, recovering integrability results of \cite{CrZ} and \cite{BCZ}.
+
+%My contribution to the paper \cite{AGM}, which provides technical
+%proofs for some of the results needed in the Cattaneo and Felder's
+%quantization program \cite{CaFeCo1}, is essentially to show than under regularity
+%conditions  $\underline{\bt^{-1}(C_0)\cap \bs^{-1}(C_1)}$ agrees, as
+%a symplectic manifold, with a natural quotient of a space of
+%$T^*P$-paths whose base paths connect $C_0$ to $C_1$.
+
+%\subsection{Integer and contact Morita equivalence ({\tt Ongoing project} \cite{ZZME})}\label{CCpoitiers}
+%There is a notion of equivalence between Poisson manifolds: two
+%Poisson manifolds $P_1$ and $P_2$ are called Morita equivalent if
+%there is a symplectic manifold $S$ mapping to $P_1$ and $P_2$ by
+%maps satisfying certain properties. In a joint work with Zhu
+%\cite{ZZME} we want to consider two other notions of equivalence:
+%for ``integer Morita equivalence'' we require $S$ to be equipped
+%  with a prequantization circle bundle,
+%for ``contact Morita equivalence'' we replace $S$ by a contact
+% manifold.
+% A preliminary result is that Poisson manifolds that are contact Morita
+%equivalent are automatically equivalent as Poisson manifolds, but
+%not viceversa, so that we obtain finer equivalence relation among
+%Poisson manifolds than the
+%usual one. The notion of integer Morita equivalence turns out to
+%apply to prequantizable Poisson manifolds only, and we would like to show
+%that it provides a courser equivalence than the one given by contact
+%Morita equivalence. We plan to investigate what invariants of
+%Poisson manifolds are preserved by both kinds of Morita equivalence;
+%presumably they involve integrals over 2-cycles in the
+%symplectic leaves.
+% Incidentally, the notion of integer
+%Morita equivalence is interesting also because, as remarked by A.
+%Weinstein, in some simple examples it can be used to prove in a
+%completely geometric fashion that the strict deformation
+%quantizations of two integer Morita equivalent Poisson manifolds are
+%Morita equivalent as $C^*$ algebras.
+
+\section{Averaging of submanifolds}
+ In this last section I describe briefly   work that I carried out as part of my Ph.D. thesis. 
+  
+The starting point is a  purely Riemannian-geometric result of  Weinstein's \cite{we}  in
+1999, which shows the following: given a family of (nicely embedded)
+submanifolds $\{N_g\}$ of a Riemannian manifold $M$, there is a
+construction that produces a ``center of mass'' submanifold
+$\bar{N}$ (the ``average'' of the $N_g$'s), and this construction is
+equivariant with respect to isometries of $M$. The construction is
+canonical, i.e. it does not involve arbitrary choices, and has
+applications for example to compact group actions.
+
+I adapt this statement to the setting of symplectic geometry (\textsection \ref{aviso}) and contact geometry (\textsection \ref{avleg}).
+
+\subsection{Averaging of isotropic submanifolds (\cite{iso})}\label{aviso}
+In \cite{iso}  I specialized the above averaging procedure to the
+setting of symplectic geometry: starting with a family of isotropic
+submanifolds, I could produce canonically an isotropic average.
+  The idea of the proof is to take Weinstein's average
+ -  which will usually not be isotropic -  and deform it canonically
+to an isotropic submanifold using Moser's path method. The
+techniques used are all finite dimensional, but the result can be
+seen as an infinite dimensional statement (``In the space of
+isotropic submanifolds of $M$ one can determine the center of mass of the family
+of points $N_g$'').
+
+\subsection{Averaging of legendrian submanifolds (\cite{leg}) }\label{avleg}
+In \cite{leg} I proved a theorem analog to the one in \cite{iso} for
+legendrian submanifolds of a (not necessarily co-orientable) contact manifold $M$ by passing to the
+symplectization of $M$, and obtaining
+in this way better estimates then if I had used directly Moser's path method on $M$.
+%\end{document}
+
+\bibliographystyle{habbrv}
+\bibliography{/Users/marcozambon/Desktop/Dropbox/Math/mybib}
+
+\end{document}
+
