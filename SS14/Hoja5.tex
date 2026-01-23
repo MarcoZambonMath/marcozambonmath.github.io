@@ -1,0 +1,135 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+
+%% Para las columnas
+\usepackage{multicol}
+\usepackage{amssymb,amsmath,eepic,fancyhdr}
+\usepackage{latexsym}
+\usepackage{datenumber}
+
+
+%% Para numeraci?n autom?tica
+\newcounter{nroproblema}
+\setcounter{nroproblema}{1}
+\newcounter{nroapartado}
+\setcounter{nroapartado}{1}
+
+\newcommand{\n}{%
+    \vspace{.1in}\noindent{\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+
+\newcommand{\nn}{%
+    \vspace{.1in}\noindent \hskip.4cm {\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+
+
+\newcommand{\ap}{\vspace*{0.2cm}\hspace*{0.2cm}%
+   {\bf \alph{nroapartado})}
+   \addtocounter{nroapartado}{1}%
+   }
+
+ 
+%marcos by Marco
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\vX}{\frak{X}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}} 
+ 
+
+%% márgenes
+
+% Anterior:
+
+%\setlength{\unitlength}{1mm} \addtolength{\voffset}{-15mm}
+%\addtolength{\textheight}{30mm} \addtolength{\hoffset}{-20mm}
+%\addtolength{\textwidth}{45mm}
+
+\setlength{\unitlength}{1mm} \addtolength{\voffset}{-22mm}
+\addtolength{\textheight}{40mm} \addtolength{\hoffset}{-22mm}
+\addtolength{\textwidth}{46mm}
+
+
+
+
+\begin{document}
+
+\noindent
+{\sffamily\large Marco Zambon 
+\hfill  Master UAM, 2013-14  \\Geometr\'ia simpl\'ectica y de Poisson}
+
+
+ 
+
+\begin{center}\bfseries\large\textsf{Hoja 5    \vspace{-2mm}}
+\end{center}
+ 
+ 
+\n
+\ap Sea $G$ un grupo de Lie. Sea $(M,\omega)$ una variedad simpl\'ectica y $\Phi$ una accion hamiltoniana de $G$ en $(M,\omega)$  con aplicaci\'on momento $J\colon M\to \g^*$.
+
+Sea $H$ un subgrupo de Lie de $G$. A partir de $J$, construye una aplicaci\'on momento para la acci\'on $\Phi|_H$ de $H$ en $(M,\omega)$.
+
+
+\ap
+Sea $G$ un grupo de Lie. Sean $(M_i,\omega_i)$ variedades simpl\'ecticas y $\Phi_i$ acciones hamiltonianas de $G$ en $(M_i,\omega_i)$  con aplicaci\'on momento $J_i$ ($i=1,2$).
+
+Demuestra que la acci\'on diagonal de $G$ en $(M_1\times M_2,\pi_1^*\omega_1+\pi_2^*\omega_2)$ (es decir, $g\mapsto \Phi_1(g) \times \Phi_2(g)$) es hamiltoniana, y describe una aplicaci\'on momento. Aqu\'i $\pi_i\colon M_1\times M_2\to M_i$ es la proyecci\'on.
+ 
+  \noindent\textbf{Consejo:} Considera primero la acci\'on $\Phi_1\times \Phi_2$ de $G\times G$ en $M_1\times M_2$, despu\'es utiliza a) y la aplicaci\'on diagonal $\Delta\colon \g\to \g\times \g, v\mapsto (v,v)$.
+  
+  
+
+
+ 
+ \n  Sea $(W,\omega)$ un espacio vectorial simpl\'ectico, y $Sp(W,\omega)$ su grupo de simplectomorf\'ismos. Sea $G$ un subgrupo de Lie de 
+$Sp(W,\omega)$. 
+Comprueba que una aplicaci\'on momento para la acci\'on can\'onica de  $G$ en $(W,\omega)$ es   $J\colon W\to \g^*$, cuyas componentes son dadas como sigue: para todo $A\in \g$,  $$J^A\colon W\to \RR, w\mapsto-\frac{1}{2}\omega(w,Aw).$$
+  
+  \noindent\textbf{Nota:} puedes mirar la p\'agina 66 de los apuntes de Meinrenken, donde Meinrenken no demuestra la equivarianza.
+  
+  
+  \n   Sean $\lambda_1,\dots,\lambda_n\in \ZZ$. Considera la acci\'on del circulo $U(1)$ en $\CC^n$ por  $$e^{i\theta}\cdot (z_1,\dots,z_n)= (e^{i\theta\lambda_1}z_1,\dots,e^{i\theta\lambda_n}z_n).$$
+Encuentra la \'unica aplicaci\'on momento para esta acci\'on que lleva $0\in \CC^n$ al origen del dual del \'algebra  de Lie, de dos maneras distintas:
+
+\ap    utilizando el problema 1b)
+
+\ap utilizando el problema 2.
+  
+  
+\n  \ap Considera una acci\'on de un grupo de Lie $G$   sobre una variedad 
+ simpl\'ectica  \emph{compacta} $(M,\omega)$. Demuestra que si existe $v\in \g$ tal que  $(v_M)|_p\neq 0$ para todo  $p\in M$, entonces no existe ninguna aplicaci\'on momento para esta acci\'on.
+ 
+% \ap Deduce que toda acci\'on sin puntos fijos de $U(1)$ en una variedad 
+ %simpl\'ectica  \emph{compacta}   no tiene aplicaci\'on momento.
+%Me: need to know that d/dt exp(tv)p=v_M...for all t 
+ 
+  \ap Demuestra que toda  acci\'on de  $G=SL_2(\RR)$ sobre una variedad 
+ simpl\'ectica   $(M,\omega)$ por simplectomorfismos admite una \'unica aplicaci\'on momento. 
+  
+  \noindent\textbf{Consejo:} usa un problema de la hoja 4.
+  
+\n [3 puntos]
+Sea $(M,\omega)$ una variedad simpl\'ectica y considera una acci\'on hamiltoniana de un grupo de Lie $G$ en $(M,\omega)$  con aplicaci\'on momento $J$. Demuestra que la equivarianza de $J$ implica que
+$$\cL_{v_M}J^w=J^{[v,w]}$$
+para todo $v,w\in \g$. Aqu\'i $J^v\colon M\to \RR$ es la componente de $J$ dada por $v$.
+
+
+  
+   \end{document}
+  \noindent\textbf{Consejo:}
+\noindent\textbf{Nota:}

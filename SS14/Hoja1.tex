@@ -1,0 +1,161 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+
+%% Para las columnas
+\usepackage{multicol}
+\usepackage{amssymb,amsmath,eepic,fancyhdr}
+\usepackage{latexsym}
+\usepackage{datenumber}
+
+
+%% Para numeraci?n autom?tica
+\newcounter{nroproblema}
+\setcounter{nroproblema}{1}
+\newcounter{nroapartado}
+\setcounter{nroapartado}{1}
+
+\newcommand{\n}{%
+    \vspace{.1in}\noindent{\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+
+\newcommand{\nn}{%
+    \vspace{.1in}\noindent \hskip.4cm {\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+
+
+\newcommand{\ap}{\vspace*{0.2cm}\hspace*{0.2cm}%
+   {\bf \alph{nroapartado})}
+   \addtocounter{nroapartado}{1}%
+   }
+
+ 
+%marcos by Marco
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}}
+
+ 
+
+%% márgenes
+
+% Anterior:
+
+%\setlength{\unitlength}{1mm} \addtolength{\voffset}{-15mm}
+%\addtolength{\textheight}{30mm} \addtolength{\hoffset}{-20mm}
+%\addtolength{\textwidth}{45mm}
+
+\setlength{\unitlength}{1mm} \addtolength{\voffset}{-22mm}
+\addtolength{\textheight}{40mm} \addtolength{\hoffset}{-22mm}
+\addtolength{\textwidth}{46mm}
+
+
+
+
+\begin{document}
+
+\noindent
+{\sffamily\large Marco Zambon 
+\hfill  Master UAM, 2013-14  \\Geometr\'ia simpl\'ectica y de Poisson}
+
+
+ 
+
+\begin{center}\bfseries\large\textsf{Hoja 1    \vspace{-2mm}}
+\end{center}
+
+
+%\begin{flushright}
+%1${}^o$ de grado en Física, curso 2013/14
+%\today
+%\end{flushright}
+%\begin{center}{\bf {\Large \'ALGEBRA I. HOJA 4}}\end{center}
+%\vskip.35cm
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+\n 
+Sea $(V,\Omega)$ un  espacio vectorial simpl\'ectico de dimensi\'on $2n$. Sean $W$ y $Z$ subespacios vectoriales de $V$. Demuestra:
+
+
+\ap ($W^{\Omega})^{\Omega}=W$
+
+\ap $W$ isotropico $\Rightarrow$ $dim(W)\le n$
+
+\ap $W$ coisotropico $\Rightarrow$ $dim(W)\ge n$ 
+
+\ap $W$ lagrangiano $\Rightarrow$ $dim(W)= n$
+
+\ap si  $dim(W)=2n-1$, entonces $W$ es coisotropico
+
+\ap $W^{\Omega}\cap Z^{\Omega}=(W+Z)^{\Omega}$ 
+
+
+\ap $(W\cap Z)^{\Omega}=W^{\Omega}+Z^{\Omega}$.
+
+\n Sea $(V,\Omega)$ un  espacio vectorial simpl\'ectico de dimensi\'on $2n$. 
+
+\ap Si $L$ es un subespacio lagrangiano de $V$, entonces cualquier subespacio $Z$ de $V$ que contiene $L$ es coisotropico.
+
+\ap Sea $W$  un subespacio coisotropico de $V$. Entonces existe un subespacio lagrangiano $L$ de $(V,\Omega)$ con $L\subset W$.
+
+\noindent{\bf Consejo para b):} Utiliza el espacio vectorial simpl\'ectico $W/W^{\Omega}$.
+ 
+
+\n 
+Sean $(V,\Omega_V)$ y $(W,\Omega_W)$ espacios vectoriales simpl\'ecticos.
+Sea $\Phi \colon V \to W$ una aplicaci\'on  lineal tal que $\Phi^*\Omega_W=\Omega_V$.
+
+\ap Demuestra que $dim(V)\le dim(W)$
+
+\ap Demuestra que $grafo(\Phi):=\{(v,\Phi(v)):v\in V\}$ es un subespacio isotropico de $(V\times W,\omega)$,
+donde la forma simpl\'ectica lineal $\omega$ est\'a definida por $$\omega((v_1,w_1),(v_2,w_2))=\Omega_V(v_1,v_2)-\Omega_W(w_1,w_2).$$
+
+\noindent \textbf{Recuerda:} $\Phi^*\Omega_W$ est\'a definida por  $(\Phi^*\Omega_W)(v_1,v_2)=\Omega_W(\Phi(v_1),\Phi(v_2))$ para todo $v_1,v_2\in V$.
+
+\n Sea $V$ un espacio vectorial real, y $J\colon V\to V$ una estructura compleja. (En otras palabras,  $(V,J)$ es un espacio vectorial complejo).
+
+\ap si $\Omega$ es una forma simpl\'ectica en $V$ tal que $J$ y $\Omega$ son compatibles, y definiendo $g:=\Omega(\cdot,J\cdot)$, entonces $h:=g-i\Omega$ es un producto hermitico en $(V,J)$
+
+\ap reciprocamente: si $h$ es un producto hermitico en $(V,J)$,
+entonces $\Omega(v,w):=-Im(h(v,w))$ define una forma simpl\'ectica $\Omega$ en $V$ compatible con $J$, y
+$g(v,w):=Re(h(v,w))$ es
+el producto escalar asociado (es decir, $g=\Omega(\cdot,J\cdot)$).
+Aqu\'i Re y Im denotan la parte real y imaginaria.
+
+\noindent{\bf Recuerda:} Un producto hermitico en $(V,J)$ es una aplicaci\'on
+$h\colon V\times V\to \CC$ tal que:
+\begin{itemize}
+\item $h$ es $\CC$-lineal en la primera entrada y $\CC$-antilineal en la segunda
+\item $h(v,w)=\overline{h(w,v)}$ para todo $v,w\in V$
+\item $h(v,v)>0$ para todo $v\neq 0$.
+\end{itemize}
+ 
+ 
+ \n Sea $(V,\Omega)$ un  espacio vectorial simpl\'ectico de dimensi\'on $2n$, $J$ una estructura compleja compatible, y $g$ el producto escalar  $g:=\Omega(\cdot,J\cdot)$. Demuestra: existe un isomorfismo $V\cong \RR^{2n}$ que identifica $\Omega, J, g$ con la forma simpl\'ectica can\'onica, la estructura compleja can\'onica y el producto escalar can\'onico en $\RR^{2n}=\CC^n$. 
+ 
+ 
+ \n Ejercicio 2 en p\'agina 72 del libro de Cannas da Silva (sobre $Sp(2n), O(2n), GL(n,\CC), U(n)$). 
+ 
+\noindent{\bf Recuerda:} $U(n)$ consiste de las matrices que preservan el producto hermitico standard en $\CC^n$. 
+\end{document}

@@ -1,0 +1,170 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+
+%% Para las columnas
+\usepackage{multicol}
+\usepackage{amssymb,amsmath,eepic,fancyhdr}
+\usepackage{latexsym}
+\usepackage{datenumber}
+
+
+%% Para numeraci?n autom?tica
+\newcounter{nroproblema}
+\setcounter{nroproblema}{1}
+\newcounter{nroapartado}
+\setcounter{nroapartado}{1}
+
+\newcommand{\n}{%
+    \vspace{.1in}\noindent{\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+
+\newcommand{\nn}{%
+    \vspace{.1in}\noindent \hskip.4cm {\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+
+
+\newcommand{\ap}{\vspace*{0.2cm}\hspace*{0.2cm}%
+   {\bf \alph{nroapartado})}
+   \addtocounter{nroapartado}{1}%
+   }
+
+ 
+%marcos by Marco
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\vX}{\frak{X}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}} 
+ 
+
+%% márgenes
+
+% Anterior:
+
+%\setlength{\unitlength}{1mm} \addtolength{\voffset}{-15mm}
+%\addtolength{\textheight}{30mm} \addtolength{\hoffset}{-20mm}
+%\addtolength{\textwidth}{45mm}
+
+\setlength{\unitlength}{1mm} \addtolength{\voffset}{-22mm}
+\addtolength{\textheight}{40mm} \addtolength{\hoffset}{-22mm}
+\addtolength{\textwidth}{46mm}
+
+
+
+
+\begin{document}
+
+\noindent
+{\sffamily\large Marco Zambon 
+\hfill  Master UAM, 2013-14  \\Geometr\'ia simpl\'ectica y de Poisson}
+
+
+ 
+
+\begin{center}\bfseries\large\textsf{Hoja 3    \vspace{-2mm}}
+\end{center}
+
+\n Sea $(M,\omega)$ una variedad simpl\'ectica con\'exa, y $p,q\in M$.
+Demuestra que existe un simplectomorfismo $\phi$ de $(M,\omega)$ tal que $\phi(p)=q$.
+
+\noindent\textbf{Consejo:} Construye una functi\'on $f$ tal que el flujo de $X_f$ lleve $p$ a $q$.
+
+ \n [3 puntos]
+Encuentra un ejemplo de variedad compacta $M$ y de formas simpl\'ecticas
+$\omega_1$ y $\omega_0$ tales que \emph{no} existe ningun difeomorfismo $\phi$ de $M$, isotopico a la identidad, tal que $\phi^*\omega_1=\omega_0$.
+ 
+
+ \n 
+\ap Sea $N$ una variedad.
+Define $I\colon \Omega^k([0,1]\times N)\to \Omega^{k-1}(N)$ como en clase. Demuestra que para todo $\beta\in \Omega^{k-1}([0,1]\times N)$ tenemos
+$$I(d\beta)=-d (I \beta)+j_1^*\beta-j_0^*\beta,$$
+donde $j_0\colon N\to [0,1]\times N, p\mapsto (0,p)$  (y similarmente para $j_1$). 
+ 
+\noindent\textbf{Consejo:}  
+Escribe $\beta=\alpha_t+dt\wedge \gamma_t$ donde $\alpha_t\in \Omega^{k-1}(N),\gamma_t\in \Omega^{k-2}(N)$, y nota que $\gamma_t=j_t^*  
+(\iota_{\pd{t}}\beta)$ donde $j_t\colon N\to [0,1]\times N, p\mapsto (t,p)$.
+Utiliza la formula de Cartan para calcular  
+ $\iota_{\pd{t}}d\beta$.
+ 
+ \ap Sean $f_0,f_1\colon M\to N$. Sea $Q$ un operador de homotop\'ia entre ellas, es decir, $f_1^*-f_0^*=dQ+Qd$. Demuestra que las aplicaciones inducidas por $f_0$ and $f_1$ en cohomolog\'ia coinciden.
+
+
+
+ \n Sea $M$ variedad   de dimensi\'on 2.
+
+\ap  
+Dado $p\in M$ y $\alpha\in \Omega^1(M)$ con $\alpha_p\neq 0$, demuestra que existe un entorno $U$ de $p$ en $M$ y $f,g\in C^{\infty}(U)$ tales que  $\alpha|_U=fdg$.
+
+\noindent\textbf{Consejo:} Utiliza el teorema de Frobenius.
+
+ \ap 	 Demuestra de manera elemental, utilizando el apartado anterior, el teorema de Darboux para variedades simpl\'ecticas  $(M,\omega)$ de dimensi\'on 2.
+ 
+ 
+ 
+ \n Considera la variedad simpl\'ectica $(\RR^{2n},\sum_{i=1}^n dq_1\wedge dp_i)$. Sea $f\in C^{\infty}(\RR^{2n})$.  Comprueba   con un calculo en coordenadas que  $grafo(df)$ es una subvariedad lagrangiana.
+
+\noindent\textbf{Nota:}
+En clase ya vimos que $grafo(df)$ es una subvariedad lagrangiana. Ahora demuestralo directamente, sin utilizar la proposici\'on de clase.
+
+ 
+ 
+ 
+\n 
+Sea $\omega$ una forma simpl\'ectica en $M$.
+%, donde $M$ es una variedad de dimensi\'on $2n$.
+Sea $F=(f_1,\dots,f_k)\colon M\to \RR^k$ una submersi\'on (es decir, 
+ $df_1(q),\dots,df_k(q)$ son elementos linealmente independientes  de $T^*_qM$ $\;\forall q\in M$)
+y $N:=F^{-1}(0)$ (que suponemos no-vacio). 
+ Demuestra que:
+
+\ap ($T_qN)^{\omega}=span\{X_{f_1}(q),\dots, X_{f_k}(q)\} \;\forall q\in N$.
+
+\ap $N$ es una  subvariedad coisotropica si y solo si $\{f_i,f_j\}(q)=0 \;\forall q\in N$.
+
+\ap $N$ es una subvariedad  simpl\'ectica si y solo si $det(\{f_i,f_j\}(q))\neq 0 \;\forall q\in N$.
+
+
+ 
+
+
+
+
+\n  
+Sea $\omega$ una forma simpl\'ectica en $M$, donde $M$ es una variedad de dimensi\'on $2n$, y 
+Sea $F=(f_1,\dots,f_k)\colon M\to \RR^k$ una submersi\'on.
+%$f_1,\dots,f_k$ funciones  tales que  $df_1(p),\dots,df_k(p)\in T^*_p M$ son linealmente independientes en cada $p\in M.$
+
+\ap Si $H$ es una funci\'on tal que $\{H,f_i\}=0$ para todo $i$, entonces para todo $p\in M$ la curva integral de $X_{H}$  a trav\'es de $p$ est\'a contenida en la subvariedad $F^{-1}(F(p))$.
+%$\{q \in M: F(q)=F(p)\}$.
+
+\ap Si $\{f_i,f_j\}=0$ para todo $i,j$, entonces necesariamente tenemos $k\le n$.
+  
+ 
+\noindent{\bf Continua detras} 
+
+
+ \n [3 puntos] Considera el toro $M=S^1\times S^1\times S^1\times S^1$ con ``coordenadas'' $(\theta_1,\theta_2,\theta_3,\theta_4)$,
+ % y para $i=1,2,3,4$
+donde $\theta_i$ denota  la ``coordenada'' en $S^1=\RR/\ZZ$ inducida por la coordenada can\'onica en $\RR$. Considera la    forma 
+ presimpl\'ectica $\omega=d\theta_1\wedge d\theta_2$ en $M$.
+ 
+ Encuentra una variedad simpl\'ectica $(X,\Omega)$ y un embebimiento $\iota \colon M\hookrightarrow X$ tal que $\iota(M)$ es una subvariedad coisotr\'opica y $\iota^*\Omega=\omega$.
+
+  
+   \end{document}
+  \noindent\textbf{Consejo:}
+\noindent\textbf{Nota:}

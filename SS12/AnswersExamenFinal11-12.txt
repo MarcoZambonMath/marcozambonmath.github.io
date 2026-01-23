@@ -1,0 +1,35 @@
+Respuestas al examen final de Geometria III (2011-12)
+[con la idea basica que habria que desarrollar para justificar la respuesta].
+Por: Marco Zambon.
+
+1) a)  A la suma conexa de 9 planos proyectivos, menos 2 discos,
+[ S # S' no es orientable, tiene 2 componentes de borde, y numero de Euler -9]
+b) A la suma conexa de 9 planos proyectivos, menos 4 discos.
+[Nota que (S-D)#(S'-D')=(S#S)-D-D', y utiliza a)]
+
+
+2) a)  G(p,x)=f(p)-x
+b) Si 
+[Considera F:M--> grafo(f) dada por F(p)=(p,f(p)) y la imagen su derivada F_*(p), para todo punto p de M. Alternativamente, considera Ker(G_*(p,f(p))) donde G es la aplicacion en a).
+
+
+3) a)  Si.
+ [Toma cualquier aplicacion constante]
+b) No.
+[Para todo punto p de M, la dimension de T_pS^7 es mayor de la de T_pS^5,
+por lo tanto no existe ninguna aplicacion lineal inyectiva de una a otra.]
+
+
+4) a)  tau_p(t)=(e^tp_1,e^2tp_2,p_3), donde p=(p_1,p_2,p_3).
+b) {(0,0,p_3):p_3  es un numero real}
+
+
+5) a)  6
+b) 5
+[La aplicacion lineal \wedge^2V*--> R que lleva \omega a \omega(e_1,e_2) es sobreyectiva, y utiliza a)]
+
+
+6) Si
+[Utiliza g_p(v,w)=1/2[g_p(v+w,v+w)-g_p(v,v)-g_p(w,w)]]
+
+

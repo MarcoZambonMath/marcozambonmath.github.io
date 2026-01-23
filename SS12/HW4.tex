@@ -1,0 +1,117 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[]{amsmath,amsthm,amssymb,amscd}
+\usepackage[latin1]{inputenc}
+%\usepackage{fullpage}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+     
+\textheight 246mm
+     
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+     
+\textwidth 159mm
+
+
+%               Theorem Environments
+\theoremstyle{definition}
+\newtheorem{ex}{}
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%               Subquestions numbered with letters
+\renewcommand{\theenumi}{\textbf{\alph{enumi}}}
+
+%               Maths definitions
+
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+
+\begin{document}
+\noindent
+{\sffamily\large Marco Zambon 
+\hfill   a discutir:   Jueves, 19/04/2012\\Geometr\'ia III, curso 2011-12}
+ 
+
+\noindent
+\hrulefill{}\\
+\begin{center}\bfseries\large\textsf{Hoja 4    \vspace{-2mm}}
+\end{center}
+
+\noindent
+%\hrulefill{}\\
+ 
+ 
+
+\begin{ex}
+Considera $$M:=\{(x_1,x_2,x_3)\in \RR^3: x_1^2+x_2^2-x_3=0\}.$$
+
+a) Demuestra que $M$ es una subvariedad de $\RR^3$.
+
+b) Encuentra bases de $T_pM$ y $T_qM$,
+donde $p:=(0,0,0)\in M$ y $q:=(1,3,10)\in M$.\\
+\textbf{Observaci\'on:} Por a) sabemos que $M$  es una subvariedad de  $\RR^3$, as\'i que  $T_qM\subset T_q\RR^3\cong \RR^3$. Una base de $T_q\RR^3$ es dada por $\{\pd{x_1}|_q,\pd{x_2}|_q,\pd{x_3}|_q\}$ (corresponde a la base  canonica de  $\RR^3$ bajo la identificaci\'on $T_q\RR^3\cong \RR^3$). Por lo tanto 
+ cada elemento de $T_qM$ es de la forma $a\pd{x_1}|_q+b\pd{x_2}|_q+c\pd{x_3}|_q$ donde $a,b,c\in \RR$. 
+\end{ex}
+
+
+ 
+\begin{ex} [\textbf{Teorema de la funci\'on inversa}] Demuestra:
+sea $f \colon M \to N$ una aplicaci\'on diferenciable entre variedades diferenciales, y sea $p\in M$, entonces:
+$$\text{$f_*(p) \colon T_pM \to T_{f(p)}N$ es un isomorfismo $\Leftrightarrow$ $f$ es un difeomorfismo local en $p$}.$$
+\end{ex} 
+
+
+
+
+
+
+\begin{ex} 
+Demuestra que
+$$SL(n;\RR) := \{A \in Mat(n;\RR) : det(A) = 1\}$$
+es una subvariedad de $Mat(n;\RR)$. >Cual es su dimensi\'on? 
+\end{ex} 
+
+
+\begin{ex} {\bf (Por escrito)} Para qu\'e
+ $ c\in \RR$ es $g^{-1}(c)$ una subvariedad de $\RR^2$, donde $$g : \RR^2 \to \RR; (x, y) \mapsto xy?$$  
+\end{ex} 
+
+\begin{ex} Sean $M,N$  variedades diferenciales y $f \colon M \to N$ una aplicaci\'on
+diferenciable. Demuestra que $$G\colon M \to M \times N, x\mapsto (x,f(x))$$
+es un embebimiento.  
+\end{ex} 
+
+\begin{ex} 
+Considera el campo vectorial $X=\sum_{i=1}^n x_i \frac{\partial}{\partial x_i}$ en $\RR^n$.\\
+Cual es el flujo de $X$?  
+\end{ex} 
+
+
+ \end{document}
+ %%%%%%% 
+ 
+ 
+
+ \begin{ex}
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{ex}
+ 
+ 
+ 
+ 

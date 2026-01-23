@@ -1,0 +1,168 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+
+%% Para las columnas
+\usepackage{multicol}
+\usepackage{amssymb,amsmath,eepic,fancyhdr}
+\usepackage{latexsym}
+\usepackage{datenumber}
+
+
+%% Para numeraci?n autom?tica
+\newcounter{nroproblema}
+\setcounter{nroproblema}{1}
+\newcounter{nroapartado}
+\setcounter{nroapartado}{1}
+
+\newcommand{\n}{%
+    \vspace{.1in}\noindent{\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+
+\newcommand{\nn}{%
+    \vspace{.1in}\noindent \hskip.4cm {\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+
+
+\newcommand{\ap}{\vspace*{0.2cm}\hspace*{0.2cm}%
+   {\bf \alph{nroapartado})}
+   \addtocounter{nroapartado}{1}%
+   }
+
+ 
+%marcos by Marco
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\vX}{\frak{X}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}} 
+ 
+
+%% márgenes
+
+% Anterior:
+
+%\setlength{\unitlength}{1mm} \addtolength{\voffset}{-15mm}
+%\addtolength{\textheight}{30mm} \addtolength{\hoffset}{-20mm}
+%\addtolength{\textwidth}{45mm}
+
+\setlength{\unitlength}{1mm} \addtolength{\voffset}{-22mm}
+\addtolength{\textheight}{40mm} \addtolength{\hoffset}{-22mm}
+\addtolength{\textwidth}{46mm}
+
+
+
+
+\begin{document}
+
+\noindent
+{\sffamily\large Marco Zambon 
+\hfill  Master UAM, 2013-14  \\Geometr\'ia simpl\'ectica y de Poisson}
+
+
+ 
+
+\begin{center}\bfseries\large\textsf{Hoja 2    \vspace{-2mm}}
+\end{center}
+
+
+%\begin{flushright}
+%1${}^o$ de grado en Física, curso 2013/14
+%\today
+%\end{flushright}
+%\begin{center}{\bf {\Large \'ALGEBRA I. HOJA 4}}\end{center}
+%\vskip.35cm
+ 
+ 
+ 
+ 
+ 
+\n 
+Sea $(V,\Omega)$ un  espacio vectorial simpl\'ectico de dimensi\'on $2n$.
+ Sea $e_1,\dots,e_n,f_1,\dots,f_n$ una base de
+$V$ y denota por $e_1^*,\cdots,e_n^*,f^*_1,\dots,f_n^*$ la base dual de $V^*$.
+Supone que  $\Omega(e_i,e_j)=0=\Omega(f_i,f_j)$, y  $\Omega(e_i,f_j)=\delta_{ij}$.
+
+\ap Demuestra que $\Omega=\sum_i e^*_i \wedge f^*_i$.
+
+\ap Demuestra que $\Omega^n:=\Omega\wedge\dots\wedge \Omega$ es un elemento de $\wedge^{2n}V^*\cong \RR$ distinto de cero.
+
+\ap Deduce que si $(M,\omega)$ es una variedad simpl\'ectica de dimensi\'on $2n$, entonces $\frac{1}{n!}\omega^n$ es una forma volumen en $M$.
+ 
+\n Considera la variedad simpl\'ectica $(T^*Q,\omega_{can}=-d\theta)$.
+
+\ap Demuestra que si $Z\in \vX(T^*Q)$ satisface $\cL_{Z}\theta=0$, entonces $Z$ es un campo vectorial hamiltoniano.
+
+\ap Encuentra una variedad $Q$ y $Y\in \vX(T^*Q)$ tal que $Y$ es un campo vectorial simpl\'ectico, pero no hamiltoniano.
+ 
+\n Sea $Q$ una variedad. Denota  $\pi \colon T^*Q\to Q$  la projecci\'on.
+Sea $i\colon Q\to T^*Q$ la inclusi\'on. 
+
+Demuestra que la aplicaci\'on que $i$ induce en cohomolog\'ia de deRham, es decir $$i^*\colon H(T^*Q)\to H(Q),$$ es un isomorfismo. Adem\'as, su inversa es $\pi^*\colon H(Q)\to H(T^*Q)$.
+
+\noindent{\bf Consejo:} Considera $i\circ \pi$. Puedes utilizar que si dos aplicaciones $f_0\colon X\to Y$ y  $f_1\colon X\to Y$
+son homotopicas (es decir, existe $F \colon [0,1]\times X\to Y$ con $F(0,\cdot)=f_0, F(1,\cdot)=f_1$), entonces las aplicaciones inducidas $f_0^*\colon H(Y)\to H(X)$ y $f_1^*\colon H(Y)\to H(X)$ coinciden.  
+ 
+\n Sea $Q$ una variedad. Denota  $\pi \colon T^*Q\to Q$  la projecci\'on.
+ 
+ 
+\ap Sea  $B\in \Omega^2(Q)$ una dos-forma cerrada.  
+Demuestra que $\omega_{can}+\pi^*B$ es una forma simpl\'ectica en
+ $T^*Q$.
+
+ 
+\ap Demuestra que si existe un simplectomorfismo $f$ entre $(T^*Q,\omega_{can})$ y $(T^*Q,\omega_{can}+\pi^*B)$ tal que $f$ es homotopico a $Id_{T^*Q}$, entonces $B$ es exacta.
+
+\noindent{\bf Consejo:} Utiliza el problema 3.
+ 
+
+\ap Demuestra que si $B$ es exacta, entonces  $(T^*Q,\omega_{can})$ y $(T^*Q,\omega_{can}+\pi^*B)$ son simplectomorfas, y que existe un simplectomorfismo $f$ que es homotopico a $Id_{T^*Q}$.
+
+\noindent{\bf Consejo:} Considera el difeomorfismo de $T^*Q$  
+ dado por la translaci\'on a lo largo de las fibras por una secci\'on de $T^*Q$ (=una 1-forma en $Q$). Trabaja en coordinadas can\'onicas $q,p$ en $T^*Q$.
+ 
+	%p 177 tavars 
+ 
+\n  
+Sea $\omega$ una forma simpl\'ectica en una variedad $M$. Utilizando $d\omega=0$ y la formula para el diferencial de  de Rham en terminos de corchetes de Lie de campos vectoriales, da otra demostraci\'on que el corchete de Poisson   satisface la identidad de Jacobi, es decir,
+$$\{f_1,\{f_2,f_3\}\}+\{f_2,\{f_3,f_1\}\}+\{f_3,\{f_1,f_2\}\}=0.$$
+ 
+
+%\n  
+%Sea $\omega$ una forma simpl\'ectica en $M$, donde $M$ es una variedad de %dimensi\'on $2n$, y $f_1,\dots,f_k$ funciones  tales que  $df_1(p),\dots,df_k(p)\in T^*_p M$ son linealmente independientes en cada $p\in M.%$
+
+%5\ap Si $H$ es una funci\'on tal que $\{H,f_i\}=0$ para todo $i$, entonces para todo $p\in M$ la curva integral de $X_{H}$  a trav\'es de $p$ est\'a %contenida en la subvariedad
+%$\{q \in M: f_i(q)=f_i(p)\}$.
+
+%\ap Si $\{f_i,f_j\}=0$ para todo $i,j$, entonces necesariamente tenemos %$k\le n$.
+
+\n  
+
+\ap Considera un sistema hamiltoniano $(M,\omega,H)$.
+Sean $f,g\in C^{\infty}(M)$ tales que sus  campos vectoriales hamiltonianos $X_f$,$X_g$  son simetr\'ias del sistema hamiltoniano, es decir, $\cL_{X_f}H=0$ y $\cL_{X_g}H=0$.
+?` Es  $[X_f,X_g]$ una   simetr\'ia del sistema hamiltoniano tambi\'en?
+
+%\noindent \textbf{Consejo:} Utiliza  $[X_f,X_g]=-X_{\{f,g\}}$.
+ 
+
+
+\ap Considera el sistema hamiltoniano $$(\RR^{4},\omega:=dx_1\wedge dx_2+dx_3\wedge dx_4,
+H=x_1+x_3).$$  Comprueba que los campos hamiltonianos de $f:=x_2-x_4$ y $g:=x_3^2$ son simetr\'ias del sistema hamiltoniano. Calcula explicitamente  $X_f,X_g, [X_f,X_g]$.
+ 
+
+
+ 
+  \end{document}

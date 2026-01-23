@@ -1,0 +1,131 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[]{amsmath,amsthm,amssymb,amscd}
+\usepackage[latin1]{inputenc}
+%\usepackage{fullpage}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+     
+\textheight 246mm
+     
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+     
+\textwidth 159mm
+
+
+%               Theorem Environments
+\theoremstyle{definition}
+\newtheorem{ex}{}
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%               Subquestions numbered with letters
+\renewcommand{\theenumi}{\textbf{\alph{enumi}}}
+
+%               Maths definitions
+
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\QQ}{\ensuremath{\mathbb Q}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+
+\begin{document}
+\noindent
+{\sffamily\large Marco Zambon 
+\hfill   a discutir:   Mi\'ercoles, 07/03/2012\\Geometr\'ia III, curso 2011-12}
+ 
+
+\noindent
+\hrulefill{}\\
+\begin{center}\bfseries\large\textsf{Hoja 2    \vspace{-2mm}}
+\end{center}
+
+\noindent
+%\hrulefill{}\\
+
+\begin{ex} 
+Para cada $\alpha \in [0,1]$, considera la aplicaci\'on
+$$\Phi \colon \RR\to S^1\times S^1, t\mapsto (e^{2\pi i t}, e^{2\pi i t \alpha}),$$
+donde $S^1:=\{z\in \CC: |z|=1\}$. Supongamos que $\alpha  \notin \QQ$.
+\begin{enumerate} 
+\item Demuestra que   $\Phi$ es inyectiva y continua.
+\item Demuestra que $\Phi \colon \RR \to \Phi(\RR)$ no es un homeomorfismo. Por qu\'e no hay ninguna contradici\'on con la pregunta 4a de la hoja 1? (Aqu\'i $\Phi(\RR)$ tiene la topolog\'ia subespacio inducida por el toro $S^1\times S^1$). 
+\item  Es $\Phi(\RR)$ es una variedad topol\'ogica o no?
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex}
+Sea $K$ una superficie topol\'ogica compacta, conexa y con borde.
+Demuestra que el borde $\partial K$ tiene un numero finito de componentes conexas.
+\end{ex} 
+ 
+\begin{ex}  
+Demuestra para el espacio proyectivo $P_2(\RR)$, la banda de M\"obius $M$, la botella de Klein $K$ y el toro $\TT=S^1\times S^1$:
+\begin{enumerate}
+\item  $\chi(P_2(\RR))=1$
+\item  $\chi(K)=0$
+\item $\chi(M)=0$
+\item $\chi(\TT)=0$
+\end{enumerate}
+\textbf{Consejo:}  Para a. puedes utilizar el hecho que $\chi(S^2)=2$
+% y para b. utiliza la formula $\chi(S_1\sharp S_2)=\chi(S_1)+\chi(S_2)-2$.
+\end{ex}
+ 
+
+\begin{ex}  
+A cual superficie en la lista (de superficies compactas, conexas, con borde) es homeomorfa la suma conexa
+$$\TT \;\;\sharp\;\; C,$$
+donde $\TT=S^1\times S^1$ y $C=S^1\times [0,1]$?
+\end{ex} 
+ 
+
+\begin{ex}[{\bf Por escrito}]
+Demuestra que si $M,N,L$ so variedades diferenciales y $f \colon M \to N$, $g \colon N \to L$ aplicaciones diferenciables, entonces $g \circ f \colon M \to L$ es  una aplicaci\'on diferenciable.
+\end{ex} 
+ 
+
+
+
+\begin{ex}
+Encuentra una estructura de variedad diferencial en $$Q:=\{(x,y):x\in[-1,1], y\in\{-1,1\}\}\cup \{(x,y): x\in\{-1,1\},y\in[-1,1]\}$$
+(el borde de un cuadrado) con la topolog\'ia subespacio inducida por $\RR^2$.
+\end{ex} 
+
+
+\begin{ex} Sea $M$ una variedad diferencial conexa y $p,q$ puntos de $M$. Demuestra que  existe una aplicaci\'on diferenciable $c \colon [0,1] \to M$ tal que $c(0)=p,c(1)=q$.\\
+{\bf Observaci\'on:} Como $[0,1]$ no es una variedad diferencial segundo la definici\'on dada  en clase (porque tiene borde), hay que definir cuando una aplicaci\'on  $c \colon [0,1] \to M$ es diferenciable: lo es cuando existe un $\epsilon >0$ y una aplicaci\'on diferenciable $\tilde{c} \colon (-\epsilon, 1+\epsilon) \to M$ tal que 
+$\tilde{c}|_{[0,1]}=c$.\\
+{\bf Consejo:} Puedes utilizar, sin demonstraci\'on, el hecho que una variedad topol\'ogia conexa es automaticamente conexa por caminos.
+ \end{ex} 
+ 
+
+
+
+ \end{document}
+ %%%%%%%
+ \begin{ex}
+
+\end{ex}
+
+ \begin{ex}
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{ex}
+ 
+ 
+ 
+ 

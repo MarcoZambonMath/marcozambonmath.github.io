@@ -1,0 +1,118 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[]{amsmath,amsthm,amssymb,amscd}
+\usepackage[latin1]{inputenc}
+%\usepackage{fullpage}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+     
+\textheight 246mm
+     
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+     
+\textwidth 159mm
+
+
+%               Theorem Environments
+\theoremstyle{definition}
+\newtheorem{ex}{}
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%               Subquestions numbered with letters
+\renewcommand{\theenumi}{\textbf{\alph{enumi}}}
+
+%               Maths definitions
+
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+
+\begin{document}
+\noindent
+{\sffamily\large Marco Zambon 
+\hfill   a discutir:   Jueves, 3/05/2012\\Geometr\'ia III, curso 2011-12}
+ 
+
+\noindent
+\hrulefill{}\\
+\begin{center}\bfseries\large\textsf{Hoja 5    \vspace{-2mm}}
+\end{center}
+
+\noindent
+%\hrulefill{}\\
+ 
+ 
+
+\begin{ex}
+\begin{enumerate}
+\item   Sea $A\in Mat(n,\RR)$ una matriz cuadrada. Para cada $t\in \RR$ obtenemos un difeomorfismo 
+$e^{tA} \colon \RR^n \to \RR^n$, dado por $v \mapsto e^{tA} v$ donde $e^{tA}:=\sum_{i=0}^{\infty}\frac{(tA)^i}{i!}$ es la exponencial de matrices.
+  Encuentra un campo vectorial en $\RR^n$ cuyo flujo $F_t$ sea dado por $e^{tA}$.
+  
+\item  Tomamos $A=\left(\begin{array}{ccc}0 & 1  \\-1 & 0\end{array}\right) \in Mat(2,\RR)$. 
+Calcula explicitamente $e^{tA}$ y el campo vectorial en $\RR^2$ cuyo flujo es dado por $e^{tA}$.
+\end{enumerate}
+\end{ex}
+
+ \begin{ex}
+  Considera $\RR^2$ con coordenadas $x,y$. Calcula los siguientes crochetes de Lie  de campos vectoriales:
+\begin{enumerate}
+\item $[x\pd{y},x\pd{y}]$ 
+\item $[x\pd{y},\pd{x}]$
+\end{enumerate}
+\end{ex}
+
+
+\begin{ex} 
+Sea $n\ge 1$. Demuestra que $Mat(n,\RR)$, con $[A,B]:=AB-BA$, es un \'algebra de Lie. 
+\end{ex}
+
+
+ \begin{ex}
+  Sea $V$ un espacio vectorial y $\{e_1,\dots,e_n\}\subset V$ una base de $V$. Sea $\{f_1,\dots,f_n\}\subset V^*$ la base dual. Dados vectores
+$v=\sum_{i=1}^n a_i e_i$ y $w=\sum_{i=1}^n b_i e_i$ de $V$ (aqu\'i $a_i,b_i\in \RR$), calcula
+$$(f_1\wedge f_2)(v,w).$$
+ 
+\end{ex}
+
+ \begin{ex} Sea $V$ un espacio vectorial y $\{f_1,\dots,f_n\}\subset V^*$ una base de $V^*$. Demuestra,  para cada $k\in\{1,\dots,n\}$, que
+ $$\{f_{i_1}\wedge\dots\wedge f_{i_k}: 1\le i_1 <\dots<i_k\le n\}$$
+ es una base de $\wedge^k V^*$.
+\end{ex}
+
+ \begin{ex}
+ Considera $\RR^3$ con coordenadas $x,y,z$. 
+ \begin{enumerate}
+ 
+\item Calcula $(dx \wedge dy \wedge dz) (\pd{y},\pd{x}, x \pd{z})$
+\item Encuentra 2 campos vectoriales $X$ y $Y$ en $\RR^3$, linealmente independientes en cada punto, tal que
+$$(xdy+dz)(X)=(xdy+dz)(Y)=0.$$
+\end{enumerate}
+\end{ex}
+ \end{document}
+ %%%%%%% 
+ 
+ 
+
+ \begin{ex}
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{ex}
+ 
+ 
+ 
+ 

@@ -1,0 +1,172 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[]{amsmath,amsthm,amssymb,amscd}
+\usepackage[latin1]{inputenc}
+%\usepackage{fullpage}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+     
+\textheight 246mm
+     
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+     
+\textwidth 159mm
+
+
+%               Theorem Environments
+\theoremstyle{definition}
+\newtheorem{ex}{}
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%               Subquestions numbered with letters
+\renewcommand{\theenumi}{\textbf{\alph{enumi}}}
+
+%               Maths definitions
+
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\QQ}{\ensuremath{\mathbb Q}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+
+\begin{document}
+\noindent
+{\sffamily\large Marco Zambon 
+\hfill     27/03/2012\\Geometr\'ia III, curso 2011-12}
+ 
+
+%\noindent
+%\hrulefill{}\\
+\begin{center}\bfseries\large\textsf{Soluci\'on al examen Parcial    \vspace{-2mm}}
+\end{center}
+
+ 
+%\hrulefill{}\\
+
+ \noindent
+\hrulefill{}\\
+ 
+ 
+\begin{ex}[8 puntos]    
+Considera $S^2=\{v\in \RR^3: |v|=1\}$  con la relaci\'on de equivalencia $$v\sim_a w \Leftrightarrow (v=w \text{ o bien } v=-w).$$
+Considera tambi\'en  $\RR^3-\{0\}$ con la relaci\'on de equivalencia $$v\sim_b w \Leftrightarrow \exists \lambda \neq 0: v=\lambda \cdot  w.$$
+Encuentra \emph{explicitamente} un homeomorfismo $$S^2/\sim_a \to (\RR^3-\{0\})/\sim_b,$$ y demuestra que es un homeomorfismo.
+
+\noindent{\bf Nota:} En clase vimos que existe un tal homeomorfismo
+(ambos cocientes son homeomorfos al plano proyectivo). Aqu\'i os pido de escribir \emph{explicitamente} un tal homeomorfismo.
+\end{ex}
+
+\noindent{\bf Soluci\'on:} \begin{it}
+Denota $\pi_a \colon S^2\to S^2/\sim_a$ la proyecci\'on canonica, y para $v\in S^2$ denota
+$[v]_a:=\pi_a(v)$ (la clase de equivalencia de $v$). De manera similar, denota $\pi_b \colon \RR^3-\{0\}\to \RR^3-\{0\}/\sim_b$ la proyecci\'on canonica, y para $z\in \RR^3-\{0\}$ denota
+$[z]_b:=\pi_b(z)$.
+Considera
+$$F \colon  S^2/\sim_a \to \RR^3-\{0\}/\sim_b,\;\; [v]_a \to [v]_b.$$ Esta aplicaci\'on est\'a bien definida, porque $[v]_b=[-v]_b$ para todo $v\in S^2$ (ya que $-v=(-1)\cdot v$). 
+
+$F$ is injectiva: si para $v,w\in S^2$ existe  $\lambda \neq 0$ tal que $v=\lambda \cdot w,$ entonces $|v|=1=|w|$ implica que necesariamente $\lambda=1$ o $\lambda=-1$, y por lo tanto $[v]_a=[w]_a$.
+
+ $F$ es sobreyectiva: dado $z\in \RR^3-\{0\}$, tenemos $F([\frac{z}{|z|}]_a)=[\frac{z}{|z|}]_b=[z]_b$. 
+Entonces $F$ es biyectiva, y $F^{-1}([z]_b)=[\frac{z}{|z|}]_a$.
+
+
+La aplicaci\'on $f\colon S^2 \to \RR^3-\{0\}, v\mapsto v$ es continua. $$\pi_b \circ f\colon  S^2 \to (\RR^3-\{0\})/\sim_b$$
+satisface $(\pi_b \circ f)=F \circ \pi_a$. Como $\pi_b \circ f$ es continua, $F$ tambi\'en lo es (por el ejercicio 4 de la hoja 1).
+
+La aplicaci\'on $g\colon \RR^3-\{0\} \to S^2, z\mapsto \frac{z}{|z|}$ es
+continua. $$\pi_a \circ g \colon \RR^3-\{0\} \to S^2/\sim_a $$
+satisface
+satisface $(\pi_a \circ g)=F^{-1} \circ \pi_b$. Como $\pi_a \circ g$ es continua, $F^{-1}$ tambi\'en lo es (por el ejercicio 4 de la hoja 1).
+En conclusi\'on, $F$ es un homeomorfismo.
+\end{it}
+
+
+\begin{ex} [7 puntos]
+Considera $$S:=([0,1]\times[0,1])-\cup_{i=1}^5 D_i,$$ donde  $D_1,\dots,D_5$ son  discos abiertos en  $(0,1)\times(0,1)$ tal que  $\bar{D_i}\cap \bar{D_j}=\emptyset$ si $i\neq j$. Considera 
+$S/\sim$, donde la relaci\'on de equivalencia $\sim$ es la siguiente:  cada punto es equivalente a s\'i mismo, y adem\'as $(0,y)\sim (1,1-y)$ para todo $y\in [0,1]$. 
+
+> A qu\'e superficie en la lista de superficies compactas, conexas, con borde es homeomorfa  $S/\sim$? Demuestralo.
+\end{ex}
+\noindent{\bf Soluci\'on:} \begin{it}
+$S/\sim$ es homeomorfo a $$P_2(\RR)- \cup_{i=1}^6 D_i',$$ donde
+los $D_i'$ son  discos abiertos en $P_2(\RR)$ tal que sus cierres son disjuntos dos a dos.
+
+Est\'a claro que $S$ es la banda de M\"obius  $M$ menos 5 discos abiertos. Ahora utilizamos el hecho, visto en clase, que pegando la banda de M\"obius $M$ y un disco cerrado a lo largo de sus bordes se obtiene $P_2(\RR)$. Entonces $M\cong P_2(\RR)- D_1'$, donde  $D_1'$ es un disco abierto en $P_2(\RR)$. Por lo tanto $S$ es homeomorfo a $P_2(\RR)$ menos 6 discos abiertos.
+\end{it} 
+
+\begin{ex}  [8 puntos]
+Sea $S^2=\{v\in \RR^3: |v|=1\}$, con su estructura   diferencial standard. Sea $\textbf{S}:=(0,0,-1)\in S^2$.
+Para todo $(x,y,z)\in \RR^3$, se denota por $|(x,y,z)|:=\sqrt{x^2+y^2+z^2}$ su norma.
+
+> Es la funci\'on
+$$f \colon S^2\to \RR,  \;\;\; v\mapsto |v-\textbf{S}|$$
+diferenciable? Demuestralo.
+
+\noindent{\bf Nota:} Puedes utilizar que una carta diferencial de $S^2$ es dada por la proyecci\'on estereogr\'afica $\phi_N$, y que su inversa es $$(\phi_N)^{-1} \colon \RR^2 \to S^2-\{\textbf{N}\},\;\;(u,v)\mapsto \frac{1}{u^2+v^2+1}(2u,2v,u^2+v^2-1),$$
+donde $\textbf{N}:=(0,0,1)$.
+\end{ex}
+\noindent{\bf Soluci\'on:} \begin{it}
+No, $f$ no es diferenciable en el punto $\textbf{S}$.
+
+Primero, escribimos $f$ as\'i: 
+$$f((x,y,z))=|(x,y,z)-\textbf{S}|=\sqrt{x^2+y^2+(z+1)^2}=
+\sqrt{1+2z+1}=\sqrt{2(z+1)}.$$
+Tomamos la carta $\phi_N$. Obtenemos
+$$f \circ (\phi_N)^{-1} \colon \RR^2 \to \RR, (u,v)\mapsto \sqrt{2(\frac{u^2+v^2-1}{u^2+v^2+1}+1)}=2\sqrt{\frac{u^2+v^2}{u^2+v^2+1}}
+,$$ es decir, $(f \circ (\phi_N)^{-1})(X)=2\frac{|X|}{\sqrt{|X|^2+1}}$ para todo $X\in \RR^2$.
+Esta funci\'on no es diferenciable en el origen de $\RR^2$ (ya que la norma no lo es).
+\end{it}
+
+
+
+
+\begin{ex}[7 puntos]
+Si $M$ es una variedad diferencial y $S,R$ son subvariedades de $M$ tal que $dim(S)=dim(R)$, > es verdad que la union $S\cup R$ es siempre  una subvariedad de $M$? Demuestralo.
+\end{ex}
+\noindent{\bf Soluci\'on:} \begin{it}
+No.
+
+Un contraej\'emplo es lo siguiente. Sea $M=\RR^2$ (con su estructura standard de variedad diferencial). Sea $S=\RR\times \{0\}$ (el eje $x$), y $R=\{0\}\times \RR$ (el eje $y$). $S$ y $R$ son subvariedades de $M$ de dimensi\'on $1$: $(\RR^2,Id_{\RR^2})$ es una carta de $M$ adaptada a $S$, y $(\RR^2,(x,y)\mapsto(y,x))$ es una carta de $M$ adaptada a $R$.
+
+La uni\'on $S\cup R$ no es una subvariedad de $M$. Una manera de verlo es: si lo fuera, entonces $S\cup R$ ser\'ia una variedad diferencial de dimensi\'on $1$.
+Pero existe un entorno conexo $U$ del origen $0$ en $S\cup R$  tal que $U-\{0\}$ tiene $4$ componentes conexas, entonces $U$ no puede ser homeomorfo a un intervalo.
+\end{it}
+ 
+
+%\begin{ex}  
+%Demuestra que 
+%$$T \;\;\sharp \;\; C\cong T-(D_1 \cup D_2)$$
+%donde $T=S^1\times S^1$ es el toro, $C=S^1\times [0,1]$ el cilindro, y $D_i\subset T$ (por $i=1,2$) son discos cerrados tal que $D_1\cap D_2=\emptyset$.
+%\end{ex} 
+
+
+
+
+
+
+ \end{document}
+ %%%%%%%
+ \begin{ex}
+
+\end{ex}
+
+ \begin{ex}
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{ex}
+ 
+ 
+ 
+ 

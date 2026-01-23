@@ -1,0 +1,151 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+
+%% Para las columnas
+\usepackage{multicol}
+\usepackage{amssymb,amsmath,eepic,fancyhdr}
+\usepackage{latexsym}
+\usepackage{datenumber}
+
+
+%% Para numeraci?n autom?tica
+\newcounter{nroproblema}
+\setcounter{nroproblema}{1}
+\newcounter{nroapartado}
+\setcounter{nroapartado}{1}
+
+\newcommand{\n}{%
+    \vspace{.1in}\noindent{\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+
+\newcommand{\nn}{%
+    \vspace{.1in}\noindent \hskip.4cm {\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+
+
+\newcommand{\ap}{\vspace*{0.2cm}\hspace*{0.2cm}%
+   {\bf \alph{nroapartado})}
+   \addtocounter{nroapartado}{1}%
+   }
+
+ 
+%marcos by Marco
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\vX}{\frak{X}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}} 
+ 
+
+%% márgenes
+
+% Anterior:
+
+%\setlength{\unitlength}{1mm} \addtolength{\voffset}{-15mm}
+%\addtolength{\textheight}{30mm} \addtolength{\hoffset}{-20mm}
+%\addtolength{\textwidth}{45mm}
+
+\setlength{\unitlength}{1mm} \addtolength{\voffset}{-22mm}
+\addtolength{\textheight}{40mm} \addtolength{\hoffset}{-22mm}
+\addtolength{\textwidth}{46mm}
+
+
+
+
+\begin{document}
+
+\noindent
+{\sffamily\large Marco Zambon 
+\hfill  Master UAM, 2013-14  \\Geometr\'ia simpl\'ectica y de Poisson}
+
+
+ 
+
+\begin{center}\bfseries\large\textsf{Hoja 6    \vspace{-2mm}}
+\end{center}
+  
+ 
+ 
+
+\n [3 puntos]
+Sea $(M,\omega)$ una variedad simpl\'ectica y considera una acci\'on hamiltoniana de un grupo de Lie $G$ en $(M,\omega)$  con aplicaci\'on momento $J$.
+Demuestra que, suponiendo que $0$ es un valor regular de $J$,  $J^{-1}(0)$ es una subvariedad coisotropica de $(M,\omega)$. 
+%Demuestra que la distribuci\'on caracter\'istica de $J^{-1}(0)$?
+ 
+ 
+ 
+ %\n [3 puntos] Sea $W$ un subespacio vectorial de un espacio vectorial $V$ (de dimensi\'on finita). Demuestra que hay un isomorf\'ismo can\'onico
+% $$W^{\circ}\cong (V/W)^*$$
+% donde $W^{\circ}\subset V^*$ es el anulador de $W$. 
+
+ \n Sea $(M,\omega,H)$ una sistema hamiltoniano y considera una acci\'on de un grupo de Lie $G$ en $M$ que preserva $\omega$ y $H$.   Supone que esta acci\'on tenga aplicaci\'on momento $J$, y que $\mu\in \g^*$ sea tal que $G_{\mu}$ es compacto y actua libremente en $J^{-1}(\mu)$. Denota por $i\colon J^{-1}(\mu) \to M$ la inclusi\'on, y por $\pi\colon J^{-1}(\mu)\to M_{red}:=J^{-1}(\mu)/G_{\mu}$ la proyecci\'on.
+ 
+\ap Demuestra que existe una \'unica funci\'on $H_{red}$ en $M_{red}$ tal que $\pi^*(H_{red})=i^*H$
+
+\ap Demuestra que $X_H$ es tangente a $J^{-1}(\mu)$
+
+\ap Demuestra que $\pi$ envia $(X_H)|_{J^{-1}(\mu)}$ a $X_{H_{red}}$, es decir: para todo $p\in {J^{-1}(\mu)}$, tenemos $$\pi_* (X_H|_p)=
+X_{H_{red}}|_{\pi(p)}.$$
+Aqu\'i $X_{H_{red}}$ denota el campo hamiltoniano de $H_{red}$ con respecto a la forma simpl\'ectica $\omega_{red}$ en $M_{red}$ determinada por $i^*\omega=\pi^*(\omega_{red})$.
+  
+\noindent\textbf{Nota:}   
+b) dice que la din\'amica dada por $X_H$ en $M$ se restringe a cada fibra de $J$.
+
+c) dice que $(M_{red}, \omega_{red}, H_{red})$ es un sistema hamiltoniano  ``equivalente'' a $(M,\omega,H)$.
+%, pero con menos (o incluso ninguna, si tomamos $\mu=0$) sim\'etria.
+
+
+\n Considera la acci\'on de $U(1)$ en $\CC^{n+1}$ por rotaciones; vimos que una aplicaci\'on momento es $$J\colon \CC^{n+1}\to \RR, \vec{z}\mapsto 
+-\frac{1}{2}|\vec{z}|^2.$$
+Para todo $\lambda>0$, sea $M_{\lambda}:=J^{-1}(-\lambda/2)/U(1)$, y denota por $\omega_{red,\lambda}$ la forma simpl\'ectica en $M_\lambda$ obtenida por reducci\'on.
+Calcula explicitamente la funci\'on $f(\lambda)\colon \RR_+\to \RR$, donde $$f(\lambda):=Vol(M_\lambda)/Vol(M_1),$$ y $Vol(M_\lambda)$ es el volumen de $M_\lambda\cong \CC P^n$ dado por la forma simpl\'ectica $\omega_{red,\lambda}$.
+
+
+%\n 
+%\ap Para cada entero $n>0$, demuestra que 
+%el espacio proyectivo (real) $\RR P_{n}$ no admite ninguna estructura simpl\'ectica. 
+ 
+%\ap Demuestra el espacio proyectivo complejo $\CC P_n$ admite una estructura simpl\'ectica. 
+%(En particular, $S^2\cong \CC P_1$ admite una estructura simpl\'ectica.
+
+%Deduce que $H^2(\CC P_n, \RR),H^4(\CC P_n, \RR),\dots,H^{2n}(\CC P_n, \RR)$ son todos no trivales.
+
+\n
+Sea $(V,\Omega)$ un espacio vectorial simpl\'ectico, $W\subset V$ un subespacio coisotropico, y $Z$ otro subespacio con $W\subset Z \subset V$.
+Recuerda que $\underline{Z}:=Z/Z^{\Omega}$ tiene una forma simpl\'ectica $\underline{\Omega}$ inducida por $\Omega$. Denota   
+la proyecci\'on por $\pi \colon Z\to \underline{Z}, z\mapsto \underline{z}:=(z \text{ mod } Z^{\Omega})$.
+ Denota $\underline{W}$ la imagen de $W$ bajo la proyecci\'on $\pi \colon Z\to \underline{Z}$.
+
+Demuestra que:
+
+\ap la aplicaci\'on can\'onica
+$$ \phi\colon W/W^{\Omega}\to \underline{W}/\underline{W}^{\underline{\Omega}},
+(w \text{ mod } W^{\Omega}) \mapsto (\underline{w} \text{ mod }  \underline{W}^{\underline{\Omega}})
+$$
+est\'a bien definida y es   un isomorfismo.
+
+\ap $\phi$
+identifica la formas simpl\'ectica en $W/W^{\Omega}$ inducida por $\Omega$ con la formas simpl\'ectica  en $\underline{W}/\underline{W}^{\underline{\Omega}}$ inducida por $\underline{\Omega}$. 
+
+
+
+ 
+
+  
+   \end{document}
+  \noindent\textbf{Consejo:}
+\noindent\textbf{Nota:}

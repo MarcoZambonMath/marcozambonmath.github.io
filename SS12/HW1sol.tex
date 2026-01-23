@@ -1,0 +1,100 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[]{amsmath,amsthm,amssymb,amscd}
+\usepackage[latin1]{inputenc}
+%\usepackage[spanish]{babel}
+%\usepackage{fullpage}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+     
+\textheight 246mm
+     
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+     
+\textwidth 159mm
+
+
+%               Theorem Environments
+\theoremstyle{definition}
+\newtheorem{ex}{}
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%               Subquestions numbered with letters
+\renewcommand{\theenumi}{\textbf{\alph{enumi}}}
+
+%               Maths definitions
+
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\QQ}{\ensuremath{\mathbb Q}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+
+\begin{document}
+\noindent
+{\sffamily\large Marco Zambon 
+\hfill   \\Geometr\'ia III, curso 2011-12}
+ 
+
+\noindent
+\hrulefill{}\\
+\begin{center}\bfseries\large\textsf{Hoja 1    \vspace{-2mm}}
+\end{center}
+
+\noindent
+%\hrulefill{}\\
+
+ 
+
+ \begin{ex}Sea $M$ una variedad topol\'ogica de dimension $n$ con borde. Demuestra:
+\begin{enumerate}
+\item $Int(M)$ es una variedad topol\'ogica de dimension $n$ (sin borde).
+\item $\partial M$ es una variedad topol\'ogica de dimension $n-1$ (sin borde).
+\end{enumerate}
+\end{ex}
+
+\noindent{\bf Soluci\'on:}\\
+
+a)  
+Sea $p\in Int(M)$. Por definici\'on de interior,  existe un abierto $U\subset M$ con $p\in U$ y un homeomorfismo $\phi \colon U\to \phi(U)$ a un abierto de $\overline{\RR^n_+}$ tal que $$
+\phi(p)\in \RR^n_+:=\{(x_1,\dots,x_n)\in\overline{\RR^n_+}:x_n>0\}.$$
+Sea $V$ un entorno abierto  de $\phi(p)$ en $\RR^n_+$. Entonces $$\phi|_{U \cap \phi^{-1}(V)}\colon U \cap \phi^{-1}(V) \to \phi(U)\cap V$$ es un homeomorfismo a 
+un entorno abierto de $\phi(p)$ en $\RR^n_+$. Nota que    $U \cap \phi^{-1}(V)\subset Int(M)$ (por definici\'on de interior).
+
+ 
+Arriba vimos que $\phi(U)\cap V$ es abierto en $\RR^n_+$, y nota que $\RR^n_+$ es abierto en $\RR^n$, as\'i que
+$\phi(U)\cap V$ es abierto en $\RR^n$.
+En conclusi\'on, hemos demostrado que cada punto de $Int(M)$ tiene un entorno abierto en $Int(M)$ que es homeomorfo a un abierto de $\RR^n$, es decir, que $Int(M)$ es una variedad topol\'ogica de dimension $n$.\\
+
+b) Sea $p\in \partial M$.  Por definici\'on de borde,  existe un abierto $U\subset M$ con $p\in U$ y un homeomorfismo  $\phi \colon U\to \phi(U)$ a un abierto de $\overline{\RR^n_+}$  con $\phi(p)\in \RR^{n-1}\times \{0\}$. Restringiendo el dominio y codominio, obtenemos un homeomorfismo $$\phi|_{\partial M \cap U} \colon \partial M \cap U \to \phi(\partial M \cap U).$$ Nota que $\partial M \cap U$ es un entorno abierto de $p$ en $\partial M$, por la definici\'on de topolog\'ia subespacio. Por el ejercicio 2), para todo $q\in U$ tenemos: $q\in \partial M$ si y solo si $\phi(q)\in \RR^{n-1}\times \{0\}$.
+Eso implica que $\phi(\partial M \cap U)=\phi(U)\cap (\RR^{n-1}\times \{0\})$, lo cual -- por definici\'on de topolog\'ia subespacio -- 
+es un abierto de $\RR^{n-1}$.
+
+En conclusi\'on, hemos demostrado que $\phi|_{\partial M \cap U}$
+es un homeomorfismo de ${\partial M \cap U}$ a un abierto de $\RR^{n-1}$, y por lo tanto que $\partial M$ es una variedad topo\'ogica de dimension $n-1$.
+ \end{document}
+ %%%%%%%
+ \begin{ex}
+
+\end{ex}
+
+ \begin{ex}
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{ex}
+ 
+ 
+ 
+ 

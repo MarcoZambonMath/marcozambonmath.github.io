@@ -1,0 +1,132 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+
+%% Para las columnas
+\usepackage{multicol}
+\usepackage{amssymb,amsmath,eepic,fancyhdr}
+\usepackage{latexsym}
+\usepackage{datenumber}
+
+
+%% Para numeraci?n autom?tica
+\newcounter{nroproblema}
+\setcounter{nroproblema}{1}
+\newcounter{nroapartado}
+\setcounter{nroapartado}{1}
+
+\newcommand{\n}{%
+    \vspace{.1in}\noindent{\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+
+\newcommand{\nn}{%
+    \vspace{.1in}\noindent \hskip.4cm {\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+
+
+\newcommand{\ap}{\vspace*{0.2cm}\hspace*{0.2cm}%
+   {\bf \alph{nroapartado})}
+   \addtocounter{nroapartado}{1}%
+   }
+
+ 
+%marcos by Marco
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\vX}{\frak{X}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}} 
+ 
+
+%% márgenes
+
+% Anterior:
+
+%\setlength{\unitlength}{1mm} \addtolength{\voffset}{-15mm}
+%\addtolength{\textheight}{30mm} \addtolength{\hoffset}{-20mm}
+%\addtolength{\textwidth}{45mm}
+
+\setlength{\unitlength}{1mm} \addtolength{\voffset}{-22mm}
+\addtolength{\textheight}{40mm} \addtolength{\hoffset}{-22mm}
+\addtolength{\textwidth}{46mm}
+
+
+
+
+\begin{document}
+
+\noindent
+{\sffamily\large Marco Zambon 
+\hfill  Master UAM, 2013-14  \\Geometr\'ia simpl\'ectica y de Poisson}
+
+
+ 
+
+\begin{center}\bfseries\large\textsf{Hoja 4    \vspace{-2mm}}
+\end{center}
+ 
+ 
+\n Considera el espacio vectorial simpl\'ectico  $(\RR^{2n},\omega )$, donde $\omega$ es la forma simpl\'ectica lineal can\'onica..
+
+\ap Describe explicitamente el \'algebra de Lie de $Sp(2n):=\{A\in GL(2n,\RR):A^*\omega =\omega \}$.
+
+\ap Calcula la dimensi\'on de $Sp(2n)$ (de manera distinta de la utilizada en clase).
+
+
+ 
+
+%\n
+%Demuestra que la siguiente es una biyecci\'on: $$\Phi \colon S^3\to SU(2), (\alpha,\beta) \mapsto \left(\begin{array}{cc} \alpha & \beta \\ -\bar{\beta} & \bar{\alpha} \end{array}\right).$$
+%Aqu\'i consideramos $S^3$ como el conjunto de vectores de norma uno en $\CC^2$.
+
+%\textbf{Observaci\'on:}  Esta aplicaci\'on es un isomorfismo de grupos de Lie. En particular, $SU(2)$ es simplemente con\'exo. 
+
+\n [3 puntos]
+Sean $\g$ una algebra de Lie y $\h$ un ideal de Lie, es decir, un subespacio tal que $[\h,\g]\subset \h$. Demuestra que el espacio cociente $\g/\h$ admite una \'unica estructura de \'algebra de Lie tal que la  projeci\'on 
+$\pi \colon \g \to \g/\h$  es un morfismo de \'algebras de Lie.    
+
+
+
+\n [3 puntos]
+Sean $G,H$ grupos de Lie y  $\Phi \colon G \to H$ un  homomorfismo de grupos de Lie. Demuestra que para cada elemento $v$  del \'algebra de Lie $T_eG$ se cumple 
+$$\Phi(exp(v))=exp(d_e\Phi (v))$$
+donde $exp$ denota la aplicaci\'on exponential de $G$ o de $H$.
+ 
+ 
+\n   Considera el \'algebra de Lie $\g:=\mathfrak{sl}_2(\RR)$, y una base
+\[  \begin{array}{ccc}
+h=\left( \begin{array}{cc} 1 & 0 \\ 0 & -1 \end{array} \right), &
+e=\left( \begin{array}{cc} 0 & 1 \\ 0 & 0 \end{array} \right), &
+f=\left( \begin{array}{cc} 0 & 0 \\ 1 & 0 \end{array} \right).
+\end{array} \]
+
+
+\ap Combrueba que $[h,e]=2e, [h,f]=-2f, [e,f]=h$.
+
+\ap Calcula $d_{\g}\colon \g^*\to \wedge^2\g^*$
+
+\ap Calcula $H^1(\g)$ y $H^2(\g)$.
+
+\n Sea $G$ in grupo de Lie, $\g$ su \'algebra de Lie. Sea $B\colon \g\times \g \to \RR$ un producto escalar invariante bajo $Ad$, es decir, $B(Ad_gX,Ad_gY)=B(X,Y)$ para todo $g\in G$, $X,Y\in \g$.
+
+Demuestra que, bajo el isomorfismo $\g\to \g^*, X\to B(X,\cdot)$,
+la acci\'on adjunta $Ad$ de $G$ en $\g$ y la 
+la acci\'on coadjunta $Ad^*$ de $G$ en $\g^*$ coinciden.
+ 
+     \end{document}
+   
+  \noindent\textbf{Consejo:}
+\noindent\textbf{Nota:}

@@ -1,0 +1,196 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[]{amsmath,amsthm,amssymb,amscd}
+\usepackage[latin1]{inputenc}
+%\usepackage{fullpage}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+     
+\textheight 246mm
+     
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+     
+\textwidth 159mm
+
+
+%               Theorem Environments
+\theoremstyle{definition}
+\newtheorem{ex}{}
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%               Subquestions numbered with letters
+\renewcommand{\theenumi}{\textbf{\alph{enumi}}}
+
+%               Maths definitions
+
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\QQ}{\ensuremath{\mathbb Q}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+
+\begin{document}
+\noindent
+{\sffamily\large Marco Zambon 
+\hfill     27/03/2012\\Geometr\'ia III, curso 2011-12}
+ 
+
+%\noindent
+%\hrulefill{}\\
+\begin{center}\bfseries\large\textsf{Examen Parcial    \vspace{-2mm}}
+\end{center}
+
+ 
+%\hrulefill{}\\
+
+\noindent
+\hrulefill{}\\
+
+\noindent
+{\sffamily\large Tu nombre:
+\\
+Tu DNI: 
+
+}
+
+
+ 
+\begin{center}{\sffamily (deja esta tabla vac\'ia)}
+\end{center}
+\vspace*{-5mm}
+%\begin{table}[htdp]
+%\caption{}
+%\begin{center}
+%\begin{tabular}{|c|c|c|c|c|c||c|}
+%\hline
+%Ej. 1  &Ej. 2&Ej. 3&Ej. 4&Ej. 5&Ej. 6& Total puntos (de 100)\\
+%\hline
+%& & & & & &  \\
+%& & & & & &  \\
+%\hline
+%\end{tabular}
+%\end{center}
+%\label{default}
+%\end{table}
+ 
+
+\begin{table}[htdp]
+%\caption{}
+\begin{center}
+\begin{tabular}{|c|p{2cm} |}
+\hline
+&\\[-0.2cm]
+Ej. 1  &\\[0.2cm]
+\hline
+&\\[-0.2cm]
+Ej. 2  &\\[0.2cm]
+\hline
+&\\[-0.2cm]
+Ej. 3  &\\[0.2cm]
+\hline
+&\\[-0.2cm]
+Ej. 4  &\\[0.2cm]
+\hline\hline
+&\\[-0.2cm]
+Total (de 30) & \\[0.2cm]
+\hline
+\end{tabular}
+\end{center}
+\label{default}
+\end{table}
+\vspace*{-5mm}
+
+
+%%
+\noindent
+%\hrulefill{}\\
+\textsf{{\bf \sffamily  Instrucciones:} Utiliza una hoja distinta para 
+cada problema, y en cada hoja escribe  tu nombre y el n\'umero del problema.\\
+Justifica todas tus respuestas.
+Puedes utilizar, cit\'andolos de manera apropriada, resultados que hemos obtenido en clase o en los ejercicios para casa.    \vspace{-2mm}}
+
+ 
+\noindent
+\hrulefill{}\\
+
+ 
+\begin{ex}[8 puntos]    
+Considera $S^2=\{v\in \RR^3: |v|=1\}$  con la relaci\'on de equivalencia $$v\sim_a w \Leftrightarrow (v=w \text{ o bien } v=-w).$$
+Considera tambi\'en  $\RR^3-\{0\}$ con la relaci\'on de equivalencia $$v\sim_b w \Leftrightarrow \exists \lambda \neq 0: v=\lambda \cdot  w.$$
+Encuentra \emph{explicitamente} un homeomorfismo $$S^2/\sim_a \to (\RR^3-\{0\})/\sim_b,$$ y demuestra que es un homeomorfismo.
+
+\noindent{\bf Nota:} En clase vimos que existe un tal homeomorfismo
+(ambos cocientes son homeomorfos al plano proyectivo). Aqu\'i os pido de escribir \emph{explicitamente} un tal homeomorfismo.
+\end{ex}
+
+\begin{ex} [7 puntos]
+Considera $$S:=([0,1]\times[0,1])-\cup_{i=1}^5 D_i,$$ donde  $D_1,\dots,D_5$ son  discos abiertos en  $(0,1)\times(0,1)$ tal que  $\bar{D_i}\cap \bar{D_j}=\emptyset$ si $i\neq j$. Considera 
+$S/\sim$, donde la relaci\'on de equivalencia $\sim$ es la siguiente:  cada punto es equivalente a s\'i mismo, y adem\'as $(0,y)\sim (1,1-y)$ para todo $y\in [0,1]$. 
+
+> A qu\'e superficie en la lista de superficies compactas, conexas, con borde es homeomorfa  $S/\sim$? Demuestralo.
+
+\end{ex}
+ 
+
+\begin{ex}  [8 puntos]
+Sea $S^2=\{v\in \RR^3: |v|=1\}$, con su estructura   diferencial standard. Sea $\textbf{S}:=(0,0,-1)\in S^2$.
+Para todo $(x,y,z)\in \RR^3$, se denota por $|(x,y,z)|:=\sqrt{x^2+y^2+z^2}$ su norma.
+
+> Es la funci\'on
+$$f \colon S^2\to \RR,  \;\;\; v\mapsto |v-\textbf{S}|$$
+diferenciable? Demuestralo.
+
+\noindent{\bf Nota:} Puedes utilizar que una carta diferencial de $S^2$ es dada por la proyecci\'on estereogr\'afica $\phi_N$, y que su inversa es $$(\phi_N)^{-1} \colon \RR^2 \to S^2-\{\textbf{N}\},\;\;(u,v)\mapsto \frac{1}{u^2+v^2+1}(2u,2v,u^2+v^2-1),$$
+donde $\textbf{N}:=(0,0,1)$.
+
+ 
+\end{ex}
+
+
+
+
+
+\begin{ex}[7 puntos]
+Si $M$ es una variedad diferencial y $S,R$ son subvariedades de $M$ tal que $dim(S)=dim(R)$, > es verdad que la union $S\cup R$ es siempre  una subvariedad de $M$? Demuestralo.
+\end{ex}
+
+ 
+
+%\begin{ex}  
+%Demuestra que 
+%$$T \;\;\sharp \;\; C\cong T-(D_1 \cup D_2)$$
+%donde $T=S^1\times S^1$ es el toro, $C=S^1\times [0,1]$ el cilindro, y $D_i\subset T$ (por $i=1,2$) son discos cerrados tal que $D_1\cap D_2=\emptyset$.
+%\end{ex} 
+
+
+
+
+
+
+ \end{document}
+ %%%%%%%
+ \begin{ex}
+
+\end{ex}
+
+ \begin{ex}
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{ex}
+ 
+ 
+ 
+ 

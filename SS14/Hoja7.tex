@@ -1,0 +1,127 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+
+%% Para las columnas
+\usepackage{multicol}
+\usepackage{amssymb,amsmath,eepic,fancyhdr}
+\usepackage{latexsym}
+\usepackage{datenumber}
+
+
+%% Para numeraci?n autom?tica
+\newcounter{nroproblema}
+\setcounter{nroproblema}{1}
+\newcounter{nroapartado}
+\setcounter{nroapartado}{1}
+
+\newcommand{\n}{%
+    \vspace{.1in}\noindent{\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+
+\newcommand{\nn}{%
+    \vspace{.1in}\noindent \hskip.4cm {\bf \arabic{nroproblema}.\ }%
+    \addtocounter{nroproblema}{1}%
+    \setcounter{nroapartado}{1}%
+    }%
+
+
+\newcommand{\ap}{\vspace*{0.2cm}\hspace*{0.2cm}%
+   {\bf \alph{nroapartado})}
+   \addtocounter{nroapartado}{1}%
+   }
+
+ 
+%marcos by Marco
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\vX}{\frak{X}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}} 
+ 
+
+%% márgenes
+
+% Anterior:
+
+%\setlength{\unitlength}{1mm} \addtolength{\voffset}{-15mm}
+%\addtolength{\textheight}{30mm} \addtolength{\hoffset}{-20mm}
+%\addtolength{\textwidth}{45mm}
+
+\setlength{\unitlength}{1mm} \addtolength{\voffset}{-22mm}
+\addtolength{\textheight}{40mm} \addtolength{\hoffset}{-22mm}
+\addtolength{\textwidth}{46mm}
+
+
+
+
+\begin{document}
+
+\noindent
+{\sffamily\large Marco Zambon 
+\hfill  Master UAM, 2013-14  \\Geometr\'ia simpl\'ectica y de Poisson}
+
+
+ 
+
+\begin{center}\bfseries\large\textsf{Hoja 7    \vspace{-2mm}}
+\end{center}
+  
+ 
+ 
+
+\n  Considera $\RR^3$ y una funci\'on $f\colon \RR\to \RR$. Considera
+el campo bivectorial 
+$$\pi:=f(z)\pd{x}\wedge\pd{y}.$$
+
+\ap Comprueba que $\pi$ es un campo bivectorial  de Poisson.
+ 
+\ap Cuales son las hojas simpl\'ecticas de $\pi$? Dib\'ujalas. 
+
+  
+\n[3 puntos]
+Sea $V$ un espacio vectorial y $\pi\in \wedge^2 V$. Denota por $\sharp\colon V^*\to V$ la aplicaci\'on lineal $\xi \mapsto \iota_{\xi}\pi$.
+Demuestra que
+  $$Ker(\sharp)=[Im(\sharp)]^{\circ}.$$
+  
+  
+%\{,\cdot,\cdot\}_M  
+\n Sean $(M,\pi_M)$ y   $(N,\pi_N)$
+variedades de Poisson, y $\phi\colon M\to N$ una aplicaci\'on.
+
+Vamos a demostrar en 3 pasos que:
+
+ \emph{$\phi$ es un morfismo de Poisson $\Rightarrow$
+$\text{grafo}(\phi)$ es una subvariedad coisotropica de $(M\times N, \pi)$},
+
+donde $\pi$ es el campo bivectorial dado por $\pi|_{(m,n)}=(\pi_M)|_m-
+(\pi_N)|_n$ para todo $(m,n)\in M\times N$.
+  
+
+\noindent\textbf{Notaci\'on:} Para todo $f\in C^{\infty}(N)$, denotamos $$F:=\phi^*(f)-f  \in 
+C^{\infty}(M\times N).$$  (Aqu\'i estoy abusando un poco la notaci\'on, denotando por $f$ una funci\'on en $N$ y tambi\'en la funci\'on en $M\times N$ dada por $(m,n)\mapsto f(n)$. Lo mismo vale para $\phi^*(f)$.)
+  
+\ap Denota por $I_{  \text{grafo}(\phi)}$ el conjunto de funciones en $M\times N$ que se anulan en $\text{grafo}(\phi)$. Demuestra: para todo $f\in C^{\infty}(N)$, tenemos $$F\in I_{  \text{grafo}(\phi)}.$$ 
+
+
+\ap Para todo $f_1,f_2\in C^{\infty}(N)$, tenemos $$\{F_1,F_2\}_{M\times N}\in I_{  \text{grafo}(\phi)}.$$
+
+\ap Demuestra que $$\{I_{  \text{grafo}(\phi)},I_{  \text{grafo}(\phi)}\}_{M\times N}\subset I_{  \text{grafo}(\phi)}.$$
+
+\noindent\textbf{Nota:} Puedes utilizar que $\{F:f\in C^{\infty}(N)\}$
+genera $I_{  \text{grafo}(\phi)}$ como ideal multiplicativo, es decir, cada elemento de $I_{  \text{grafo}(\phi)}$ es una suma finita  $\sum_i G_iF_i$ donde $G_i\in C^{\infty}(M\times N)$ y   $F_i=\phi^*(f_i)-f_i$ para  $f_i\in C^{\infty}(N)$.
+
+   \end{document}
+  \noindent\textbf{Consejo:}
+\noindent\textbf{Nota:}

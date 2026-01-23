@@ -1,0 +1,147 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[]{amsmath,amsthm,amssymb,amscd}
+\usepackage[latin1]{inputenc}
+%\usepackage{fullpage}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+     
+\textheight 246mm
+     
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+     
+\textwidth 159mm
+
+
+%               Theorem Environments
+\theoremstyle{definition}
+\newtheorem{ex}{}
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%               Subquestions numbered with letters
+\renewcommand{\theenumi}{\textbf{\alph{enumi}}}
+
+%               Maths definitions
+
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\TT}{\ensuremath{\mathbb T}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+
+\begin{document}
+\noindent
+{\sffamily\large Marco Zambon 
+\hfill   a discutir:   Miercoles, 16/05/2012\\Geometr\'ia III, curso 2011-12}
+ 
+
+\noindent
+\hrulefill{}\\
+\begin{center}\bfseries\large\textsf{Hoja 6    \vspace{-2mm}}
+\end{center}
+
+\noindent
+%\hrulefill{}\\
+% \begin{ex} 
+%Sea $F \colon M\to N$ una submersi\'on sobreyectiva entre variedades.
+%Demuestra para todo $k\ge 0$ que la aplicaci\'on lineal (definida en clase)
+%$$\Omega^k(N) \to  \Omega^k(M) , \alpha \mapsto F^* \alpha$$
+%es inyectiva. 
+% 
+%\noindent{\textbf{Recuerda:}   una aplicaci\'on diferenciable $F$ es una submersi\'on si en todo $p\in M$, la derivada $F_*(p)$ es sobreyectiva.}
+%\end{ex}
+
+ 
+ \begin{ex} Sea $M=\RR^2$. 
+ \begin{enumerate}
+\item Existe $f\in C^{\infty}(M)$ tal que $df=x dy$?
+\item Existe $f\in C^{\infty}(M)$ tal que $df=x dy+y dx$?
+\end{enumerate}
+\end{ex}
+ 
+\begin{ex} \label{int}
+Sea $M$ una variedad, $\alpha\in \Omega^1(M)$ una 1-forma, y 
+$c \colon [a,b]\to M$ una curva diferenciable. Definimos  \emph{la integral de $\alpha$ a lo largo de $c$}:
+$$\int_c\alpha:=\int_a^b \alpha_{c(t)}(\dot{c}(t)) dt.$$
+Demuestra que, si $f$ es una funci\'on diferenciable en $M$, entonces
+$$\int_{c} df=f(c(b))-f(c(a)).$$ 
+\end{ex}
+
+
+
+\begin{ex} 
+Sea $(M,g)$ una variedad Riemanniana y $f \in C^{\infty}(M)$. El \emph{gradiente} de $f$ es el campo vectorial $grad(f)$ en $M$ definido por la propriedad:
+$$g(grad(f),X)=df(X) \text{ para todo campo vectorial $X$ en $M$}.$$
+Demuestra que:
+\begin{enumerate}
+\item Para cada $p\in M$ tal que $df_p \neq 0$   la funci\'on
+$$\{Y\in T_pM : |Y|=1\}\to \RR, Y \mapsto df_p(Y)$$
+tiene su valor m\'aximo en $\frac{grad(f)_p}{|{grad(f)_p}|}$. Aqu\'i utilizamos la notaci\'on $|Y|:=\sqrt{g_p(Y,Y)}$.
+\item Sea $c \colon [a,b] \to M$ una curva integral de $grad(f)$. Entonces $$f(c(b))\ge f(c(a)).$$
+\end{enumerate}
+
+
+\noindent\textbf{Consejo para a):} utiliza la desigualdad de Cauchy-Schwarz.\\
+\noindent\textbf{Consejo para b):} utiliza el ejercicio \ref{int}.
+\end{ex}
+
+\newpage
+\begin{ex} 
+Sea $$O(3)=\{A\in Mat(3,\RR):A^TA=Id\}.$$ Cada $A\in O(3)$ induce un difeomorfismo $\Phi_A \colon \RR^3 \to \RR^3, w \to A\cdot w$.
+Adem\'as, 
+sea $S^2:=\{(x,y,z)\in \RR^3:x^2+y^2+z^2=1\}$ la esfera. Demuestra:
+
+\begin{enumerate}
+\item Para cada $A\in O(3)$, $\Phi_A$ es una isometr\'ia de $\RR^3$ (con su metrica Riemanniana \'estandard $g$).
+\item Para cada $A\in O(3)$, la aplicaci\'on $\Phi_A$ satisface $\Phi_A(S^2)=S^2$. Denotamos $\phi_A \colon S^2 \to S^2$ la aplicaci\'on inducida por restricci\'on.
+\item\label{c} Para cada $A\in O(3)$, la aplicaci\'on $\phi_A$ es una isometr\'a de $S^2$ (con la metrica Riemannniana $\bar{g}$ inducida por la metrica est\'andard en $\RR^3$).
+\item Deduce de \ref{c}. que, dados puntos $p,q\in S^2$, existe una isometr\'ia $\phi$ de $S^2$ con $\phi(p)=q$.
+\item Deduce de \ref{c}. que el plano proyectivo $P_2(\RR)$ tiene una metrica Riemanniana tal que la proyecci\'on $\pi \colon S^2 \to P_2(\RR)$ es una isometr\'ia local.
+\end{enumerate}
+
+\noindent\textbf{Recuerda (para a):} Por las clases de calculo, como $\Phi_A$ es una aplicaci\'on lineal, tenemos $D_p \Phi_A=A$ en cada $p\in \RR^3$. 
+
+\noindent\textbf{Recuerda (para d):} Las matrices de $O(3)$ son exactamente las matrices cuyas columnas forman una base ortonormal de $\RR^3$.
+
+\noindent\textbf{Observaci\'on (para e):} $\pi$ es una    isometr\'ia local si  cada $p\in S^2$ tiene un entorno $U$ tal que $\pi|_U \colon U \to \pi(U)$ es una isometr\'ia.
+\end{ex}
+
+\begin{ex}
+Considera el paraboloide $$P=\{(x_1,x_2,x_3)\in \RR^3:x_1^2+x_2^2=x_3\},$$ con la metrica Riemanniana inducida por $\RR^3$. Describe  la geod\'esica $\gamma$ que satisface $$\gamma(0)=(0,0,0)\;\;\;\;\;\;\;{\gamma}^{\prime}(0)=\pd{x_1}|_{(0,0,0)}.$$
+
+\noindent\textbf{Consejo:} Se puede decir bastante sobre $\gamma$ sin hacer ninguna cuenta, utilizando el hecho que $\Phi \colon \RR^3 \to \RR^3, (x_1,x_2,x_3) \mapsto (x_1,-x_2,x_3)$ induce por restricci\'on  una isometr\'ia de $P$.
+\end{ex} 
+ 
+
+%\begin{ex}
+%Sea $(M,g)$ una variedad Riemanniana compacta. Demuestra que existen $p_0,q_0\in M$ tal que para cualquier otro par de puntos $p,q\in M$, tenemos $$d(p_0,q_0)\ge d(p,q).$$ Demuestra que, si quitamos  la suposici\'on que 
+%$M$ sea compacta, la afirmaci\'on es falsa.
+
+%\noindent\textbf{Consejo:} Demuestra que la aplicaci\'on $M \times M \to \RR, (p,q)\to d(p,q)$ es continua, es decir, preimagenes de abiertos de $\RR$ son abiertos en $M\times M$. 
+%\end{ex}    
+ 
+  \end{document}
+ %%%%%%% 
+ 
+ 
+
+ \begin{ex}
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{ex}
+ 
+ 
+ 
+ 

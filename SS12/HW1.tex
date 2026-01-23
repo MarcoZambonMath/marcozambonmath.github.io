@@ -1,0 +1,137 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[]{amsmath,amsthm,amssymb,amscd}
+\usepackage[latin1]{inputenc}
+%\usepackage[spanish]{babel}
+%\usepackage{fullpage}
+
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+     
+\textheight 246mm
+     
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+     
+\textwidth 159mm
+
+
+%               Theorem Environments
+\theoremstyle{definition}
+\newtheorem{ex}{}
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%               Subquestions numbered with letters
+\renewcommand{\theenumi}{\textbf{\alph{enumi}}}
+
+%               Maths definitions
+
+\newcommand{\NN}{\ensuremath{\mathbb N}}
+\newcommand{\ZZ}{\ensuremath{\mathbb Z}}
+\newcommand{\CC}{\ensuremath{\mathbb C}}
+\newcommand{\RR}{\ensuremath{\mathbb R}}
+\newcommand{\QQ}{\ensuremath{\mathbb Q}}
+\newcommand{\g}{\ensuremath{\frak{g}}}
+\newcommand{\h}{\ensuremath{\frak{h}}}
+\newcommand{\ft}{\ensuremath{\frak{t}}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cD}{\mathcal{D}}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+%\newcommand{\pd}[1]{\frac{\partial}{\partial #1}} %\pd{x}
+
+\begin{document}
+\noindent
+{\sffamily\large Marco Zambon 
+\hfill   a discutir:   21/02/2012\\Geometr\'ia III, curso 2011-12}
+ 
+
+\noindent
+\hrulefill{}\\
+\begin{center}\bfseries\large\textsf{Hoja 1    \vspace{-2mm}}
+\end{center}
+
+\noindent
+%\hrulefill{}\\
+
+
+\begin{ex}  
+Considera $$M:=\{(x,0):x <0\}\cup\{(x,y): x\ge0, y \in \RR\}\subset \RR^2$$
+con la topolog\'ia subespacio inducida por $\RR^2$.
+\begin{enumerate}
+\item Demuestra que $M$ no es una variedad topol\'ogica.
+\item Demuestra que $M$ no es una variedad topol\'ogica con borde.
+\end{enumerate}
+
+\textbf{Consejo:} Utiliza el teorema de invariancia del dominio.
+\end{ex}
+
+ \begin{ex}Sea $M$ una variedad topol\'ogica de dimension $n$ con borde, $p\in M$ y $(U,\phi)$ una carta con $p\in U$. 
+ 
+Demuestra: si $\phi(p)\in R^{n-1}\times \{0\}$, entonces para toda otra carta $(U',\phi')$  con $p\in U'$, tenemos $\phi'(p)\in R^{n-1}\times \{0\}$.
+
+ 
+\textbf{Consejo:} Utiliza el teorema de invariancia del dominio.
+\end{ex}
+
+
+ \begin{ex}Sea $M$ una variedad topol\'ogica de dimension $n$ con borde. Demuestra:
+\begin{enumerate}
+\item $Int(M)$ es una variedad topol\'ogica de dimension $n$ (sin borde).
+\item $\partial M$ es una variedad topol\'ogica de dimension $n-1$ (sin borde).
+\end{enumerate}
+\end{ex}
+ 
+
+\begin{ex}
+\begin{enumerate}
+\item Sea $X$ un espacio topol\'ogico compacto, $Y$ un espacio topol\'ogico Hausdorff, y $f \colon X \to Y$ una biyecci\'on continua. Demuestra: entonces $f$ es un homeomorfismo.
+\item Sea $Z$ un espacio topol\'ogico y $\sim$ una relaci\'on de equivalencia en $Z$. Denota por $\pi \colon Z \to Z/\sim$ la aplicaci\'on canonica al espacio cociente. Describe las condiciones necesarias y suficientes para que una aplicaci\'on $F \colon Z \to Y$ induzca una aplicaci\'on  $\tilde{F} \colon Z/\sim \to Y$ (es decir, para que exista una aplicaci\'on $\tilde{F}$ tal que $F=\tilde{F}\circ\pi$). En este caso, demuestra que $F$ es continua si y solo si $\tilde{F}$ es continua. 
+\item Sea $Z$ un espacio topol\'ogico compacto, $\sim$ una una relaci\'on de equivalencia en $Z$, y $Y$   un espacio topol\'ogico Hausdorff. Sea $F \colon Z \to X$ una aplicaci\'on continua, sobreyectiva, y tal que $z\sim z' \Leftrightarrow F(z)=F(z')$. Demuestra: $F$ induce un homeomorfismo $\tilde{F} \colon Z/\sim 
+\to Y$. 
+\end{enumerate}
+\textbf{Nota:} Para a. es \'util saber que un subconjunto compacto de un espacio topologico Hausdorff es automaticamente cerrado.
+\end{ex}
+
+
+
+
+
+\begin{ex}
+\begin{enumerate}
+\item Sea $P_1(\RR)$ el cociente de $S^1:=\{z\in \CC: |z|=1\}$ por la relaci\'on de equivalencia $z\sim -z$. A qu\'e es homeomorfo $P_1(\RR)$?
+\item Sea $M:= P_2(\RR)$, definida como en clase. El borde $\partial M$ est\'a vacio o no? Demuestra.
+\item $P_2(\RR)$ es compacto o no? Demuestra.\end{enumerate}
+\end{ex}
+
+
+
+
+
+%\begin{ex}  
+%Demuestra que 
+%$$T \;\;\sharp \;\; C\cong T-(D_1 \cup D_2)$$
+%donde $T=S^1\times S^1$ es el toro, $C=S^1\times [0,1]$ el cilindro, y $D_i\subset T$ (por $i=1,2$) son discos cerrados tal que $D_1\cap D_2=\emptyset$.
+%\end{ex} 
+
+
+
+
+
+
+ \end{document}
+ %%%%%%%
+ \begin{ex}
+
+\end{ex}
+
+ \begin{ex}
+\begin{enumerate}
+\item 
+\end{enumerate}
+\end{ex}
+ 
+ 
+ 
+ 
