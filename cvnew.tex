@@ -1,7 +1,8 @@
 \documentclass[12p]{resume}
 
 
-\usepackage{hyperref,url}
+\usepackage{url}
+\usepackage{hyperref}
 \pagestyle{plain}
 
 \renewcommand{\categoryfont}{\sc}
@@ -38,7 +39,20 @@
 \newcommand{\second}{$2^{\mbox{\scriptsize nd}}$\ }
 \newcommand{\third}{$3^{\mbox{\scriptsize rd}}$\ }
 
+% To remove symbol and hyperref from footnote
+%\usepackage{lipsum}
+%\newcommand\blfootnote[1]{%
+% \begin{NoHyper}%
+%  \renewcommand\thefootnote{}\footnote{#1}%
+%  \addtocounter{footnote}{-1}%
+% \end{NoHyper}%
+%}
+%\blfootnote{Last updated on  \today}
+
+\begin{document}
+
 \author{MARCO ZAMBON}
+
 % ------ Address --------------------------------------------------------
 
 \address{
@@ -60,12 +74,15 @@ Born 1975 in Treviso (Italy) \\
 %USA and Italy\\
 {\bf ORCID id:}\\
 0000-0002-5021-3675
+\\
+\emph{CV last updated on  \today}
 }
 
 
 
-\begin{document}
+
 \maketitle
+
 
 %
 \begin{category}{Research interests}
